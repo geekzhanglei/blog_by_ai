@@ -1,29 +1,683 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-
-const cards = [
-  { href: '/admin/release', title: '发布文章', desc: '后续迁移 Markdown 编辑与图片上传。' },
-  { href: '/admin/delete', title: '文章管理', desc: '后续迁移文章列表、删除和分页。' },
-  { href: '/admin/comments', title: '评论管理', desc: '后续迁移评论检索与删除。' },
-  { href: '/admin/msg', title: '动态管理', desc: '后续迁移动动态管理与回复。' },
-  { href: '/admin/info', title: '个人信息', desc: '后续迁移昵称、头像与密码修改。' },
-  { href: '/admin/option', title: '系统设置', desc: '后续迁移分页和默认昵称配置。' }
-];
+// 管理后台 - 纯客户端渲染，不使用 BaseLayout
+const apiBase = import.meta.env.PUBLIC_API_BASE_URL || 'https://blog.feroad.com';
 ---
-<BaseLayout title="管理后台 - 我的博客" description="博客管理后台">
-  <div class="container">
-    <div class="page-header">
-      <h1 class="page-title">博客管理后台</h1>
-      <p class="page-desc">Astro SSR 迁移版后台入口，复杂表单功能已保留迁移路径。</p>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>管理后台 - 我的博客</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif}
+body{overflow:hidden}
+#app{height:100vh;display:flex;flex-direction:column}
+
+/* Header */
+.adm-hd{height:64px;background:linear-gradient(135deg,#1e1b4b,#312e81);display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;color:#fff;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.adm-hd a{color:#fff;text-decoration:none}
+.adm-title{font-weight:700;font-size:1rem;display:flex;align-items:center;gap:6px}
+.adm-title::before{content:'✦';background:linear-gradient(135deg,#818cf8,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:1.1rem}
+.adm-user{position:relative;cursor:pointer;display:flex;align-items:center;gap:10px}
+.adm-user img{width:34px;height:34px;border-radius:50%;border:2px solid rgba(255,255,255,.3)}
+.adm-user .name{font-size:.88rem;font-weight:500}
+.udrop{position:absolute;right:0;top:48px;background:#fff;border-radius:10px;box-shadow:0 10px 25px rgba(0,0,0,.15);min-width:130px;overflow:hidden;opacity:0;visibility:hidden;transform:translateY(-8px);transition:all .2s;z-index:200}
+.adm-user:hover .udrop{opacity:1;visibility:visible;transform:translateY(0)}
+.udrop a{display:block;padding:10px 16px;font-size:.88rem;color:#334155;text-decoration:none;font-weight:500}
+.udrop a:hover{color:#6366f1;background:#f8fafc}
+.udrop .divider{height:1px;background:#e2e8f0;margin:4px 0}
+
+/* Layout */
+.adm-body{display:flex;flex:1;overflow:hidden}
+.adm-sb{width:200px;background:linear-gradient(180deg,#1e2130,#16192a);display:flex;flex-direction:column;flex-shrink:0;transition:width .3s;border-right:1px solid rgba(255,255,255,.05)}
+.adm-sb.collapsed{width:64px}
+.adm-sb.collapsed .mt{display:none}
+.adm-sb.collapsed .subm{display:none}
+.smenu{flex:1;overflow-y:auto;padding:8px 0}
+.mi,.sti{display:flex;align-items:center;padding:12px 14px;margin:2px 8px;border-radius:8px;color:#9ca3af;font-size:.88rem;font-weight:500;cursor:pointer;transition:all .15s;text-decoration:none}
+.mi:hover,.sti:hover{background:rgba(99,102,241,.12);color:#818cf8}
+.mi.on{background:rgba(99,102,241,.2);color:#818cf8}
+.mi svg,.sti svg{width:18px;height:18px;margin-right:8px;flex-shrink:0}
+.subm{padding-left:26px}
+.subm .mi{margin:2px 8px 2px 0;padding:10px 14px;font-size:.85rem}
+.sbt{height:48px;display:flex;align-items:center;justify-content:flex-end;padding:0 1.5rem;border-top:1px solid rgba(255,255,255,.08);cursor:pointer;color:#6b7280;transition:color .2s}
+.sbt:hover{color:#818cf8}
+.sbt svg{width:20px;height:20px}
+
+/* Content */
+.adm-main{flex:1;background:#f1f5f9;overflow:auto;padding:2rem}
+.sec{display:none}
+.sec.on{display:block}
+.tips{margin:0 0 1rem;padding:10px 14px;background:linear-gradient(135deg,#f8faff,#f1f5f9);border-left:4px solid #6366f1;border-radius:0 8px 8px 0;font-size:.88rem;font-weight:600;color:#334155}
+
+/* Forms */
+.fg{margin-bottom:1.5rem}
+.fg label{display:block;margin-bottom:6px;font-size:.9rem;font-weight:600;color:#334155}
+.fg input,.fg textarea,.fg select{width:100%;padding:10px 14px;border:1px solid #e2e8f0;border-radius:8px;font-size:.92rem;font-family:inherit;transition:border-color .2s}
+.fg input:focus,.fg textarea:focus,.fg select:focus{outline:none;border-color:#6366f1;box-shadow:0 0 0 3px rgba(99,102,241,.1)}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#6366f1;color:#fff;border:none;border-radius:8px;font-size:.92rem;font-weight:600;cursor:pointer;transition:background .2s}
+.btn:hover{background:#4f46e5}
+.btn-g{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:transparent;color:#6366f1;border:1px solid #6366f1;border-radius:8px;font-size:.92rem;font-weight:600;cursor:pointer;transition:all .2s}
+.btn-g:hover{background:#6366f1;color:#fff}
+.btn-r{background:#ef4444}
+.btn-r:hover{background:#dc2626}
+
+/* Tables */
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+th,td{padding:12px 16px;text-align:left;font-size:.88rem}
+th{background:#f8fafc;font-weight:600;color:#475569;border-bottom:2px solid #e2e8f0}
+td{border-bottom:1px solid #f1f5f9;color:#334155}
+tr:hover td{background:#f8fafc}
+.tac{display:flex;gap:8px;justify-content:center}
+
+/* Pagination */
+.pg{display:flex;justify-content:center;gap:6px;margin:2rem 0}
+.pg button{padding:8px 14px;border:1px solid #e2e8f0;background:#fff;border-radius:6px;cursor:pointer;font-size:.85rem;transition:all .2s}
+.pg button:hover{background:#f1f5f9}
+.pg button.on{background:#6366f1;color:#fff;border-color:#6366f1}
+.pg button:disabled{opacity:.4;cursor:not-allowed}
+
+/* Markdown */
+.md-editor{display:flex;gap:12px;min-height:400px}
+.md-editor textarea{flex:1;min-height:400px;font-family:'Consolas','Monaco',monospace;line-height:1.6}
+.md-preview{flex:1;min-height:400px;padding:1rem;background:#fff;border:1px solid #e2e8f0;border-radius:8px;overflow:auto}
+.md-preview h1,.md-preview h2,.md-preview h3{margin:1rem 0 .5rem}
+.md-preview p{margin:.5rem 0}
+.md-preview pre{background:#1e293b;color:#e2e8f0;padding:1rem;border-radius:8px;overflow:auto}
+.md-preview code{background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:.9em}
+.md-preview blockquote{border-left:4px solid #6366f1;padding-left:1rem;color:#64748b;margin:1rem 0}
+.md-preview img{max-width:100%;border-radius:8px}
+.md-preview ul,.md-preview ol{padding-left:1.5rem;margin:.5rem 0}
+
+/* Toast */
+#toast{position:fixed;top:20px;right:20px;z-index:9999;max-width:300px}
+.toast-item{padding:12px 16px;border-radius:8px;margin-bottom:8px;font-size:.9rem;font-weight:500;box-shadow:0 4px 12px rgba(0,0,0,.15);animation:slideIn .3s ease;cursor:pointer}
+.toast-item.ok{background:#dcfce7;color:#166534;border:1px solid #bbf7d0}
+.toast-item.err{background:#fee2e2;color:#991b1b;border:1px solid #fecaca}
+@keyframes slideIn{from{transform:translateX(100%);opacity:0}to{transform:translateX(0);opacity:1}}
+
+/* Dialog */
+.modal{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;z-index:500;opacity:0;visibility:hidden;transition:all .2s}
+.modal.on{opacity:1;visibility:visible}
+.modal-box{background:#fff;border-radius:12px;padding:1.5rem;max-width:400px;width:90%;box-shadow:0 20px 40px rgba(0,0,0,.2);transform:scale(.9);transition:transform .2s}
+.modal.on .modal-box{transform:scale(1)}
+.modal-title{font-size:1.1rem;font-weight:700;color:#1e293b;margin-bottom:8px}
+.modal-text{font-size:.9rem;color:#64748b;margin-bottom:1.5rem}
+.modal-btns{display:flex;gap:10px;justify-content:flex-end}
+
+/* Collapsible */
+.collapsible{cursor:pointer}
+.collapsible .arrow{transition:transform .2s;display:inline-block;margin-left:4px}
+.collapsible.on .arrow{transform:rotate(90deg)}
+.coll-content{display:none}
+.coll-content.on{display:block}
+
+/* Msg card */
+.msg-card{background:#fff;border-radius:12px;padding:1.25rem;margin-bottom:1rem;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.msg-card .meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:.75rem;font-size:.85rem;color:#64748b}
+.msg-card .content{color:#334155;line-height:1.6;margin-bottom:.75rem}
+.msg-card .replies{background:#f8fafc;border-radius:8px;padding:.75rem 1rem;margin-top:.5rem}
+.msg-card .reply-item{padding:.5rem 0;border-bottom:1px solid #e2e8f0;font-size:.85rem}
+.msg-card .reply-item:last-child{border:none}
+</style>
+</head>
+<body>
+<div id="app">
+  <header class="adm-hd">
+    <a href="/" class="adm-title">传送门</a>
+    <div class="adm-user" id="userBox">
+      <img id="userImg" src="/img/default-avatar.jpg" alt="avatar">
+      <span class="name" id="userName">管理员</span>
+      <div class="udrop">
+        <a href="javascript:void(0)" data-sec="info">设置</a>
+        <div class="divider"></div>
+        <a href="javascript:void(0)" id="logoutBtn">退出登录</a>
+      </div>
     </div>
-    <div class="admin-grid">
-      {cards.map((card) => (
-        <a class="admin-card" href={card.href}>
-          <h3>{card.title}</h3>
-          <p>{card.desc}</p>
-          <span class="read-more">进入 →</span>
-        </a>
-      ))}
+  </header>
+  <div class="adm-body">
+    <aside class="adm-sb" id="sidebar">
+      <div class="smenu" id="menu"></div>
+      <div class="sbt" id="toggleSb">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 17l-5-5 5-5M18 17l-5-5 5-5"/></svg>
+      </div>
+    </aside>
+    <main class="adm-main" id="main"></main>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <div class="modal-title" id="modalTitle">确认</div>
+    <div class="modal-text" id="modalText">确定执行此操作吗？</div>
+    <div class="modal-btns">
+      <button class="btn-g" id="modalCancel">取消</button>
+      <button class="btn" id="modalOk">确定</button>
     </div>
   </div>
-</BaseLayout>
+</div>
+
+<script>
+const API = 'https://blog.feroad.com';
+const IMGAPI = 'https://api.feroad.com';
+let adminInfo = { nickname: '管理员', headimg: '/img/default-avatar.jpg' };
+let currentSection = 'release';
+let sidebarCollapsed = false;
+
+const menuData = [
+  { id: 'info', text: '个人信息', icon: 'user' },
+  { id: 'admin', text: '文章管理', icon: 'doc', children: [
+    { id: 'release', text: '发表文章' },
+    { id: 'delete', text: '删除文章' }
+  ]},
+  { id: 'comments', text: '评论管理', icon: 'comment' },
+  { id: 'msg', text: '动态管理', icon: 'msg' },
+  { id: 'option', text: '常用选项', icon: 'gear' }
+];
+
+// ====== Icons ======
+const icons = {
+  user: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>',
+  doc: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>',
+  comment: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>',
+  msg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>',
+  gear: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>',
+  edit: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>',
+  trash: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>',
+  eye: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>',
+  check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>',
+  x: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+};
+
+// ====== API Helpers ======
+function api(url, opts = {}) {
+  const token = localStorage.getItem('token');
+  const headers = { 'Content-Type': 'application/x-www-form-urlencoded' };
+  if (token) headers['Authorization'] = `Bearer ${token}`;
+  if (opts.headers) Object.assign(headers, opts.headers);
+
+  let body = opts.body;
+  if (body && typeof body === 'object' && !(body instanceof FormData) && !(body instanceof URLSearchParams)) {
+    body = new URLSearchParams(body);
+  }
+
+  return fetch(`${API}${url}`, { ...opts, headers, body }).then(r => r.json());
+}
+
+function get(url, params) {
+  const qs = params ? '?' + new URLSearchParams(params) : '';
+  return api(url + qs, { method: 'GET' });
+}
+
+function post(url, data) {
+  return api(url, { method: 'POST', body: data });
+}
+
+function uploadImg(file) {
+  const fd = new FormData();
+  fd.append('file', file);
+  return fetch(`${IMGAPI}/upload`, { method: 'POST', body: fd }).then(r => r.json());
+}
+
+// ====== UI Helpers ======
+function toast(msg, type = 'ok') {
+  const el = document.createElement('div');
+  el.className = `toast-item ${type}`;
+  el.textContent = msg;
+  el.onclick = () => el.remove();
+  document.getElementById('toast').appendChild(el);
+  setTimeout(() => el.remove(), 3000);
+}
+
+function confirmDialog(title, text, onOk) {
+  document.getElementById('modalTitle').textContent = title;
+  document.getElementById('modalText').textContent = text;
+  const modal = document.getElementById('modal');
+  modal.classList.add('on');
+
+  const ok = document.getElementById('modalOk');
+  const cancel = document.getElementById('modalCancel');
+
+  const cleanup = () => {
+    modal.classList.remove('on');
+    ok.onclick = null;
+    cancel.onclick = null;
+  };
+
+  ok.onclick = () => { cleanup(); onOk(); };
+  cancel.onclick = cleanup;
+  modal.onclick = (e) => { if (e.target === modal) cleanup(); };
+}
+
+// ====== Sidebar ======
+function renderMenu() {
+  const menu = document.getElementById('menu');
+  menu.innerHTML = menuData.map(item => {
+    if (item.children) {
+      const isOpen = item.children.some(c => c.id === currentSection);
+      return `<div class="collapsible ${isOpen ? 'on' : ''}" data-id="${item.id}">
+        <div class="sti"><span class="mt">${item.text}</span></div>
+        <div class="subm ${isOpen ? 'on' : ''}">${item.children.map(c =>
+          `<a class="mi ${c.id === currentSection ? 'on' : ''}" data-sec="${c.id}" href="javascript:void(0)"><span class="mt">${c.text}</span></a>`
+        ).join('')}</div>
+      </div>`;
+    }
+    return `<a class="mi ${item.id === currentSection ? 'on' : ''}" data-sec="${item.id}" href="javascript:void(0)">${icons[item.icon] || ''}<span class="mt">${item.text}</span></a>`;
+  }).join('');
+
+  menu.querySelectorAll('[data-sec]').forEach(el => {
+    el.addEventListener('click', () => navigate(el.dataset.sec));
+  });
+
+  menu.querySelectorAll('.collapsible').forEach(el => {
+    el.querySelector('.sti').addEventListener('click', () => {
+      el.classList.toggle('on');
+      el.querySelector('.subm').classList.toggle('on');
+    });
+  });
+}
+
+// ====== Navigation ======
+function navigate(sec) {
+  currentSection = sec;
+  window.location.hash = sec;
+  renderMenu();
+  renderPage();
+}
+
+function renderPage() {
+  const main = document.getElementById('main');
+  const renderers = {
+    release: renderRelease,
+    delete: renderDelete,
+    comments: renderComments,
+    msg: renderMsg,
+    info: renderInfo,
+    option: renderOption
+  };
+  const fn = renderers[currentSection] || renderRelease;
+  main.innerHTML = fn();
+  if (typeof fn.init === 'function') setTimeout(fn.init, 0);
+}
+
+// ====== Release Page ======
+function renderRelease() {
+  return `<div class="sec on">
+    <div class="tips">发布新文章</div>
+    <div class="fg"><label>文章标题</label><input type="text" id="rTitle" placeholder="请输入标题"></div>
+    <div class="fg"><label>文章摘要</label><textarea id="rIntro" rows="3" placeholder="请输入摘要"></textarea></div>
+    <div class="fg"><label>文章内容 (Markdown)</label>
+      <div class="md-editor">
+        <textarea id="rContent"></textarea>
+        <div class="md-preview" id="rPreview"></div>
+      </div>
+    </div>
+    <div class="fg"><label>封面图片</label><input type="file" id="rImg" accept="image/*"></div>
+    <div><button class="btn" id="rSubmit">发布文章</button></div>
+  </div>`;
+}
+renderRelease.init = function() {
+  const content = document.getElementById('rContent');
+  const preview = document.getElementById('rPreview');
+  content.addEventListener('input', () => {
+    preview.innerHTML = mdParse(content.value);
+  });
+  document.getElementById('rSubmit').addEventListener('click', async () => {
+    const title = document.getElementById('rTitle').value.trim();
+    const intro = document.getElementById('rIntro').value.trim();
+    const text = content.value.trim();
+    const file = document.getElementById('rImg').files[0];
+    if (!title || !text) { toast('标题和内容不能为空', 'err'); return; }
+    let imgUrl = '';
+    if (file) {
+      const res = await uploadImg(file);
+      if (res.result && res.result.status) imgUrl = res.result.data || '';
+    }
+    const res = await post('/blogapi/article/release', { title, intro, content: text, img: imgUrl });
+    if (res.result && res.result.status) {
+      toast('文章发布成功');
+      document.getElementById('rTitle').value = '';
+      document.getElementById('rIntro').value = '';
+      content.value = '';
+      preview.innerHTML = '';
+      document.getElementById('rImg').value = '';
+    } else {
+      toast(res.result ? res.result.message : '发布失败', 'err');
+    }
+  });
+};
+
+// ====== Delete Page ======
+let delPage = 1, delTotal = 0, delList = [];
+function renderDelete() {
+  return `<div class="sec on">
+    <div class="tips">文章管理 - 删除文章</div>
+    <table><thead><tr><th>ID</th><th>标题</th><th>发布时间</th><th>操作</th></tr></thead><tbody id="delTbody"></tbody></table>
+    <div class="pg" id="delPg"></div>
+  </div>`;
+}
+renderDelete.init = function() {
+  loadDeleteList();
+};
+async function loadDeleteList() {
+  const res = await get('/blogapi/article', { page: delPage, pagesize: 10 });
+  delList = (res.result && res.result.data) || [];
+  delTotal = (res.result && res.result.count) || 0;
+  renderDeleteTable();
+  renderDeletePagination();
+}
+function renderDeleteTable() {
+  const tbody = document.getElementById('delTbody');
+  if (!delList.length) { tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;color:#94a3b8;padding:2rem">暂无文章</td></tr>'; return; }
+  tbody.innerHTML = delList.map(item => `<tr>
+    <td>${item.id}</td><td>${item.title}</td><td>${item.createtime || '-'}</td>
+    <td class="tac"><button class="btn btn-r" data-id="${item.id}" data-act="del">${icons.trash}删除</button></td>
+  </tr>`).join('');
+  tbody.querySelectorAll('[data-act="del"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.id;
+      confirmDialog('删除文章', `确定删除文章 #${id} 吗？此操作不可恢复。`, async () => {
+        const res = await post('/blogapi/article/delete', { id });
+        if (res.result && res.result.status) { toast('删除成功'); loadDeleteList(); }
+        else toast('删除失败', 'err');
+      });
+    });
+  });
+}
+function renderDeletePagination() {
+  const totalPages = Math.max(1, Math.ceil(delTotal / 10));
+  const pg = document.getElementById('delPg');
+  let html = `<button ${delPage <= 1 ? 'disabled' : ''} data-p="${delPage-1}">上一页</button>`;
+  for (let i = 1; i <= totalPages; i++) {
+    html += `<button class="${i === delPage ? 'on' : ''}" data-p="${i}">${i}</button>`;
+  }
+  html += `<button ${delPage >= totalPages ? 'disabled' : ''} data-p="${delPage+1}">下一页</button>`;
+  pg.innerHTML = html;
+  pg.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => { delPage = +btn.dataset.p; loadDeleteList(); });
+  });
+}
+
+// ====== Comments Page ======
+let commPage = 1, commTotal = 0, commList = [];
+function renderComments() {
+  return `<div class="sec on">
+    <div class="tips">评论管理</div>
+    <table><thead><tr><th>文章</th><th>评论者</th><th>内容</th><th>时间</th><th>操作</th></tr></thead><tbody id="commTbody"></tbody></table>
+    <div class="pg" id="commPg"></div>
+  </div>`;
+}
+renderComments.init = function() {
+  loadComments();
+};
+async function loadComments() {
+  const res = await get('/blogapi/admin/articlesWithMarks', { page: commPage, pagesize: 10 });
+  commList = (res.result && res.result.data) || [];
+  commTotal = (res.result && res.result.count) || 0;
+  renderCommentsTable();
+  renderCommentsPagination();
+}
+function renderCommentsTable() {
+  const tbody = document.getElementById('commTbody');
+  if (!commList.length) { tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:#94a3b8;padding:2rem">暂无评论</td></tr>'; return; }
+  let html = '';
+  commList.forEach(article => {
+    if (article.marks && article.marks.length) {
+      article.marks.forEach(mark => {
+        html += `<tr>
+          <td>${article.title}</td><td>${mark.name}</td><td>${mark.content}</td><td>${mark.time || '-'}</td>
+          <td class="tac"><button class="btn btn-r" data-aid="${article.id}" data-mid="${mark.id}" data-act="del">${icons.trash}删除</button></td>
+        </tr>`;
+      });
+    }
+  });
+  tbody.innerHTML = html || '<tr><td colspan="5" style="text-align:center;color:#94a3b8;padding:2rem">暂无评论</td></tr>';
+  tbody.querySelectorAll('[data-act="del"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const aid = btn.dataset.aid, mid = btn.dataset.mid;
+      confirmDialog('删除评论', '确定删除这条评论吗？', async () => {
+        const res = await get('/blogapi/admin/deleteMark', { articleid: aid, id: mid });
+        if (res.result && res.result.status) { toast('删除成功'); loadComments(); }
+        else toast('删除失败', 'err');
+      });
+    });
+  });
+}
+function renderCommentsPagination() {
+  const totalPages = Math.max(1, Math.ceil(commTotal / 10));
+  const pg = document.getElementById('commPg');
+  let html = `<button ${commPage <= 1 ? 'disabled' : ''} data-p="${commPage-1}">上一页</button>`;
+  for (let i = 1; i <= totalPages; i++) html += `<button class="${i === commPage ? 'on' : ''}" data-p="${i}">${i}</button>`;
+  html += `<button ${commPage >= totalPages ? 'disabled' : ''} data-p="${commPage+1}">下一页</button>`;
+  pg.innerHTML = html;
+  pg.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => { commPage = +btn.dataset.p; loadComments(); });
+  });
+}
+
+// ====== Msg Page ======
+let msgPage = 1, msgTotal = 0, msgList = [];
+function renderMsg() {
+  return `<div class="sec on">
+    <div class="tips">动态管理</div>
+    <div id="msgList"></div>
+    <div class="pg" id="msgPg"></div>
+  </div>`;
+}
+renderMsg.init = function() {
+  loadMsgs();
+};
+async function loadMsgs() {
+  const res = await get('/blogapi/admin/msgwithmarks', { page: msgPage, pagesize: 10 });
+  msgList = (res.result && res.result.data) || [];
+  msgTotal = (res.result && res.result.count) || 0;
+  renderMsgList();
+  renderMsgPagination();
+}
+function renderMsgList() {
+  const list = document.getElementById('msgList');
+  if (!msgList.length) { list.innerHTML = '<div style="text-align:center;color:#94a3b8;padding:2rem">暂无动态</div>'; return; }
+  list.innerHTML = msgList.map(item => {
+    const replies = item.replies ? item.replies.map(r =>
+      `<div class="reply-item"><strong>${r.name}:</strong> ${r.content}</div>`
+    ).join('') : '';
+    return `<div class="msg-card">
+      <div class="meta"><span>#${item.id} · ${item.name || '匿名'} · ${item.time || '-'}</span>
+        <button class="btn btn-r" data-id="${item.id}" data-act="del" style="padding:6px 12px;font-size:.8rem">${icons.trash}删除</button>
+      </div>
+      <div class="content">${item.content}</div>
+      ${replies ? `<div class="replies">${replies}</div>` : ''}
+    </div>`;
+  }).join('');
+  list.querySelectorAll('[data-act="del"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.id;
+      confirmDialog('删除动态', `确定删除动态 #${id} 吗？`, async () => {
+        const res = await post('/blogapi/msg/delete', { id });
+        if (res.result && res.result.status) { toast('删除成功'); loadMsgs(); }
+        else toast('删除失败', 'err');
+      });
+    });
+  });
+}
+function renderMsgPagination() {
+  const totalPages = Math.max(1, Math.ceil(msgTotal / 10));
+  const pg = document.getElementById('msgPg');
+  let html = `<button ${msgPage <= 1 ? 'disabled' : ''} data-p="${msgPage-1}">上一页</button>`;
+  for (let i = 1; i <= totalPages; i++) html += `<button class="${i === msgPage ? 'on' : ''}" data-p="${i}">${i}</button>`;
+  html += `<button ${msgPage >= totalPages ? 'disabled' : ''} data-p="${msgPage+1}">下一页</button>`;
+  pg.innerHTML = html;
+  pg.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => { msgPage = +btn.dataset.p; loadMsgs(); });
+  });
+}
+
+// ====== Info Page ======
+function renderInfo() {
+  return `<div class="sec on">
+    <div class="tips">个人信息设置</div>
+    <div class="fg"><label>昵称</label><input type="text" id="iName" value="${adminInfo.nickname || ''}"></div>
+    <div class="fg"><label>头像</label><input type="file" id="iImg" accept="image/*"><img id="iPreview" src="${adminInfo.headimg || '/img/default-avatar.jpg'}" style="width:80px;height:80px;border-radius:50%;margin-top:8px;object-fit:cover"></div>
+    <div class="fg"><label>旧密码</label><input type="password" id="iOldPw" placeholder="不修改密码请留空"></div>
+    <div class="fg"><label>新密码</label><input type="password" id="iNewPw" placeholder="不修改密码请留空"></div>
+    <div><button class="btn" id="iSubmit">保存修改</button></div>
+  </div>`;
+}
+renderInfo.init = function() {
+  document.getElementById('iImg').addEventListener('change', async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const res = await uploadImg(file);
+    if (res.result && res.result.status) {
+      document.getElementById('iPreview').src = res.result.data || URL.createObjectURL(file);
+      adminInfo.headimg = res.result.data || '';
+    }
+  });
+  document.getElementById('iSubmit').addEventListener('click', async () => {
+    const nickname = document.getElementById('iName').value.trim();
+    const oldPw = document.getElementById('iOldPw').value;
+    const newPw = document.getElementById('iNewPw').value;
+    const headimg = adminInfo.headimg;
+
+    const infoRes = await post('/blogapi/admin/modifyAdminInfo', { nickname, headimg });
+    if (infoRes.result && infoRes.result.status) {
+      adminInfo.nickname = nickname;
+      document.getElementById('userName').textContent = nickname;
+      toast('信息保存成功');
+    } else {
+      toast('信息保存失败', 'err');
+    }
+
+    if (oldPw && newPw) {
+      const pwRes = await post('/blogapi/admin/modifypw', { oldpw: oldPw, newpw: newPw });
+      if (pwRes.result && pwRes.result.status) {
+        toast('密码修改成功');
+        document.getElementById('iOldPw').value = '';
+        document.getElementById('iNewPw').value = '';
+      } else {
+        toast(pwRes.result ? pwRes.result.message : '密码修改失败', 'err');
+      }
+    }
+  });
+};
+
+// ====== Option Page ======
+function renderOption() {
+  return `<div class="sec on">
+    <div class="tips">系统设置</div>
+    <div class="fg"><label>文章默认每页条数</label><input type="number" id="oArtPages" placeholder="10"></div>
+    <div class="fg"><label>评论默认每页条数</label><input type="number" id="oCommPages" placeholder="10"></div>
+    <div class="fg"><label>评论默认昵称</label><input type="text" id="oCommName" placeholder="游客"></div>
+    <div class="fg"><label>评论默认回复昵称</label><input type="text" id="oReplyName" placeholder="博主"></div>
+    <div><button class="btn" id="oSubmit">保存设置</button></div>
+  </div>`;
+}
+renderOption.init = function() {
+  get('/blogapi/admin/options').then(res => {
+    if (res.result && res.result.status) {
+      const d = res.result.data || {};
+      document.getElementById('oArtPages').value = d.defaultArticlePages || '';
+      document.getElementById('oCommPages').value = d.defaultCommentPages || '';
+      document.getElementById('oCommName').value = d.defaultCommentName || '';
+      document.getElementById('oReplyName').value = d.defaultReplyName || '';
+    }
+  });
+  document.getElementById('oSubmit').addEventListener('click', async () => {
+    const artPages = document.getElementById('oArtPages').value;
+    const commPages = document.getElementById('oCommPages').value;
+    const commName = document.getElementById('oCommName').value;
+    const replyName = document.getElementById('oReplyName').value;
+
+    const r1 = await post('/blogapi/admin/setDefaultArticlePages', { defaultArticlePages: artPages });
+    const r2 = await post('/blogapi/admin/setDefaultCommentInfos', {
+      defaultCommentPages: commPages,
+      defaultCommentName: commName,
+      defaultReplyName: replyName
+    });
+
+    if ((r1.result && r1.result.status) && (r2.result && r2.result.status)) {
+      toast('设置保存成功');
+    } else {
+      toast('设置保存失败', 'err');
+    }
+  });
+};
+
+// ====== Markdown Parser ======
+function mdParse(text) {
+  if (!text) return '';
+  return text
+    .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+    .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+    .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+    .replace(/\*\*(.*)\*\*/gim, '<strong>$1</strong>')
+    .replace(/\*(.*)\*/gim, '<em>$1</em>')
+    .replace(/~~(.*)~~/gim, '<del>$1</del>')
+    .replace(/```([\s\S]*?)```/gim, '<pre><code>$1</code></pre>')
+    .replace(/`([^`]+)`/gim, '<code>$1</code>')
+    .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
+    .replace(/!\[([^\]]*)\]\(([^)]+)\)/gim, '<img alt="$1" src="$2">')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/gim, '<a href="$2">$1</a>')
+    .replace(/^\- (.*$)/gim, '<ul><li>$1</li></ul>')
+    .replace(/^\d+\. (.*$)/gim, '<ol><li>$1</li></ol>')
+    .replace(/\n/gim, '<br>');
+}
+
+// ====== Auth & Init ======
+async function checkLogin() {
+  const token = localStorage.getItem('token');
+  if (!token) { window.location.href = '/login'; return false; }
+  const res = await get('/blogapi/admin/isLogin', { token });
+  if (!res.result || !res.result.status) { window.location.href = '/login'; return false; }
+  return true;
+}
+
+async function getAdminInfo() {
+  const res = await get('/blogapi/admin/adminInfo', {});
+  if (res.result && res.result.status) {
+    const data = res.result.data;
+    adminInfo.nickname = data.nickname || '管理员';
+    adminInfo.headimg = data.head_img || '/img/default-avatar.jpg';
+    document.getElementById('userName').textContent = adminInfo.nickname;
+    document.getElementById('userImg').src = adminInfo.headimg;
+  }
+}
+
+document.getElementById('logoutBtn').addEventListener('click', async () => {
+  const token = localStorage.getItem('token');
+  if (!token) { window.location.href = '/login'; return; }
+  await get('/blogapi/admin/loginout', { token });
+  localStorage.removeItem('token');
+  window.location.href = '/login';
+});
+
+document.getElementById('toggleSb').addEventListener('click', () => {
+  sidebarCollapsed = !sidebarCollapsed;
+  document.getElementById('sidebar').classList.toggle('collapsed', sidebarCollapsed);
+});
+
+// Hash routing
+window.addEventListener('hashchange', () => {
+  const hash = window.location.hash.replace('#', '') || 'release';
+  if (hash !== currentSection) {
+    currentSection = hash;
+    renderMenu();
+    renderPage();
+  }
+});
+
+// Init
+checkLogin().then(ok => {
+  if (!ok) return;
+  getAdminInfo();
+  const hash = window.location.hash.replace('#', '') || 'release';
+  currentSection = hash;
+  renderMenu();
+  renderPage();
+});
+</script>
+</body>
+</html>

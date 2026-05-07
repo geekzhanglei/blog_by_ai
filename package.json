@@ -11,7 +11,8 @@
     },
     "dependencies": {
         "@astrojs/node": "latest",
-        "astro": "latest"
+        "astro": "latest",
+        "mavon-editor": "^2.10.4"
     },
     "devDependencies": {
         "typescript": "latest"
