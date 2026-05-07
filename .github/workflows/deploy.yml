@@ -12,6 +12,11 @@ on:
   pull_request:
     branches: [main]
 
+# 全局环境变量：强制 GitHub Actions 自身的 JS actions 在 Node.js 24 下运行
+# （解决“Node.js 20 actions are deprecated”警告，与项目构建用的 Node 版本无关）
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 # 禁用并发，防止多个部署同时运行
 concurrency:
   group: deploy-${{ github.ref }}
