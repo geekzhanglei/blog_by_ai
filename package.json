@@ -7,7 +7,15 @@
     "scripts": {
         "dev": "astro dev --host 0.0.0.0 --port 4321",
         "build": "astro build",
-        "preview": "astro preview --host 0.0.0.0 --port 4321"
+        "preview": "astro preview --host 0.0.0.0 --port 4321",
+        "start": "node ./dist/server/entry.mjs",
+        "pm2:start": "pm2 start ecosystem.config.cjs --env production",
+        "pm2:reload": "pm2 reload ecosystem.config.cjs --env production",
+        "pm2:stop": "pm2 stop ecosystem.config.cjs",
+        "pm2:delete": "pm2 delete ecosystem.config.cjs",
+        "pm2:logs": "pm2 logs blog-by-ai",
+        "pm2:status": "pm2 status",
+        "pm2:preview": "pnpm build && pm2 reload ecosystem.config.cjs --env production || pm2 start ecosystem.config.cjs --env production"
     },
     "dependencies": {
         "@astrojs/node": "latest",
