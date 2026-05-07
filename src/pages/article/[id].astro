@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getArticle } from '../../lib/api';
+import { addImageDimensions, formatTime, formatUnixTime } from '../../lib/utils';
+import type { ArticleComment, ArticleDetail } from '../../lib/types';
+
+const { id } = Astro.params;
+const response = id ? await getArticle(id) : null;
+const rawResult = response?.result as ArticleDetail | (ArticleDetail & { data?: ArticleDetail }) | undefined;
+const article = (rawResult && 'data' in rawResult && rawResult.data ? rawResult.data : rawResult) as ArticleDetail | undefined;
+const comments = (article?.comments || article?.marks || []) as ArticleComment[];
+const content = await addImageDimensions(article?.content || article?.cont || '');
+const introduction = await addImageDimensions(article?.introduction || '');
+const title = article?.title || '这里一片荒芜';
+const username = article?.username || '没作者';
+const createdAt = article?.created_at ? formatUnixTime(article.created_at, 'yyyy年MM月dd日 hh:mm:ss') : '';
+---
+<BaseLayout title={`${title} - 我的博客`} description={article?.introduction || '博客文章详情'}>
+  <div class="container">
+    <article class="article-wrap">
+      <header class="post-header">
+        <a href="/" class="back-link">← 返回列表</a>
+        <h1 class="post-title">{title}</h1>
+        <div class="post-meta">
+          <span class="meta-item">作者：{username}</span>
+          {createdAt && <><span class="meta-sep">·</span><span class="meta-item">{createdAt}</span></>}
+        </div>
+      </header>
+      {introduction && <div class="post-intro" set:html={introduction}></div>}
+      <div class="post-content" set:html={content || '没内容'}></div>
+      <footer class="post-footer">
+        <span class="copyright">版权所有，转载请注明出处</span>
+      </footer>
+      <section class="comment-section" id="comments">
+        <div class="comment-list">
+          <h3 class="comment-section__title">评论 <span class="comment-count">{comments.length}</span></h3>
+          {comments.length > 0 ? (
+            <ul class="comment-items">
+              {comments.map((item) => (
+                <li class="comment-item">
+                  <div class="comment-avatar"><span>{(item.nickname || '?').slice(0, 1).toUpperCase()}</span></div>
+                  <div class="comment-body">
+                    <div class="comment-meta">
+                      <span class="comment-author">
+                        {item.website ? <a href={item.website} target="_blank" rel="noopener noreferrer">{item.nickname}</a> : item.nickname}
+                      </span>
+                      <span class="comment-time">{typeof item.create_time === 'number' ? formatUnixTime(item.create_time, 'yyyy年MM月dd日 hh:mm:ss') : formatTime(Date.parse(item.create_time), 'yyyy年MM月dd日 hh:mm:ss')}</span>
+                    </div>
+                    <div class="comment-content markdown-body" set:html={item.content}></div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          ) : <p class="form-tip">还没有评论，来抢个沙发吧。</p>}
+        </div>
+        <form class="form-card" id="comment-form">
+          <h3 class="comment-section__title">发表评论</h3>
+          <input type="hidden" name="articleId" value={id} />
+          <div class="form-group">
+            <label for="comment-content">评论内容 <em class="required">*</em></label>
+            <textarea id="comment-content" name="content" rows="6" maxlength="1000" placeholder="分享您的看法…" required></textarea>
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="comment-nickname">您的大名 <em class="required">*</em></label>
+              <input id="comment-nickname" name="nickname" maxlength="12" required />
+            </div>
+            <div class="form-group">
+              <label for="comment-email">电子邮件 <em class="required">*</em></label>
+              <input id="comment-email" name="email" type="email" maxlength="30" required />
+            </div>
+            <div class="form-group">
+              <label for="comment-website">个人网址</label>
+              <input id="comment-website" name="website" placeholder="如：www.example.com" />
+            </div>
+          </div>
+          <p class="form-tip" data-form-tip></p>
+          <button class="btn-primary" type="submit">发表</button>
+        </form>
+      </section>
+    </article>
+  </div>
+</BaseLayout>
+
+<script>
+  const form = document.querySelector('#comment-form');
+  const tip = document.querySelector('[data-form-tip]');
+  form?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const data = new FormData(form);
+    const content = String(data.get('content') || '');
+    const nickname = String(data.get('nickname') || '');
+    const email = String(data.get('email') || '');
+    if (!content || content.length > 1000 || !nickname || nickname.length > 12 || !email) {
+      if (tip) tip.textContent = '请完整填写评论内容、昵称和邮箱';
+      return;
+    }
+    if (tip) tip.textContent = '提交中…';
+    const response = await fetch('/api/comment', { method: 'POST', body: data });
+    const json = await response.json().catch(() => null);
+    if (json?.result?.status) {
+      if (tip) tip.textContent = '评论成功，正在刷新页面…';
+      window.location.reload();
+    } else if (tip) {
+      tip.textContent = json?.result?.msg || '评论提交失败';
+    }
+  });
+</script>

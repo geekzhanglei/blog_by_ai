@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Pagination from '../components/Pagination.astro';
+import { getArticleList } from '../lib/api';
+import { formatUnixTime } from '../lib/utils';
+
+const currentPage = Math.max(1, Number(Astro.url.searchParams.get('page') || 1));
+const response = await getArticleList(currentPage);
+const result = response?.result;
+const items = result?.status ? result.data : [];
+const showPages = Boolean(result?.isPagination);
+const pageSize = Number(result?.perpage || items.length || 1);
+const total = Number(result?.rows || items.length || 0);
+---
+<BaseLayout title="连篇累牍 - 我的博客" description="记录技术成长与思考旅程">
+  <div class="index-wrap">
+    <div class="container">
+      <div class="page-header">
+        <h1 class="page-title">连篇累牍</h1>
+        <p class="page-desc">记录技术成长与思考旅程</p>
+      </div>
+      <div class="article-list">
+        {items.map((item) => (
+          <article class="article-card">
+            <div class="article-card__inner">
+              <div class="article-card__meta">
+                <time class="article-date" datetime={String(item.created_at)}>{formatUnixTime(item.created_at)}</time>
+              </div>
+              <h2 class="article-card__title">
+                <a href={`/article/${item.id}`}>{item.title}</a>
+              </h2>
+              <p class="article-card__excerpt" set:html={item.introduction}></p>
+              <div class="article-card__footer">
+                <a href={`/article/${item.id}`} class="read-more">阅读全文 →</a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+      {items.length === 0 && (
+        <div class="empty-state">
+          <div class="empty-icon">📝</div>
+          <p>暂无文章或接口暂时不可用</p>
+        </div>
+      )}
+      {showPages && <Pagination current={currentPage} total={total} pageSize={pageSize} basePath="/" />}
+    </div>
+  </div>
+</BaseLayout>

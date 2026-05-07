@@ -1,0 +1,27 @@
+---
+interface Props {
+  current: number;
+  total: number;
+  pageSize: number;
+  basePath?: string;
+}
+
+const { current, total, pageSize, basePath = '/' } = Astro.props;
+const pageCount = Math.max(1, Math.ceil(total / pageSize));
+const pages = Array.from({ length: pageCount }, (_, index) => index + 1).filter((page) => {
+  return page === 1 || page === pageCount || Math.abs(page - current) <= 2;
+});
+const toHref = (page: number) => page === 1 ? basePath : `${basePath}?page=${page}`;
+---
+{pageCount > 1 && (
+  <nav class="blog-page" aria-label="分页导航">
+    <a class:list={["page-link", { disabled: current <= 1 }]} href={current <= 1 ? undefined : toHref(current - 1)}>上一页</a>
+    {pages.map((page, index) => (
+      <>
+        {index > 0 && page - pages[index - 1] > 1 && <span class="page-ellipsis">…</span>}
+        <a class:list={["page-link", { active: page === current }]} href={toHref(page)}>{page}</a>
+      </>
+    ))}
+    <a class:list={["page-link", { disabled: current >= pageCount }]} href={current >= pageCount ? undefined : toHref(current + 1)}>下一页</a>
+  </nav>
+)}

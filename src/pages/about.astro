@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const stacks = [
+  {
+    title: 'Astro SSR + Koa2 + MySQL',
+    desc: '当前迁移版本：以 Astro 页面级 SSR 替代纯客户端渲染，提高首屏内容直出和 SEO 表现。',
+    tags: ['Astro', 'SSR', 'Fetch', 'Node Adapter'],
+    links: [{ url: 'https://astro.build/', label: 'Astro' }]
+  },
+  {
+    title: 'Vue CLI 3 + Koa2 + MySQL',
+    desc: '不想理解后端的前端不是好前端，重写了后端接口，对后端有了基础了解。',
+    tags: ['Vue', 'Element UI', 'Node.js', 'Koa2', 'MySQL'],
+    links: [
+      { url: 'https://github.com/geekzhanglei/blog_by_ai', label: '前端源码' },
+      { url: 'https://github.com/geekzhanglei/beta_mysql', label: '后端源码' }
+    ]
+  },
+  {
+    title: 'Nuxt.js + PHP + MySQL',
+    desc: '实践了 Vue 的服务端渲染 Nuxt.js，试图提高加载速度和 SEO。',
+    tags: ['Nuxt.js', 'SSR', 'PHP', 'MySQL'],
+    links: [{ url: 'https://github.com/geekzhanglei/blog-nuxt', label: '前端源码' }]
+  },
+  {
+    title: 'Vue CLI 2 + PHP + MySQL',
+    desc: '上 Vue 全家桶，抛弃 jQuery、Grunt，架构更清晰现代。',
+    tags: ['Vue', 'Vue Router', 'Vuex', 'Axios', 'PHP']
+  },
+  {
+    title: 'Seajs + Grunt + jQuery + Bootstrap',
+    desc: '初代博客，工作实践的技术堆砌，那个年代的前端标配。',
+    tags: ['Seajs', 'Grunt', 'jQuery', 'Bootstrap', 'PHP'],
+    links: [{ url: 'https://github.com/geekzhanglei/blogbeta', label: '初代源码' }]
+  }
+];
+---
+<BaseLayout title="关于博客 - 我的博客" description="关于这个博客和技术栈演进">
+  <div class="container about-page">
+    <div class="about-hero">
+      <div class="hero-avatar">
+        <img src="http://img.feroad.com/programmer.gif" alt="programmer" width="180" height="135" decoding="async" fetchpriority="high" />
+      </div>
+      <div class="hero-info">
+        <h1 class="hero-title">关于这个博客</h1>
+        <p class="hero-desc">一个为了学习和实践前后端技术而搭建的个人博客，记录成长轨迹。</p>
+        <div class="hero-links">
+          <a href="https://github.com/geekzhanglei/blog" target="_blank" rel="noopener noreferrer" class="link-btn">前端源码</a>
+          <a href="https://github.com/geekzhanglei/beta_koa2_mysql" target="_blank" rel="noopener noreferrer" class="link-btn link-btn--ghost">后端源码</a>
+        </div>
+      </div>
+    </div>
+    <div class="section-title">
+      <span class="section-icon">🗂</span>
+      <h2>技术栈演进</h2>
+    </div>
+    <div class="timeline">
+      {stacks.map((item, index) => (
+        <div class="timeline-item">
+          <div class:list={["timeline-dot", { current: index === 0 }]}><span>{stacks.length - index}</span></div>
+          <div class:list={["timeline-content", { "timeline-content--current": index === 0, "timeline-content--with-links": Boolean(item.links?.length) }]}>
+            {index === 0 && <div class="timeline-badge">当前版本</div>}
+            <h3 class="timeline-title">{item.title}</h3>
+            <p class="timeline-desc">{item.desc}</p>
+            <div class="timeline-tags">
+              {item.tags.map((tag) => <span class="tech-tag">{tag}</span>)}
+            </div>
+            {item.links && (
+              <div class="timeline-links">
+                {item.links.map((link) => <a href={link.url} target="_blank" rel="noopener noreferrer" class="timeline-link">{link.label}</a>)}
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

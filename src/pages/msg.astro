@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Pagination from '../components/Pagination.astro';
+import { getMsgList } from '../lib/api';
+import { formatUnixTime } from '../lib/utils';
+
+const currentPage = Math.max(1, Number(Astro.url.searchParams.get('page') || 1));
+const response = await getMsgList(currentPage);
+const result = response?.result;
+const list = result?.status ? result.data : [];
+const showPages = Boolean(result?.isPagination);
+const pageSize = Number(result?.perpage || list.length || 1);
+const total = Number(result?.rows || list.length || 0);
+---
+<BaseLayout title="微言大义 - 我的博客" description="博客动态与留言">
+  <div class="container">
+    <div class="msg-wrap">
+      <div class="msg-header">
+        <span class="header-badge">💬</span>
+        <h2>动态 | Words</h2>
+      </div>
+      <form class="form-card" id="msg-form">
+        <div class="form-group">
+          <label for="msg-content">有什么想说呢…</label>
+          <textarea id="msg-content" name="content" rows="4" maxlength="400" placeholder="有什么想说呢…" required></textarea>
+        </div>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="msg-username">昵称</label>
+            <input id="msg-username" name="username" maxlength="10" placeholder="默认值" />
+          </div>
+        </div>
+        <p class="form-tip" data-msg-tip></p>
+        <button class="btn-primary" type="submit">说点什么</button>
+      </form>
+      <div class="message-list">
+        {list.map((item) => (
+          <article class="message-item" data-message-id={item.id}>
+            <div class="message-meta">
+              <strong>{item.username}</strong>
+              <time>{formatUnixTime(item.created_at, 'yyyy年MM月dd日 hh:mm:ss')}</time>
+            </div>
+            <p class="message-text">{item.content}</p>
+            <div class="message-actions">
+              <button class="btn-ghost reply-toggle" type="button">回复</button>
+              {item.reply && item.reply.length > 0 && <span>回复 {item.reply.length}</span>}
+            </div>
+            <form class="reply-form" data-reply-form>
+              <input type="hidden" name="comment_id" value={item.id} />
+              <div class="form-group">
+                <label>回复内容</label>
+                <textarea name="content" rows="3" maxlength="200" placeholder="这里可以评论动态" required></textarea>
+              </div>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>昵称</label>
+                  <input name="username" maxlength="10" placeholder="默认值" />
+                </div>
+              </div>
+              <p class="form-tip" data-reply-tip></p>
+              <button class="btn-primary" type="submit">回复</button>
+            </form>
+            {item.reply && item.reply.length > 0 && (
+              <div class="reply-list">
+                {item.reply.map((answer) => (
+                  <div class="reply-item">
+                    <div class="message-meta">
+                      <strong>{answer.replyUserName || answer.username || '匿名'}</strong>
+                      {answer.createTime && <time>{formatUnixTime(answer.createTime, 'yyyy年MM月dd日 hh:mm:ss')}</time>}
+                    </div>
+                    <p class="message-text">{answer.content}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+          </article>
+        ))}
+      </div>
+      {list.length === 0 && (
+        <div class="empty-state">
+          <div class="empty-icon">💬</div>
+          <p>暂无动态或接口暂时不可用</p>
+        </div>
+      )}
+      {showPages && <Pagination current={currentPage} total={total} pageSize={pageSize} basePath="/msg" />}
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const msgForm = document.querySelector('#msg-form');
+  const msgTip = document.querySelector('[data-msg-tip]');
+  msgForm?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const data = new FormData(msgForm);
+    const content = String(data.get('content') || '');
+    if (!content || content.length > 400) {
+      if (msgTip) msgTip.textContent = '总得写点啥吧';
+      return;
+    }
+    if (!data.get('username')) data.set('username', '东方三侠');
+    if (msgTip) msgTip.textContent = '提交中…';
+    const response = await fetch('/api/msg', { method: 'POST', body: data });
+    const json = await response.json().catch(() => null);
+    if (json?.result?.status) window.location.reload();
+    else if (msgTip) msgTip.textContent = json?.result?.msg || '提交失败';
+  });
+
+  document.querySelectorAll('.reply-toggle').forEach((button) => {
+    button.addEventListener('click', () => {
+      const item = button.closest('.message-item');
+      item?.querySelector('[data-reply-form]')?.classList.toggle('open');
+    });
+  });
+
+  document.querySelectorAll('[data-reply-form]').forEach((form) => {
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const data = new FormData(form);
+      const tip = form.querySelector('[data-reply-tip]');
+      if (!data.get('username')) data.set('username', '东方三侠');
+      const content = String(data.get('content') || '');
+      if (!content || content.length > 200) {
+        if (tip) tip.textContent = '总得写点啥吧';
+        return;
+      }
+      if (tip) tip.textContent = '提交中…';
+      const response = await fetch('/api/reply', { method: 'POST', body: data });
+      const json = await response.json().catch(() => null);
+      if (json?.result?.status) window.location.reload();
+      else if (tip) tip.textContent = json?.result?.msg || '回复失败';
+    });
+  });
+</script>

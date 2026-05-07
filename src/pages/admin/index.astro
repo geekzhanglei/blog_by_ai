@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const cards = [
+  { href: '/admin/release', title: '发布文章', desc: '后续迁移 Markdown 编辑与图片上传。' },
+  { href: '/admin/delete', title: '文章管理', desc: '后续迁移文章列表、删除和分页。' },
+  { href: '/admin/comments', title: '评论管理', desc: '后续迁移评论检索与删除。' },
+  { href: '/admin/msg', title: '动态管理', desc: '后续迁移动动态管理与回复。' },
+  { href: '/admin/info', title: '个人信息', desc: '后续迁移昵称、头像与密码修改。' },
+  { href: '/admin/option', title: '系统设置', desc: '后续迁移分页和默认昵称配置。' }
+];
+---
+<BaseLayout title="管理后台 - 我的博客" description="博客管理后台">
+  <div class="container">
+    <div class="page-header">
+      <h1 class="page-title">博客管理后台</h1>
+      <p class="page-desc">Astro SSR 迁移版后台入口，复杂表单功能已保留迁移路径。</p>
+    </div>
+    <div class="admin-grid">
+      {cards.map((card) => (
+        <a class="admin-card" href={card.href}>
+          <h3>{card.title}</h3>
+          <p>{card.desc}</p>
+          <span class="read-more">进入 →</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

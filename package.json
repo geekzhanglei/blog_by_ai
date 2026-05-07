@@ -1,0 +1,19 @@
+{
+    "name": "blog-by-ai",
+    "type": "module",
+    "version": "0.1.0",
+    "private": true,
+    "packageManager": "pnpm@10.30.3",
+    "scripts": {
+        "dev": "astro dev --host 0.0.0.0 --port 4321",
+        "build": "astro build",
+        "preview": "astro preview --host 0.0.0.0 --port 4321"
+    },
+    "dependencies": {
+        "@astrojs/node": "latest",
+        "astro": "latest"
+    },
+    "devDependencies": {
+        "typescript": "latest"
+    }
+}

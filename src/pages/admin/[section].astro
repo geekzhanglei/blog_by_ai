@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AdminPlaceholder from '../../components/AdminPlaceholder.astro';
+
+const section = Astro.params.section || '';
+const sections: Record<string, { title: string; description: string }> = {
+  release: { title: '发布文章', description: '旧项目中的 mavon-editor 发布页需要进一步拆为客户端岛屿组件，这里先保留 SSR 路由。' },
+  delete: { title: '文章管理', description: '旧项目的文章删除页依赖后台文章列表接口，后续可迁移为 SSR 列表加服务端表单提交。' },
+  comments: { title: '评论管理', description: '旧项目的评论管理页依赖带评论文章列表和删除接口，后续可继续迁移。' },
+  msg: { title: '动态管理', description: '旧项目的动态管理页依赖管理态动态接口，后续可迁移检索、删除和分页。' },
+  info: { title: '个人信息', description: '旧项目的个人信息页依赖登录态与头像上传，后续可迁移为 Astro API Routes。' },
+  option: { title: '系统设置', description: '旧项目的分页配置和默认昵称设置可通过服务端表单迁移。' }
+};
+const item = sections[section] || { title: '后台页面', description: '该后台路由已保留，等待继续迁移。' };
+---
+<BaseLayout title={`${item.title} - 管理后台`} description={item.description}>
+  <div class="container">
+    <div class="page-header">
+      <h1 class="page-title">{item.title}</h1>
+      <p class="page-desc">{item.description}</p>
+    </div>
+    <AdminPlaceholder title={item.title} description={item.description} />
+  </div>
+</BaseLayout>

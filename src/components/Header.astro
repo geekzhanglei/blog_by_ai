@@ -1,0 +1,47 @@
+---
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '/' } = Astro.props;
+const links = [
+  { href: '/', label: '连篇累牍' },
+  { href: '/msg', label: '微言大义' },
+  { href: '/about', label: '关于博客' }
+];
+const isActive = (href: string) => href === '/' ? currentPath === '/' : currentPath.startsWith(href);
+---
+<header class="site-header">
+  <div class="header-inner">
+    <a class="header-brand" href="/login" aria-label="进入管理后台">
+      <span class="brand-icon">✦</span>
+      <span class="brand-name">我的博客</span>
+    </a>
+    <nav class="header-nav" aria-label="主导航">
+      {links.map((link) => (
+        <a class:list={["nav-link", { "nav-link--admin": link.admin, active: isActive(link.href) }]} href={link.href}>{link.label}</a>
+      ))}
+    </nav>
+    <button class="mobile-toggle" type="button" aria-label="打开菜单" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu">
+    {links.map((link) => <a class:list={["mobile-link", { active: isActive(link.href) }]} href={link.href}>{link.label}</a>)}
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector('.mobile-toggle');
+  const menu = document.querySelector('.mobile-menu');
+  toggle?.addEventListener('click', () => {
+    const opened = toggle.classList.toggle('active');
+    menu?.classList.toggle('open', opened);
+    toggle.setAttribute('aria-expanded', String(opened));
+  });
+  menu?.addEventListener('click', () => {
+    toggle?.classList.remove('active');
+    menu.classList.remove('open');
+    toggle?.setAttribute('aria-expanded', 'false');
+  });
+</script>
