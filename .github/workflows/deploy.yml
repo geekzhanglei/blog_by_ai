@@ -85,7 +85,20 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: ${{ secrets.SERVER_PORT || '22' }}
           script_stop: true
+          # 显式传入用户 HOME，便于加载 nvm/pnpm/pm2 的安装路径
+          envs: HOME
           script: |
+            # ☀️ 关键：ssh-action 是非交互式 shell，不会自动加载 .zshrc/.bashrc
+            # 手动 source nvm（如果用 nvm 装的 Node）
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+            # 兄弟 corepack/pnpm/pm2 常见安装路径都加到 PATH
+            export PATH="$HOME/.local/share/pnpm:/usr/local/bin:/usr/bin:$PATH"
+            # 调试用：确认工具链可用
+            echo "node : $(command -v node) $(node -v 2>/dev/null || echo missing)"
+            echo "pnpm : $(command -v pnpm) $(pnpm -v 2>/dev/null || echo missing)"
+            echo "pm2  : $(command -v pm2) $(pm2 -v 2>/dev/null || echo missing)"
+
             cd /opt/blog-by-ai
             # 备份旧版本（保留最近5个）
             mkdir -p backups
