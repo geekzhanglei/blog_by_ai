@@ -74,18 +74,30 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            # 1. 进入服务器上的项目目录
-            cd /www/frontEnd/blog_by_ai
+            # 用 bash -l (登录 shell) 执行所有命令，自动加载 .bash_profile/.profile/.bashrc，
+            # 彻底解决 ssh-action 非交互式 shell 下 PATH 丢失的问题。
+            bash -l <<'EOF'
+            set -e
 
-            # 2. 从 GitHub 拉取最新代码
-            git pull origin main
-
-            # 3. 加载 NVM 环境 (ssh-action 是非交互式 shell，需手动 source)
+            # 1. 加载 NVM（即使 .profile 没加载到，手动再 source 一次）
             export NVM_DIR="/root/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+            # 兑底：把 pnpm 常见的独立安装路径也加到 PATH
+            export PNPM_HOME="$HOME/.local/share/pnpm"
+            export PATH="$PNPM_HOME:/usr/local/bin:$PATH"
+
+            # 2. 调试输出：确认工具链可用
+            echo "node: $(command -v node) $(node -v 2>/dev/null)"
+            echo "pnpm: $(command -v pnpm) $(pnpm -v 2>/dev/null)"
+            echo "pm2 : $(command -v pm2)  $(pm2 -v 2>/dev/null)"
+
+            # 3. 进入项目目录并拉取最新代码
+            cd /www/frontEnd/blog_by_ai
+            git pull origin main
 
             # 4. 安装依赖 + 构建 + 重启 pm2
             pnpm install --frozen-lockfile
             pnpm build
             pnpm pm2:reload || pnpm pm2:start
             pm2 save
+            EOF
