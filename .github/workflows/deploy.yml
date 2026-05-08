@@ -1,121 +1,91 @@
 # ============================================================
-# GitHub Actions CI/CD 配置
-# 触发条件：main 分支的 push 或 pull_request
-# 功能：pnpm 构建 -> 上传到服务器 -> pm2 重启
+# GitHub Actions CI/CD 配置 (参考 beta_mysql/ci.yml 模式)
+# 策略：不用 scp 上传产物，改为在服务器上 git pull + 本地构建 + pm2 重启
+# 优势：彻底避开 scp-action 的 handshake EOF 问题，只用 1 次 SSH 会话
 # ============================================================
 
-name: Deploy to Server
+name: Node.js CI
 
+# 触发条件：main 分支的 push 或 pull_request
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
 
-# 全局环境变量：强制 GitHub Actions 自身的 JS actions 在 Node.js 24 下运行
-# （解决“Node.js 20 actions are deprecated”警告，与项目构建用的 Node 版本无关）
+# 强制 GitHub Actions 自身的 JS actions 在 Node.js 24 下运行
+# （解决 "Node.js 20 actions are deprecated" 警告）
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
-# 禁用并发，防止多个部署同时运行
-concurrency:
-  group: deploy-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
-  build-and-deploy:
-    name: Build & Deploy
+  # ==========================================================
+  # 任务 A: 构建校验 (只验证代码能正常安装依赖并构建通过)
+  # ==========================================================
+  build:
+    name: Build Check
     runs-on: ubuntu-latest
-    # 仅当 push 到 main 时才执行部署（PR 只构建不部署）
-    if: github.event_name == 'push' || github.event.pull_request.merged == true
 
     steps:
-      # ---------- 1. 检出代码 ----------
-      - name: Checkout repository
+      # 1. 检出代码
+      - name: Checkout
         uses: actions/checkout@v4
 
-      # ---------- 2. 安装 pnpm ----------
+      # 2. 安装 pnpm
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 10.30.3
           run_install: false
 
-      # ---------- 3. 安装 Node.js ----------
+      # 3. 安装 Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '22'
           cache: 'pnpm'
 
-      # ---------- 4. 安装依赖 ----------
+      # 4. 安装依赖 (--frozen-lockfile 确保版本锁定)
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      # ---------- 5. 构建项目 ----------
+      # 5. 构建验证 (确保代码可构建，不上传产物)
       - name: Build Astro project
         run: pnpm build
 
-      # ---------- 6. 打包构建产物 ----------
-      - name: Package dist
-        run: |
-          tar -czf deploy.tar.gz \
-            dist/ \
-            package.json \
-            pnpm-lock.yaml \
-            ecosystem.config.cjs
+  # ==========================================================
+  # 任务 B: 部署到服务器 (CD 持续部署)
+  # ==========================================================
+  deploy:
+    name: Deploy to Server
+    # 依赖关系：build 通过后才部署
+    needs: build
+    # 限制：只有 main 分支 push 时才部署 (PR 只跑 build 不部署)
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
 
-      # ---------- 7. 上传构建产物到服务器 ----------
-      - name: Upload to server
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          port: ${{ secrets.SERVER_PORT || '22' }}
-          source: deploy.tar.gz
-          target: /opt/blog-by-ai/
+    runs-on: ubuntu-latest
 
-      # ---------- 8. 在服务器上解压并重启 ----------
-      - name: Deploy & restart on server
+    steps:
+      # SSH 登录服务器执行部署 (单次 SSH 会话，最稳)
+      - name: Deploy to Server
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USERNAME }}
+          username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
-          port: ${{ secrets.SERVER_PORT || '22' }}
-          script_stop: true
-          # 显式传入用户 HOME，便于加载 nvm/pnpm/pm2 的安装路径
-          envs: HOME
           script: |
-            # ☀️ 关键：ssh-action 是非交互式 shell，不会自动加载 .zshrc/.bashrc
-            # 手动 source nvm（如果用 nvm 装的 Node）
-            export NVM_DIR="$HOME/.nvm"
+            # 1. 进入服务器上的项目目录
+            cd /www/frontEnd/blog_by_ai
+
+            # 2. 从 GitHub 拉取最新代码
+            git pull origin main
+
+            # 3. 加载 NVM 环境 (ssh-action 是非交互式 shell，需手动 source)
+            export NVM_DIR="/root/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-            # 兄弟 corepack/pnpm/pm2 常见安装路径都加到 PATH
-            export PATH="$HOME/.local/share/pnpm:/usr/local/bin:/usr/bin:$PATH"
-            # 调试用：确认工具链可用
-            echo "node : $(command -v node) $(node -v 2>/dev/null || echo missing)"
-            echo "pnpm : $(command -v pnpm) $(pnpm -v 2>/dev/null || echo missing)"
-            echo "pm2  : $(command -v pm2) $(pm2 -v 2>/dev/null || echo missing)"
 
-            cd /opt/blog-by-ai
-            # 备份旧版本（保留最近5个）
-            mkdir -p backups
-            [ -d dist ] && tar -czf backups/dist-$(date +%Y%m%d-%H%M%S).tar.gz dist/ 2>/dev/null || true
-            ls -t backups/ | tail -n +6 | xargs -r rm -f
-
-            # 解压新版本
-            tar -xzf deploy.tar.gz
-            rm deploy.tar.gz
-
-            # 安装生产依赖（精简安装，不装 devDependencies）
-            pnpm install --prod --frozen-lockfile
-
-            # 用 pm2 启动或重启（零停机 reload）
-            pm2 reload ecosystem.config.cjs --env production || pm2 start ecosystem.config.cjs --env production
-
-            # 保存 pm2 进程列表（服务器重启后自动恢复）
+            # 4. 安装依赖 + 构建 + 重启 pm2
+            pnpm install --frozen-lockfile
+            pnpm build
+            pnpm pm2:reload || pnpm pm2:start
             pm2 save
-
-            echo "✅ 部署完成，端口 4321"
