@@ -13,11 +13,11 @@ module.exports = {
       script: './dist/server/entry.mjs',
       interpreter: nodeInterpreter,
 
-      // 运行实例数：max = CPU 核心数，适合多核服务器
-      instances: 'max',
+      // 运行实例数
+      instances: 1,
 
-      // 执行模式：cluster 模式支持多实例负载均衡
-      exec_mode: 'cluster',
+      // 执行模式：fork 模式会按 interpreter 启动目标 Node 版本
+      exec_mode: 'fork',
 
       // 环境变量
       env: {
