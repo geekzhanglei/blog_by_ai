@@ -237,7 +237,7 @@ const icons = {
 
 // ====== API Helpers ======
 function getToken() {
-  return localStorage.getItem('token') || '';
+  return '';
 }
 
 function api(url, opts = {}) {
@@ -252,7 +252,7 @@ function api(url, opts = {}) {
     body = new URLSearchParams(body);
   }
 
-  return fetch(`${API}${url}`, { ...opts, headers, body }).then(r => r.json());
+  return fetch(`${API}${url}`, { ...opts, headers, body, credentials: 'same-origin' }).then(r => r.json());
 }
 
 function get(url, params) {
@@ -703,11 +703,11 @@ function renderOption() {
 renderOption.init = function() {
   get('/blogapi/admin/options').then(res => {
     if (res.result && res.result.status) {
-      const d = res.result.data || {};
-      document.getElementById('oArtPages').value = d.defaultArticlePages || '';
-      document.getElementById('oCommPages').value = d.defaultCommentPages || '';
-      document.getElementById('oCommName').value = d.defaultCommentName || '';
-      document.getElementById('oReplyName').value = d.defaultReplyName || '';
+      const d = res.result || {};
+      document.getElementById('oArtPages').value = d.articlePerPage || '';
+      document.getElementById('oCommPages').value = d.msgPerPage || '';
+      document.getElementById('oCommName').value = d.msgName || '';
+      document.getElementById('oReplyName').value = d.msgReplyName || '';
     }
   });
   document.getElementById('oSubmit').addEventListener('click', async () => {
@@ -716,9 +716,10 @@ renderOption.init = function() {
     const commName = document.getElementById('oCommName').value;
     const replyName = document.getElementById('oReplyName').value;
 
-    const r1 = await post('/blogapi/admin/setDefaultArticlePages', { defaultArticlePages: artPages });
+    const r1 = await post('/blogapi/admin/setDefaultArticlePages', { ispage: 'true', perpage: artPages });
     const r2 = await post('/blogapi/admin/setDefaultCommentInfos', {
-      defaultCommentPages: commPages,
+      ispage: 'true',
+      perpage: commPages,
       defaultCommentName: commName,
       defaultReplyName: replyName
     });
@@ -753,9 +754,7 @@ function mdParse(text) {
 
 // ====== Auth & Init ======
 async function checkLogin() {
-  const token = localStorage.getItem('token');
-  if (!token) { window.location.href = '/login'; return false; }
-  const res = await get('/blogapi/admin/isLogin', { token });
+  const res = await get('/blogapi/admin/isLogin', {});
   if (!res.result || !res.result.status) { window.location.href = '/login'; return false; }
   return true;
 }
@@ -775,10 +774,7 @@ async function getAdminInfo() {
 }
 
 document.getElementById('logoutBtn').addEventListener('click', async () => {
-  const token = localStorage.getItem('token');
-  if (!token) { window.location.href = '/login'; return; }
-  await get('/blogapi/admin/loginout', { token });
-  localStorage.removeItem('token');
+  await get('/blogapi/admin/loginout', {});
   window.location.href = '/login';
 });
 

@@ -1,11 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getArticle } from '../../lib/api';
+import { getArticle, getBlogOptions } from '../../lib/api';
 import { addImageDimensions, formatTime, formatUnixTime } from '../../lib/utils';
 import type { ArticleComment, ArticleDetail } from '../../lib/types';
 
 const { id } = Astro.params;
-const response = id ? await getArticle(id) : null;
+const [response, optionResponse] = await Promise.all([
+  id ? getArticle(id) : null,
+  getBlogOptions()
+]);
+const defaultNickname = optionResponse?.result?.msgName || '匿名';
+const defaultEmail = 'nobody@no.body';
 type ArticleDetailResult = ArticleDetail & {
   data?: ArticleDetail;
   comments?: ArticleComment[];
@@ -76,11 +81,11 @@ function formatCommentTime(value: ArticleComment['create_time']) {
           <div class="form-grid">
             <div class="form-group">
               <label for="comment-nickname">您的大名 <em class="required">*</em></label>
-              <input id="comment-nickname" name="nickname" maxlength="12" required />
+              <input id="comment-nickname" name="nickname" maxlength="12" value={defaultNickname} required />
             </div>
             <div class="form-group">
               <label for="comment-email">电子邮件 <em class="required">*</em></label>
-              <input id="comment-email" name="email" type="email" maxlength="30" required />
+              <input id="comment-email" name="email" type="email" maxlength="30" value={defaultEmail} required />
             </div>
             <div class="form-group">
               <label for="comment-website">个人网址</label>

@@ -1,16 +1,21 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Pagination from '../components/Pagination.astro';
-import { getMsgList } from '../lib/api';
+import { getBlogOptions, getMsgList } from '../lib/api';
 import { formatUnixTime } from '../lib/utils';
 
 const currentPage = Math.max(1, Number(Astro.url.searchParams.get('page') || 1));
-const response = await getMsgList(currentPage);
+const [response, optionResponse] = await Promise.all([
+  getMsgList(currentPage),
+  getBlogOptions()
+]);
 const result = response?.result;
 const list = result?.status ? result.data : [];
 const showPages = Boolean(result?.isPagination);
 const pageSize = Number(result?.perpage || list.length || 1);
 const total = Number(result?.rows || list.length || 0);
+const defaultMsgName = optionResponse?.result?.msgName || '匿名';
+const defaultReplyName = optionResponse?.result?.msgReplyName || defaultMsgName;
 ---
 <BaseLayout title="微言大义 - 我的博客" description="博客动态与留言">
   <div class="container">
@@ -27,7 +32,7 @@ const total = Number(result?.rows || list.length || 0);
         <div class="form-grid">
           <div class="form-group">
             <label for="msg-username">昵称</label>
-            <input id="msg-username" name="username" maxlength="10" placeholder="默认值" />
+            <input id="msg-username" name="username" maxlength="10" value={defaultMsgName} />
           </div>
         </div>
         <p class="form-tip" data-msg-tip></p>
@@ -54,7 +59,7 @@ const total = Number(result?.rows || list.length || 0);
               <div class="form-grid">
                 <div class="form-group">
                   <label>昵称</label>
-                  <input name="username" maxlength="10" placeholder="默认值" />
+                  <input name="username" maxlength="10" value={defaultReplyName} />
                 </div>
               </div>
               <p class="form-tip" data-reply-tip></p>
@@ -98,7 +103,6 @@ const total = Number(result?.rows || list.length || 0);
       if (msgTip) msgTip.textContent = '总得写点啥吧';
       return;
     }
-    if (!data.get('username')) data.set('username', '东方三侠');
     if (msgTip) msgTip.textContent = '提交中…';
     const response = await fetch('/api/msg', { method: 'POST', body: data });
     const json = await response.json().catch(() => null);
@@ -118,7 +122,6 @@ const total = Number(result?.rows || list.length || 0);
       event.preventDefault();
       const data = new FormData(form);
       const tip = form.querySelector('[data-reply-tip]');
-      if (!data.get('username')) data.set('username', '东方三侠');
       const content = String(data.get('content') || '');
       if (!content || content.length > 200) {
         if (tip) tip.textContent = '总得写点啥吧';

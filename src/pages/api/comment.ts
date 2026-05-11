@@ -1,11 +1,12 @@
 import type { APIRoute } from 'astro';
-import { addArticleComment } from '../../lib/api';
+import { addArticleComment, getBlogOptions } from '../../lib/api';
 
 export const POST: APIRoute = async ({ request }) => {
   const form = await request.formData();
   const articleId = String(form.get('articleId') || '');
-  const nickname = String(form.get('nickname') || '');
-  const email = String(form.get('email') || '');
+  const options = await getBlogOptions();
+  const nickname = String(form.get('nickname') || options?.result?.msgName || '匿名');
+  const email = String(form.get('email') || 'nobody@no.body');
   const website = String(form.get('website') || '');
   const content = String(form.get('content') || '');
 

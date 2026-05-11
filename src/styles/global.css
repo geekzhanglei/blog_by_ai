@@ -219,7 +219,8 @@ button { cursor: pointer; }
 .login-subtitle { min-height: 1.4em; font-size: 0.85rem; line-height: 1.4; color: rgba(255,255,255,0.75); }
 .login-card__body { min-height: 318px; padding: 2rem; }
 .login-tips { font-size: 0.82rem; line-height: 1.2; color: #6b7280; text-align: center; margin: 0 0 1.25rem; min-height: 1.2em; }
-.login-btns { display: flex; gap: 10px; min-height: 40px; }
+.login-btns { display: flex; justify-content: center; gap: 10px; min-height: 40px; }
+.login-btns .btn-primary { min-width: 180px; border-radius: 10px; }
 
 .admin-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
 .admin-card { min-height: 150px; padding: 1.25rem; background: #fff; border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow-sm); font-family: var(--font-sans); }

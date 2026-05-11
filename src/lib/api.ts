@@ -67,6 +67,19 @@ export function getMsgList(curpage = 1) {
   return request<ApiEnvelope<PaginationResult<BlogMessage>>>('/blogapi/msg', undefined, { curpage });
 }
 
+export function getBlogOptions() {
+  return request<ApiEnvelope<{
+    articleIsPage?: boolean;
+    articlePerPage?: number | string;
+    msgIsPage?: boolean;
+    msgPerPage?: number | string;
+    msgName?: string;
+    msgReplyName?: string;
+    status?: boolean | number;
+    msg?: string;
+  }>>('/blogapi/admin/options');
+}
+
 export function addArticleComment(data: {
   articleId: string | number;
   nickname: string;
@@ -77,11 +90,11 @@ export function addArticleComment(data: {
   return postForm<ApiEnvelope<{ status: boolean; msg?: string }>>('/blogapi/article/marks/add', data);
 }
 
-export function addMsg(data: { username: string; content: string }) {
+export function addMsg(data: { username?: string; content: string }) {
   return postForm<ApiEnvelope<{ status: boolean; msg?: string }>>('/blogapi/msg/add', data);
 }
 
-export function addReplyMsg(data: { comment_id: string | number; username: string; content: string }) {
+export function addReplyMsg(data: { comment_id: string | number; username?: string; content: string }) {
   return postForm<ApiEnvelope<{ status: boolean; msg?: string }>>('/blogapi/msg/replyadd', data);
 }
 

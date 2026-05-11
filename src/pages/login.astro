@@ -48,7 +48,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     const response = await fetch('/api/login', { method: 'POST', body: data });
     const json = await response.json().catch(() => null);
     if (json?.result?.status) {
-      localStorage.setItem('token', json.result.token || '');
+      localStorage.removeItem('token');
       window.location.href = '/admin';
     } else if (tip) {
       tip.classList.add('error');
