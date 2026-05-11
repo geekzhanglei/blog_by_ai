@@ -1,6 +1,8 @@
 // PM2 配置文件 —— 用于生产环境守护 Node 进程
 // 用法：pm2 start ecosystem.config.cjs --env production
 
+const nodeInterpreter = process.env.PM2_NODE_INTERPRETER || 'node';
+
 module.exports = {
   apps: [
     {
@@ -9,6 +11,7 @@ module.exports = {
 
       // 入口文件（Astro @astrojs/node standalone 模式构建产物）
       script: './dist/server/entry.mjs',
+      interpreter: nodeInterpreter,
 
       // 运行实例数：max = CPU 核心数，适合多核服务器
       instances: 'max',

@@ -85,6 +85,7 @@ jobs:
             # 兑底：把 pnpm 常见的独立安装路径也加到 PATH
             export PNPM_HOME="$HOME/.local/share/pnpm"
             export PATH="$PNPM_HOME:/usr/local/bin:$PATH"
+            export PM2_NODE_INTERPRETER="/root/.nvm/versions/node/v24.15.0/bin/node"
 
             # 2. 调试输出：确认工具链可用
             echo "node: $(command -v node) $(node -v 2>/dev/null)"
@@ -98,6 +99,7 @@ jobs:
             # 4. 安装依赖 + 构建 + 重启 pm2
             pnpm install --frozen-lockfile
             pnpm build
+            mkdir -p logs
             pnpm pm2:reload || pnpm pm2:start
             pm2 save
             EOF
