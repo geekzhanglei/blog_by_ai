@@ -10,6 +10,11 @@ export default defineConfig({
 		port: 4321,
 		host: true,
 	},
+	vite: {
+		server: {
+			allowedHosts: ["dev-blog.feroad.com"],
+		},
+	},
 	security: {
 		allowedDomains: [
 			{
