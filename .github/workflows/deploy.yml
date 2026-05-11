@@ -100,6 +100,7 @@ jobs:
             pnpm install --frozen-lockfile
             pnpm build
             mkdir -p logs
-            pnpm pm2:reload || pnpm pm2:start
+            pm2 delete blog-by-ai || true
+            pnpm pm2:start
             pm2 save
             EOF
