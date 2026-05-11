@@ -6,14 +6,27 @@ import type { ArticleComment, ArticleDetail } from '../../lib/types';
 
 const { id } = Astro.params;
 const response = id ? await getArticle(id) : null;
-const rawResult = response?.result as ArticleDetail | (ArticleDetail & { data?: ArticleDetail }) | undefined;
-const article = (rawResult && 'data' in rawResult && rawResult.data ? rawResult.data : rawResult) as ArticleDetail | undefined;
-const comments = (article?.comments || article?.marks || []) as ArticleComment[];
+type ArticleDetailResult = ArticleDetail & {
+  data?: ArticleDetail;
+  comments?: ArticleComment[];
+  marks?: ArticleComment[];
+};
+
+const rawResult = response?.result as ArticleDetailResult | undefined;
+const article = (rawResult?.data || rawResult) as ArticleDetail | undefined;
+const comments = (rawResult?.comments || rawResult?.marks || article?.comments || article?.marks || []) as ArticleComment[];
 const content = await addImageDimensions(article?.content || article?.cont || '');
 const introduction = await addImageDimensions(article?.introduction || '');
 const title = article?.title || '这里一片荒芜';
 const username = article?.username || '没作者';
 const createdAt = article?.created_at ? formatUnixTime(article.created_at, 'yyyy年MM月dd日 hh:mm:ss') : '';
+
+function formatCommentTime(value: ArticleComment['create_time']) {
+  if (!value) return '时间不详';
+  if (typeof value === 'number') return formatUnixTime(value, 'yyyy年MM月dd日 hh:mm:ss') || '时间不详';
+  const timestamp = Date.parse(value);
+  return Number.isFinite(timestamp) ? formatTime(timestamp, 'yyyy年MM月dd日 hh:mm:ss') : '时间不详';
+}
 ---
 <BaseLayout title={`${title} - 我的博客`} description={article?.introduction || '博客文章详情'}>
   <div class="container">
@@ -44,7 +57,7 @@ const createdAt = article?.created_at ? formatUnixTime(article.created_at, 'yyyy
                       <span class="comment-author">
                         {item.website ? <a href={item.website} target="_blank" rel="noopener noreferrer">{item.nickname}</a> : item.nickname}
                       </span>
-                      <span class="comment-time">{typeof item.create_time === 'number' ? formatUnixTime(item.create_time, 'yyyy年MM月dd日 hh:mm:ss') : formatTime(Date.parse(item.create_time), 'yyyy年MM月dd日 hh:mm:ss')}</span>
+                      <span class="comment-time">{formatCommentTime(item.create_time)}</span>
                     </div>
                     <div class="comment-content markdown-body" set:html={item.content}></div>
                   </div>
