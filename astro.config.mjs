@@ -10,4 +10,12 @@ export default defineConfig({
 		port: 4321,
 		host: true,
 	},
+	security: {
+		allowedDomains: [
+			{
+				protocol: "https",
+				hostname: "blog.feroad.com",
+			},
+		],
+	},
 });
