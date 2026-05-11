@@ -1,6 +1,23 @@
 import type { APIRoute } from 'astro';
 
 const UPLOAD_URL = 'https://api.feroad.com/upload';
+const PUBLIC_IMAGE_ORIGIN = 'https://api.feroad.com';
+
+function publicImageUrl(url: string) {
+  if (!url) return '';
+  try {
+    const parsed = new URL(url);
+    if (parsed.hostname === '127.0.0.1' || parsed.hostname === 'localhost') {
+      return `${PUBLIC_IMAGE_ORIGIN}${parsed.pathname}`;
+    }
+    if (parsed.protocol === 'http:') {
+      parsed.protocol = 'https:';
+    }
+    return parsed.toString();
+  } catch {
+    return url.startsWith('/') ? `${PUBLIC_IMAGE_ORIGIN}${url}` : url;
+  }
+}
 
 export const POST: APIRoute = async ({ request }) => {
   const form = await request.formData();
@@ -30,7 +47,7 @@ export const POST: APIRoute = async ({ request }) => {
     return Response.json({
       result: {
         status: true,
-        data: data.imgUrl,
+        data: publicImageUrl(data.imgUrl),
         msg: data.message || '上传成功',
       },
     });
