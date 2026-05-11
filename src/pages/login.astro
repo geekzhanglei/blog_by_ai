@@ -23,7 +23,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="login-tips" data-login-tip>内测，仅允许管理员登陆</div>
           <div class="login-btns">
             <button class="btn-primary" type="submit">登 录</button>
-            <a class="btn-ghost" href="/admin">游客登录</a>
           </div>
         </form>
       </div>
@@ -34,12 +33,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <script>
   const form = document.querySelector('#login-form');
   const tip = document.querySelector('[data-login-tip]');
+  const submit = form?.querySelector('button[type="submit"]');
   form?.addEventListener('submit', async (event) => {
     event.preventDefault();
     const data = new FormData(form);
     if (tip) {
       tip.classList.remove('error');
       tip.textContent = '登录中…';
+    }
+    if (submit) {
+      submit.disabled = true;
+      submit.textContent = '登录中…';
     }
     const response = await fetch('/api/login', { method: 'POST', body: data });
     const json = await response.json().catch(() => null);
@@ -49,6 +53,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     } else if (tip) {
       tip.classList.add('error');
       tip.textContent = json?.result?.msg || '账号或密码错误';
+    }
+    if (submit) {
+      submit.disabled = false;
+      submit.textContent = '登 录';
     }
   });
 </script>
