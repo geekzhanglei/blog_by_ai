@@ -206,7 +206,6 @@ tbody tr:hover td{background:#fbfdff}
 
 <script>
 const API = 'https://blog.feroad.com';
-const IMGAPI = 'https://api.feroad.com';
 let adminInfo = { nickname: '管理员', headimg: '/default-avatar.svg' };
 let currentSection = 'release';
 let sidebarCollapsed = false;
@@ -278,7 +277,7 @@ function post(url, data) {
 function uploadImg(file) {
   const fd = new FormData();
   fd.append('file', file);
-  return fetch(`${IMGAPI}/upload`, { method: 'POST', body: fd }).then(r => r.json());
+  return fetch('/api/upload', { method: 'POST', body: fd }).then(r => r.json());
 }
 
 function normalizeImageUrl(src) {
