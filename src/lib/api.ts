@@ -71,6 +71,7 @@ export function getBlogOptions() {
   return request<ApiEnvelope<{
     articleIsPage?: boolean;
     articlePerPage?: number | string;
+    articleCommentName?: string;
     msgIsPage?: boolean;
     msgPerPage?: number | string;
     msgName?: string;

@@ -34,6 +34,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   const form = document.querySelector('#login-form');
   const tip = document.querySelector('[data-login-tip]');
   const submit = form?.querySelector('button[type="submit"]');
+
+  async function redirectIfLoggedIn() {
+    const response = await fetch('/blogapi/admin/isLogin', { credentials: 'same-origin' }).catch(() => null);
+    const json = await response?.json().catch(() => null);
+    if (json?.result?.status) {
+      window.location.replace('/admin');
+    }
+  }
+
+  redirectIfLoggedIn();
+
   form?.addEventListener('submit', async (event) => {
     event.preventDefault();
     const data = new FormData(form);

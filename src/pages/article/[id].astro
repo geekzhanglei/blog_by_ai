@@ -9,7 +9,7 @@ const [response, optionResponse] = await Promise.all([
   id ? getArticle(id) : null,
   getBlogOptions()
 ]);
-const defaultNickname = optionResponse?.result?.msgName || '匿名';
+const defaultNickname = optionResponse?.result?.articleCommentName || '匿名';
 const defaultEmail = 'nobody@no.body';
 type ArticleDetailResult = ArticleDetail & {
   data?: ArticleDetail;

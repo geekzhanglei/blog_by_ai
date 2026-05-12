@@ -695,8 +695,9 @@ function renderOption() {
     <div class="tips">系统设置</div>
     <div class="fg"><label>文章默认每页条数</label><input type="number" id="oArtPages" placeholder="10"></div>
     <div class="fg"><label>评论默认每页条数</label><input type="number" id="oCommPages" placeholder="10"></div>
-    <div class="fg"><label>评论默认昵称</label><input type="text" id="oCommName" placeholder="游客"></div>
-    <div class="fg"><label>评论默认回复昵称</label><input type="text" id="oReplyName" placeholder="博主"></div>
+    <div class="fg"><label>文章评论默认昵称</label><input type="text" id="oArticleCommName" placeholder="匿名"></div>
+    <div class="fg"><label>微言大义默认昵称</label><input type="text" id="oCommName" placeholder="匿名"></div>
+    <div class="fg"><label>微言大义回复默认昵称</label><input type="text" id="oReplyName" placeholder="匿名"></div>
     <div><button class="btn" id="oSubmit">保存设置</button></div>
   </div>`;
 }
@@ -706,6 +707,7 @@ renderOption.init = function() {
       const d = res.result || {};
       document.getElementById('oArtPages').value = d.articlePerPage || '';
       document.getElementById('oCommPages').value = d.msgPerPage || '';
+      document.getElementById('oArticleCommName').value = d.articleCommentName || '';
       document.getElementById('oCommName').value = d.msgName || '';
       document.getElementById('oReplyName').value = d.msgReplyName || '';
     }
@@ -713,6 +715,7 @@ renderOption.init = function() {
   document.getElementById('oSubmit').addEventListener('click', async () => {
     const artPages = document.getElementById('oArtPages').value;
     const commPages = document.getElementById('oCommPages').value;
+    const articleCommName = document.getElementById('oArticleCommName').value;
     const commName = document.getElementById('oCommName').value;
     const replyName = document.getElementById('oReplyName').value;
 
@@ -720,6 +723,7 @@ renderOption.init = function() {
     const r2 = await post('/blogapi/admin/setDefaultCommentInfos', {
       ispage: 'true',
       perpage: commPages,
+      defaultArticleCommentName: articleCommName,
       defaultCommentName: commName,
       defaultReplyName: replyName
     });

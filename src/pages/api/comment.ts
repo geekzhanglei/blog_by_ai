@@ -5,7 +5,7 @@ export const POST: APIRoute = async ({ request }) => {
   const form = await request.formData();
   const articleId = String(form.get('articleId') || '');
   const options = await getBlogOptions();
-  const nickname = String(form.get('nickname') || options?.result?.msgName || '匿名');
+  const nickname = String(form.get('nickname') || options?.result?.articleCommentName || '匿名');
   const email = String(form.get('email') || 'nobody@no.body');
   const website = String(form.get('website') || '');
   const content = String(form.get('content') || '');
