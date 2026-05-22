@@ -7,12 +7,14 @@ interface Props {
   title?: string;
   description?: string;
   hideChrome?: boolean;
+  trackVisits?: boolean;
 }
 
 const {
   title = '我的博客',
   description = '记录技术成长与思考旅程',
-  hideChrome = false
+  hideChrome = false,
+  trackVisits = true
 } = Astro.props;
 const apiBase = import.meta.env.PUBLIC_API_BASE_URL || 'https://blog.feroad.com';
 ---
@@ -29,6 +31,76 @@ const apiBase = import.meta.env.PUBLIC_API_BASE_URL || 'https://blog.feroad.com'
     <script is:inline define:vars={{ apiBase }}>
       window.__BLOG_API_BASE__ = apiBase.replace(/\/$/, '');
     </script>
+    {trackVisits && (
+      <script is:inline define:vars={{ trackApiBase: apiBase }}>
+        (() => {
+          const path = window.location.pathname.replace(/\/+$/, '') || '/';
+          const canTrack = path === '/' || path === '/about' || path === '/msg' || /^\/article\/\d+$/.test(path);
+          if (!canTrack) return;
+
+          const visitorKey = 'blog_visit_visitor_id';
+          const sessionKey = 'blog_visit_session';
+          const sessionTimeout = 30 * 60 * 1000;
+
+          function makeId() {
+            if (window.crypto && typeof window.crypto.randomUUID === 'function') {
+              return window.crypto.randomUUID();
+            }
+            return `${Date.now()}-${Math.random().toString(16).slice(2)}-${Math.random().toString(16).slice(2)}`;
+          }
+
+          function getVisitorId() {
+            try {
+              let id = window.localStorage.getItem(visitorKey);
+              if (!id) {
+                id = makeId();
+                window.localStorage.setItem(visitorKey, id);
+              }
+              return id;
+            } catch {
+              return makeId();
+            }
+          }
+
+          function getSessionId() {
+            const now = Date.now();
+            try {
+              const saved = JSON.parse(window.sessionStorage.getItem(sessionKey) || 'null');
+              const active = saved && saved.id && now - Number(saved.lastSeen || 0) < sessionTimeout;
+              const id = active ? saved.id : makeId();
+              window.sessionStorage.setItem(sessionKey, JSON.stringify({ id, lastSeen: now }));
+              return id;
+            } catch {
+              return makeId();
+            }
+          }
+
+          const body = new URLSearchParams({
+            path,
+            visitorId: getVisitorId(),
+            sessionId: getSessionId()
+          });
+          const endpoint = `${trackApiBase.replace(/\/$/, '')}/blogapi/visit/pageview`;
+
+          if (navigator.sendBeacon) {
+            const payload = new Blob([body.toString()], {
+              type: 'application/x-www-form-urlencoded;charset=UTF-8'
+            });
+            if (navigator.sendBeacon(endpoint, payload)) return;
+          }
+
+          fetch(endpoint, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+            },
+            body,
+            keepalive: true,
+            credentials: 'omit'
+          }).catch(() => {});
+        })();
+      </script>
+    )}
   </head>
   <body>
     <div id="app-shell" class:list={{ 'app-shell--plain': hideChrome }}>

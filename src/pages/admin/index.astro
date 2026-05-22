@@ -140,6 +140,40 @@ tbody tr:hover td{background:#fbfdff}
 .cell-muted{color:#667085;font-size:12px}
 .content-cell{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 
+/* Visit statistics */
+.stats-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.stats-range{display:inline-flex;gap:6px;padding:4px;background:#e8eef8;border:1px solid #d5deec;border-radius:8px}
+.stats-range button{min-height:32px;padding:7px 12px;border:0;border-radius:6px;background:transparent;color:#475467;font-size:13px;font-weight:850}
+.stats-range button.on{background:#fff;color:var(--brand);box-shadow:var(--shadow-sm)}
+.stats-state{min-height:20px;color:#667085;font-size:13px;font-weight:750}
+.stats-state.err{color:var(--danger)}
+.stats-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:16px}
+.stat-metric{min-height:112px;padding:18px;background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow-sm)}
+.stat-metric span{display:block;color:#667085;font-size:13px;font-weight:800}
+.stat-metric strong{display:block;margin-top:14px;color:#111827;font-size:32px;line-height:1;font-weight:950}
+.stats-grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(320px,1fr);gap:14px}
+.stats-panel{min-width:0;padding:18px;background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow-sm)}
+.stats-panel h3{margin-bottom:14px;color:#111827;font-size:15px;font-weight:900}
+.trend-legend{display:flex;align-items:center;gap:14px;margin-bottom:10px;color:#475467;font-size:12px;font-weight:850}
+.trend-legend span{display:inline-flex;align-items:center;gap:6px}
+.trend-legend i{display:block;width:12px;height:3px;border-radius:999px;background:var(--swatch)}
+.trend-chart{display:block;width:100%;height:auto;min-height:250px;color:#667085}
+.trend-chart text{fill:currentColor;font-size:11px;font-weight:750}
+.trend-chart .grid{stroke:#dfe5ef;stroke-width:1}
+.trend-chart .axis{stroke:#c7d2e3;stroke-width:1.2}
+.trend-chart .pv{fill:none;stroke:#2563eb;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.trend-chart .uv{fill:none;stroke:#0f766e;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.trend-chart .pv-dot{fill:#2563eb}
+.trend-chart .uv-dot{fill:#0f766e}
+.top-pages{display:grid;gap:13px}
+.top-row{display:grid;gap:7px}
+.top-copy{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;color:#344054;font-size:13px;font-weight:800}
+.top-path{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.top-count{flex:0 0 auto;color:#667085;font-size:12px}
+.top-track{height:10px;border-radius:999px;background:#e8eef8;overflow:hidden}
+.top-fill{height:100%;min-width:4px;border-radius:inherit;background:linear-gradient(90deg,var(--brand),var(--brand2))}
+.stats-empty{display:flex;align-items:center;justify-content:center;min-height:250px;padding:18px;border:1px dashed #cfd8e6;border-radius:8px;color:#94a3b8;font-size:14px;font-weight:750;text-align:center}
+
 @media (max-width:960px){
   #app{grid-template-rows:56px minmax(0,1fr)}
   .adm-hd{height:56px;padding:0 14px}
@@ -150,6 +184,8 @@ tbody tr:hover td{background:#fbfdff}
   .adm-main{padding:18px}
   .md-editor{grid-template-columns:1fr}
   .md-editor textarea,.md-preview{min-height:320px}
+  .stats-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stats-grid{grid-template-columns:1fr}
 }
 @media (max-width:640px){
   body{overflow:auto}
@@ -163,6 +199,8 @@ tbody tr:hover td{background:#fbfdff}
   .fg{padding:14px;margin-bottom:14px}
   table{min-width:640px}
   .adm-user .name{display:none}
+  .stats-metrics{grid-template-columns:1fr}
+  .stat-metric{min-height:94px}
 }
 </style>
 </head>
@@ -218,6 +256,7 @@ const menuData = [
   ]},
   { id: 'comments', text: '评论管理', icon: 'comment' },
   { id: 'msg', text: '动态管理', icon: 'msg' },
+  { id: 'visit', text: '访问统计', icon: 'chart' },
   { id: 'option', text: '常用选项', icon: 'gear' }
 ];
 
@@ -227,6 +266,7 @@ const icons = {
   doc: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>',
   comment: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>',
   msg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>',
+  chart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 16l4-5 4 3 5-8"/></svg>',
   gear: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>',
   edit: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>',
   trash: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>',
@@ -393,6 +433,7 @@ function renderPage() {
     delete: renderDelete,
     comments: renderComments,
     msg: renderMsg,
+    visit: renderVisit,
     info: renderInfo,
     option: renderOption
   };
@@ -614,6 +655,155 @@ function renderMsgPagination() {
   pg.querySelectorAll('button').forEach(btn => {
     btn.addEventListener('click', () => { msgPage = +btn.dataset.p; loadMsgs(); });
   });
+}
+
+// ====== Visit Statistics Page ======
+let visitDays = 30;
+let visitRequestVersion = 0;
+function renderVisit() {
+  return `<div class="sec on">
+    <div class="stats-head">
+      <div class="tips" style="margin:0">访问统计</div>
+      <div class="stats-range" id="visitRanges">
+        ${[7, 30, 90].map(days => `<button class="${days === visitDays ? 'on' : ''}" type="button" data-days="${days}">${days} 天</button>`).join('')}
+      </div>
+    </div>
+    <div class="stats-state" id="visitState">加载统计中...</div>
+    <div class="stats-metrics">
+      <div class="stat-metric"><span>今日 PV</span><strong id="visitTodayPv">-</strong></div>
+      <div class="stat-metric"><span>今日 UV</span><strong id="visitTodayUv">-</strong></div>
+      <div class="stat-metric"><span>区间 PV</span><strong id="visitRangePv">-</strong></div>
+      <div class="stat-metric"><span>区间 UV</span><strong id="visitRangeUv">-</strong></div>
+    </div>
+    <div class="stats-grid">
+      <section class="stats-panel">
+        <h3>PV / UV 趋势</h3>
+        <div class="trend-legend"><span><i style="--swatch:#2563eb"></i>PV</span><span><i style="--swatch:#0f766e"></i>UV</span></div>
+        <div id="visitTrend"><div class="stats-empty">加载统计中...</div></div>
+      </section>
+      <section class="stats-panel">
+        <h3>热门页面 Top 10</h3>
+        <div id="visitTopPages"><div class="stats-empty">加载统计中...</div></div>
+      </section>
+    </div>
+  </div>`;
+}
+renderVisit.init = function() {
+  document.querySelectorAll('#visitRanges [data-days]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const days = Number(btn.dataset.days);
+      if (days === visitDays) return;
+      visitDays = days;
+      renderPage();
+    });
+  });
+  loadVisitStats();
+};
+
+function formatMetric(value) {
+  return new Intl.NumberFormat('zh-CN').format(Number(value || 0));
+}
+
+function visitDayKey(date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+function fillVisitTrend(rows, days) {
+  const values = new Map((rows || []).map(row => [row.date, row]));
+  const today = new Date();
+  today.setHours(12, 0, 0, 0);
+  const trend = [];
+  for (let offset = days - 1; offset >= 0; offset--) {
+    const date = new Date(today);
+    date.setDate(today.getDate() - offset);
+    const key = visitDayKey(date);
+    const row = values.get(key) || {};
+    trend.push({ date: key, pv: Number(row.pv || 0), uv: Number(row.uv || 0) });
+  }
+  return trend;
+}
+
+function trendLine(data, key, x, y, className) {
+  const points = data.map((item, index) => `${x(index)},${y(item[key])}`).join(' ');
+  const dots = data.length <= 30 ? data.map((item, index) =>
+    `<circle class="${className}-dot" cx="${x(index)}" cy="${y(item[key])}" r="2.8"></circle>`
+  ).join('') : '';
+  return `<polyline class="${className}" points="${points}"></polyline>${dots}`;
+}
+
+function renderTrendChart(data) {
+  const width = 760;
+  const height = 280;
+  const pad = { top: 18, right: 18, bottom: 42, left: 48 };
+  const graphWidth = width - pad.left - pad.right;
+  const graphHeight = height - pad.top - pad.bottom;
+  const maxValue = Math.max(1, ...data.flatMap(item => [item.pv, item.uv]));
+  const x = index => pad.left + (data.length === 1 ? graphWidth / 2 : graphWidth * index / (data.length - 1));
+  const y = value => pad.top + graphHeight - graphHeight * Number(value || 0) / maxValue;
+  const grid = [0, .25, .5, .75, 1].map(rate => {
+    const value = Math.round(maxValue * rate);
+    const cy = y(value);
+    return `<line class="grid" x1="${pad.left}" y1="${cy}" x2="${width - pad.right}" y2="${cy}"></line><text x="${pad.left - 10}" y="${cy + 4}" text-anchor="end">${value}</text>`;
+  }).join('');
+  const labelIndexes = [...new Set([0, Math.floor((data.length - 1) / 2), data.length - 1])];
+  const labels = labelIndexes.map(index =>
+    `<text x="${x(index)}" y="${height - 14}" text-anchor="${index === 0 ? 'start' : index === data.length - 1 ? 'end' : 'middle'}">${escapeHtml(data[index].date.slice(5))}</text>`
+  ).join('');
+
+  return `<svg class="trend-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="PV 和 UV 访问趋势">
+    ${grid}
+    <line class="axis" x1="${pad.left}" y1="${pad.top + graphHeight}" x2="${width - pad.right}" y2="${pad.top + graphHeight}"></line>
+    ${trendLine(data, 'pv', x, y, 'pv')}
+    ${trendLine(data, 'uv', x, y, 'uv')}
+    ${labels}
+  </svg>`;
+}
+
+function renderTopPages(rows) {
+  if (!rows || !rows.length) return '<div class="stats-empty">这个区间还没有访问数据</div>';
+  const maxPv = Math.max(1, ...rows.map(row => Number(row.pv || 0)));
+  return `<div class="top-pages">${rows.map(row => {
+    const pct = Math.max(2, Math.round(Number(row.pv || 0) / maxPv * 100));
+    const article = row.articleId ? ` · 文章 #${row.articleId}` : '';
+    return `<div class="top-row">
+      <div class="top-copy"><span class="top-path" title="${escapeHtml(row.path)}">${escapeHtml(row.path)}${article}</span><span class="top-count">${formatMetric(row.pv)} PV · ${formatMetric(row.uv)} UV</span></div>
+      <div class="top-track"><div class="top-fill" style="width:${pct}%"></div></div>
+    </div>`;
+  }).join('')}</div>`;
+}
+
+function setVisitState(text, isError = false) {
+  const state = document.getElementById('visitState');
+  if (!state) return;
+  state.textContent = text;
+  state.classList.toggle('err', isError);
+}
+
+async function loadVisitStats() {
+  const version = ++visitRequestVersion;
+  setVisitState('加载统计中...');
+  const res = await get('/blogapi/admin/visit/stats', { days: visitDays }).catch(() => null);
+  if (version !== visitRequestVersion) return;
+  const data = res && res.result;
+  if (!data || !data.status) {
+    const msg = data && data.msg ? data.msg : '统计加载失败';
+    setVisitState(msg, true);
+    document.getElementById('visitTrend').innerHTML = `<div class="stats-empty">${escapeHtml(msg)}</div>`;
+    document.getElementById('visitTopPages').innerHTML = `<div class="stats-empty">${escapeHtml(msg)}</div>`;
+    return;
+  }
+
+  const summary = data.summary || {};
+  document.getElementById('visitTodayPv').textContent = formatMetric(summary.todayPv);
+  document.getElementById('visitTodayUv').textContent = formatMetric(summary.todayUv);
+  document.getElementById('visitRangePv').textContent = formatMetric(summary.rangePv);
+  document.getElementById('visitRangeUv').textContent = formatMetric(summary.rangeUv);
+  document.getElementById('visitTrend').innerHTML = renderTrendChart(fillVisitTrend(data.trend, data.days || visitDays));
+  document.getElementById('visitTopPages').innerHTML = renderTopPages(data.topPages);
+  setVisitState(`最近 ${data.days || visitDays} 天`);
 }
 
 // ====== Info Page ======
