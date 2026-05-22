@@ -95,6 +95,14 @@ const defaultReplyName = optionResponse?.result?.msgReplyName || defaultMsgName;
 <script>
   const msgForm = document.querySelector('#msg-form');
   const msgTip = document.querySelector('[data-msg-tip]');
+  function toast(message) {
+    document.querySelector('.site-toast')?.remove();
+    const el = document.createElement('div');
+    el.className = 'site-toast';
+    el.textContent = message;
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 3600);
+  }
   msgForm?.addEventListener('submit', async (event) => {
     event.preventDefault();
     const data = new FormData(msgForm);
@@ -106,7 +114,11 @@ const defaultReplyName = optionResponse?.result?.msgReplyName || defaultMsgName;
     if (msgTip) msgTip.textContent = '提交中…';
     const response = await fetch('/api/msg', { method: 'POST', body: data });
     const json = await response.json().catch(() => null);
-    if (json?.result?.status) window.location.reload();
+    if (json?.result?.status) {
+      toast('评论已发出，正在按要求审核中');
+      if (msgTip) msgTip.textContent = '';
+      msgForm.reset();
+    }
     else if (msgTip) msgTip.textContent = json?.result?.msg || '提交失败';
   });
 

@@ -161,6 +161,7 @@ button { cursor: pointer; }
 .form-group textarea[rows="6"] { min-height: 164px; }
 .form-group input:focus, .form-group textarea:focus, .login-input:focus { border-color: var(--primary); background: #fff; box-shadow: 0 0 0 3px rgba(99,102,241,0.12); }
 .form-error, .reply-error, .login-tips.error { color: var(--danger); font-weight: 600; }
+.site-toast { position: fixed; top: 22px; right: 22px; z-index: 1000; width: min(360px, calc(100vw - 32px)); padding: 13px 16px; border: 1px solid #a7f3d0; border-radius: 8px; background: #ecfdf5; box-shadow: 0 18px 40px rgba(15, 23, 42, 0.16); color: #065f46; font-family: var(--font-sans); font-weight: 800; line-height: 1.5; }
 .form-tip { color: var(--text-muted); font-size: 0.85rem; line-height: 1.4; min-height: 1.4em; }
 .required { color: var(--danger); font-style: normal; }
 .btn-primary { min-height: 40px; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; padding: 11px 18px; box-shadow: 0 4px 12px rgba(99,102,241,0.3); }
@@ -230,4 +231,4 @@ button { cursor: pointer; }
 @media screen and (max-width: 1200px) { .container { width: 88%; } }
 @media screen and (max-width: 900px) { .container { width: 92%; margin: 1.5rem auto; } .site-footer { display: none; } #app-shell { padding-bottom: 0; } .form-grid { grid-template-columns: 1fr; } }
 @media screen and (max-width: 768px) { .header-nav { display: none; } .mobile-toggle { display: flex; } .mobile-menu { display: flex; } .header-inner { padding: 0 1.25rem; } .about-hero { flex-direction: column; gap: 1.5rem; min-height: 361px; padding: 1.5rem; } .hero-avatar { flex-basis: auto; width: 100%; height: 160px; } }
-@media screen and (max-width: 600px) { .container { width: 96%; margin: 1rem auto; } .article-wrap { padding: 1.25rem; } .article-card__inner { padding: 1.25rem; } .article-card__title { font-size: 1.1rem; } .page-title { font-size: 1.6rem; } .comment-item { flex-direction: column; } .login-btns { flex-direction: column; } }
+@media screen and (max-width: 600px) { .container { width: 96%; margin: 1rem auto; } .article-wrap { padding: 1.25rem; } .article-card__inner { padding: 1.25rem; } .article-card__title { font-size: 1.1rem; } .page-title { font-size: 1.6rem; } .comment-item { flex-direction: column; } .login-btns { flex-direction: column; } .site-toast { top: 14px; right: 14px; width: calc(100vw - 28px); } }

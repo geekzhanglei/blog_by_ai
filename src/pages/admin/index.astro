@@ -137,6 +137,7 @@ tbody tr:hover td{background:#fbfdff}
 .msg-card .reply-item:last-child{border:none}
 .empty{padding:28px;text-align:center;color:#94a3b8;background:#fff;border:1px dashed #cfd8e6;border-radius:8px}
 .meta-pill{display:inline-flex;align-items:center;gap:6px;margin-right:10px;color:#475467}
+.review-pill{display:inline-flex;align-items:center;min-height:24px;padding:3px 8px;border:1px solid #fcd34d;border-radius:999px;background:#fffbeb;color:#92400e;font-size:12px;font-weight:900}
 .cell-muted{color:#667085;font-size:12px}
 .content-cell{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 
@@ -545,7 +546,7 @@ let commPage = 1, commTotal = 0, commList = [];
 function renderComments() {
   return `<div class="sec on">
     <div class="tips">评论管理</div>
-    <table><thead><tr><th>文章</th><th>评论者</th><th>内容</th><th>时间</th><th>操作</th></tr></thead><tbody id="commTbody"></tbody></table>
+    <table><thead><tr><th>文章</th><th>评论者</th><th>内容</th><th>状态</th><th>时间</th><th>操作</th></tr></thead><tbody id="commTbody"></tbody></table>
     <div class="pg" id="commPg"></div>
   </div>`;
 }
@@ -561,7 +562,7 @@ async function loadComments() {
 }
 function renderCommentsTable() {
   const tbody = document.getElementById('commTbody');
-  if (!commList.length) { tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:#94a3b8;padding:2rem">暂无评论</td></tr>'; return; }
+  if (!commList.length) { tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:#94a3b8;padding:2rem">暂无评论</td></tr>'; return; }
   let html = '';
   commList.forEach(article => {
     if (article.marks && article.marks.length) {
@@ -570,13 +571,21 @@ function renderCommentsTable() {
           <td>${escapeHtml(article.title)}<div class="cell-muted">#${article.id}</div></td>
           <td>${escapeHtml(mark.nickname || '匿名')}</td>
           <td><div class="content-cell">${escapeHtml(mark.content)}</div></td>
+          <td>${Number(mark.status) === 1 ? '<span class="cell-muted">已通过</span>' : '<span class="review-pill">待审核</span>'}</td>
           <td>${formatDate(mark.create_time)}</td>
-          <td class="tac"><button class="btn btn-r" data-mid="${mark.id}" data-act="del">${icons.trash}删除</button></td>
+          <td class="tac">${Number(mark.status) === 1 ? '' : `<button class="btn" data-mid="${mark.id}" data-act="approve">通过</button>`}<button class="btn btn-r" data-mid="${mark.id}" data-act="del">${icons.trash}删除</button></td>
         </tr>`;
       });
     }
   });
-  tbody.innerHTML = html || '<tr><td colspan="5" style="text-align:center;color:#94a3b8;padding:2rem">暂无评论</td></tr>';
+  tbody.innerHTML = html || '<tr><td colspan="6" style="text-align:center;color:#94a3b8;padding:2rem">暂无评论</td></tr>';
+  tbody.querySelectorAll('[data-act="approve"]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const res = await get('/blogapi/admin/approveMark', { id: btn.dataset.mid });
+      if (res.result && res.result.status) { toast('审核通过'); loadComments(); }
+      else toast(res.result?.msg || '审核失败', 'err');
+    });
+  });
   tbody.querySelectorAll('[data-act="del"]').forEach(btn => {
     btn.addEventListener('click', () => {
       const mid = btn.dataset.mid;
@@ -627,13 +636,20 @@ function renderMsgList() {
       `<div class="reply-item"><strong>${escapeHtml(r.replyUserName || '博主')}:</strong> ${escapeHtml(r.content)} <span class="cell-muted">${formatDate(r.createTime)}</span></div>`
     ).join('') : '';
     return `<div class="msg-card">
-      <div class="meta"><span><span class="meta-pill">#${item.id}</span><span class="meta-pill">${escapeHtml(item.username || '匿名')}</span><span class="meta-pill">${formatDate(item.created_at)}</span></span>
-        <button class="btn btn-r" data-id="${item.id}" data-act="del" style="padding:6px 12px;font-size:.8rem">${icons.trash}删除</button>
+      <div class="meta"><span><span class="meta-pill">#${item.id}</span><span class="meta-pill">${escapeHtml(item.username || '匿名')}</span><span class="meta-pill">${formatDate(item.created_at)}</span>${Number(item.status) === 1 ? '' : '<span class="review-pill">待审核</span>'}</span>
+        <span class="tac">${Number(item.status) === 1 ? '' : `<button class="btn" data-id="${item.id}" data-act="approve" style="padding:6px 12px;font-size:.8rem">通过</button>`}<button class="btn btn-r" data-id="${item.id}" data-act="del" style="padding:6px 12px;font-size:.8rem">${icons.trash}删除</button></span>
       </div>
       <div class="content">${escapeHtml(item.content)}</div>
       ${replies ? `<div class="replies">${replies}</div>` : ''}
     </div>`;
   }).join('');
+  list.querySelectorAll('[data-act="approve"]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const res = await post('/blogapi/admin/approveMsg', { id: btn.dataset.id });
+      if (res.result && res.result.status) { toast('审核通过'); loadMsgs(); }
+      else toast(res.result?.msg || '审核失败', 'err');
+    });
+  });
   list.querySelectorAll('[data-act="del"]').forEach(btn => {
     btn.addEventListener('click', () => {
       const id = btn.dataset.id;

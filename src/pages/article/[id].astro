@@ -103,6 +103,14 @@ function formatCommentTime(value: ArticleComment['create_time']) {
 <script>
   const form = document.querySelector('#comment-form');
   const tip = document.querySelector('[data-form-tip]');
+  function toast(message) {
+    document.querySelector('.site-toast')?.remove();
+    const el = document.createElement('div');
+    el.className = 'site-toast';
+    el.textContent = message;
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 3600);
+  }
   form?.addEventListener('submit', async (event) => {
     event.preventDefault();
     const data = new FormData(form);
@@ -117,8 +125,9 @@ function formatCommentTime(value: ArticleComment['create_time']) {
     const response = await fetch('/api/comment', { method: 'POST', body: data });
     const json = await response.json().catch(() => null);
     if (json?.result?.status) {
-      if (tip) tip.textContent = '评论成功，正在刷新页面…';
-      window.location.reload();
+      toast('评论已发出，正在按要求审核中');
+      if (tip) tip.textContent = '';
+      form.reset();
     } else if (tip) {
       tip.textContent = json?.result?.msg || '评论提交失败';
     }
