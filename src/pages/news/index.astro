@@ -14,7 +14,9 @@ const isValidItem = (item: typeof news.items[number]) => item.id
   && Number.isFinite(item.priority)
   && item.priority >= 1
   && item.priority <= 3
-  && isTimestamp(item.publishedAt);
+  && isTimestamp(item.publishedAt)
+  && Date.parse(item.publishedAt) >= Date.parse(news.coverageStart)
+  && Date.parse(item.publishedAt) <= Date.parse(news.updatedAt);
 
 if (!isTimestamp(news.coverageStart) || !isTimestamp(news.updatedAt) || Date.parse(news.coverageStart) >= Date.parse(news.updatedAt) || news.items.length < 20 || news.items.length > 30 || !news.items.every(isValidItem) || requiredCategories.some((category) => news.items.filter((item) => item.category === category).length < 3)) {
   throw new Error('News data must contain 20–30 recent, categorized events with an actual update time');
