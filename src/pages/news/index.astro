@@ -89,6 +89,23 @@ const categoryHref = (value: string) => value === '全部' ? '/' : `/?category=$
         <p>覆盖 {shortFormatter.format(new Date(news.coverageStart))} 至 {shortFormatter.format(new Date(news.updatedAt))}<br />共 {timelineItems.length} 条，按发生时间倒序</p>
       </section>
 
+      <section class="topic-panel" aria-labelledby="topic-title">
+        <div class="topic-panel__heading">
+          <div>
+            <p class="kicker">浏览器本地订阅</p>
+            <h2 id="topic-title">我的关注流</h2>
+          </div>
+          <p>订阅只保存在这台设备。例如：A股、AI、原油。</p>
+        </div>
+        <form class="topic-form" id="topic-form">
+          <label class="sr-only" for="topic-input">添加关注话题</label>
+          <input id="topic-input" name="topic" type="search" maxlength="30" placeholder="输入关注话题，如 A股" autocomplete="off" />
+          <button type="submit">订阅</button>
+        </form>
+        <div class="topic-chips" id="topic-chips" aria-label="已订阅话题"></div>
+        <div class="topic-feed" id="topic-feed" aria-live="polite"></div>
+      </section>
+
       {focusItems.length > 0 && (
         <section class="focus" aria-labelledby="focus-title">
           <div class="section-heading">
@@ -134,6 +151,88 @@ const categoryHref = (value: string) => value === '全部' ? '/' : `/?category=$
         ))}
       </section>
     </main>
+
+    <script is:inline define:vars={{ newsItems: news.items }}>
+      const storageKey = 'feroad-news-topics';
+      const topicForm = document.querySelector('#topic-form');
+      const topicInput = document.querySelector('#topic-input');
+      const topicChips = document.querySelector('#topic-chips');
+      const topicFeed = document.querySelector('#topic-feed');
+      const aliases = { 'a股': ['a股', '沪深', '上证', '深证', '证监会', '中国出口', '中国通胀', '人民币'] };
+      const normalise = (value) => value.trim().replace(/\s+/g, ' ');
+      const keyOf = (value) => normalise(value).toLocaleLowerCase();
+      const savedTopics = () => {
+        try {
+          const saved = JSON.parse(localStorage.getItem(storageKey) || '[]');
+          return Array.isArray(saved) ? [...new Set(saved.map(normalise).filter(Boolean))].slice(0, 8) : [];
+        } catch { return []; }
+      };
+      let topics = savedTopics();
+      const saveTopics = () => {
+        try { localStorage.setItem(storageKey, JSON.stringify(topics)); } catch { /* Local storage may be disabled. */ }
+      };
+      const newsText = (item) => [item.category, item.headline, item.summary, item.whyItMatters].join(' ').toLocaleLowerCase().replace(/\s/g, '');
+      const matches = (item, topic) => {
+        const key = keyOf(topic).replace(/\s/g, '');
+        const terms = aliases[key] || [key];
+        return terms.some((term) => newsText(item).includes(term)) || (key === 'a股' && item.category === '财经' && /中国|市场/.test(newsText(item)));
+      };
+      const create = (tag, className, content) => {
+        const element = document.createElement(tag);
+        if (className) element.className = className;
+        if (content) element.textContent = content;
+        return element;
+      };
+      const render = () => {
+        topicChips.replaceChildren();
+        topicFeed.replaceChildren();
+        topics.forEach((topic) => {
+          const chip = create('button', 'topic-chip', `${topic} ×`);
+          chip.type = 'button';
+          chip.dataset.topic = topic;
+          chip.setAttribute('aria-label', `取消订阅 ${topic}`);
+          topicChips.append(chip);
+        });
+        if (!topics.length) {
+          topicFeed.append(create('p', 'topic-empty', '添加话题后，这里会显示本轮匹配的新闻。'));
+          return;
+        }
+        const matched = newsItems.filter((item) => topics.some((topic) => matches(item, topic)));
+        if (!matched.length) {
+          topicFeed.append(create('p', 'topic-empty', '本轮暂无匹配新闻；下次定时更新后会自动重新筛选。'));
+          return;
+        }
+        matched.slice(0, 10).forEach((item) => {
+          const article = create('article', 'topic-story');
+          const meta = create('p', 'topic-story__meta', `${item.category} · ${new Intl.DateTimeFormat('zh-CN', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Asia/Shanghai' }).format(new Date(item.publishedAt))}`);
+          const title = create('h3', '');
+          const link = create('a', '', item.headline);
+          link.href = item.sourceUrl;
+          link.target = '_blank';
+          link.rel = 'noreferrer';
+          title.append(link);
+          article.append(meta, title, create('p', '', item.summary));
+          topicFeed.append(article);
+        });
+      };
+      topicForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const topic = normalise(topicInput.value);
+        if (!topic || topics.some((saved) => keyOf(saved) === keyOf(topic))) return;
+        topics = [...topics, topic].slice(-8);
+        saveTopics();
+        topicInput.value = '';
+        render();
+      });
+      topicChips.addEventListener('click', (event) => {
+        const button = event.target.closest('button[data-topic]');
+        if (!button) return;
+        topics = topics.filter((topic) => topic !== button.dataset.topic);
+        saveTopics();
+        render();
+      });
+      render();
+    </script>
 
     <footer class="footer">
       <div class="footer__inner">
