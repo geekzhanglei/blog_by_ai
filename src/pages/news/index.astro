@@ -92,8 +92,8 @@ const categoryHref = (value: string) => value === '全部' ? '/' : `/?category=$
       {focusItems.length > 0 && (
         <section class="focus" aria-labelledby="focus-title">
           <div class="section-heading">
-            <h2 id="focus-title">本轮焦点</h2>
-            <span>影响范围与紧迫性优先</span>
+            <h2 id="focus-title">重点要闻</h2>
+            <span>按影响范围与紧迫性排序</span>
           </div>
           <div class="focus__grid">
             {focusItems.map((story, index) => (
