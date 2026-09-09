@@ -1,75 +1,33 @@
 {
-  "updatedAt": "2026-09-09T13:30:00+08:00",
+  "coverageStart": "2026-09-08T15:11:42+08:00",
+  "updatedAt": "2026-09-09T15:11:42+08:00",
   "items": [
-    {
-      "id": "middle-east-oil-20260909",
-      "category": "能源",
-      "headline": "中东冲突升级，布伦特原油逼近每桶 100 美元",
-      "summary": "也门胡塞武装袭击沙特能源设施、美国与伊朗继续交火，市场重新计价石油供应中断风险。亚洲股市承压，日元走强，欧洲央行等主要央行的通胀判断也变得更难。",
-      "whyItMatters": "油价若长期站上高位，会同时推升运输、制造和居民能源成本，并压缩全球降息空间。",
-      "source": "Reuters",
-      "sourceUrl": "https://au.investing.com/news/economy-news/oil-heads-for-100-asia-stocks-subdued-as-middle-east-tensions-escalate-4633452",
-      "publishedAt": "2026-09-09T12:26:00+08:00"
-    },
-    {
-      "id": "iran-us-jordan-hormuz-20260909",
-      "category": "国际",
-      "headline": "伊朗袭击美军约旦基地及霍尔木兹海峡附近船只",
-      "summary": "伊朗革命卫队称向美军设施与海上目标发射弹道导弹。事件紧接美国摧毁多艘伊朗油轮之后，地区冲突正在从陆上目标进一步外溢至能源运输通道。",
-      "whyItMatters": "霍尔木兹海峡是全球关键能源咽喉，军事风险会迅速传导到油价、航运保险和供应链。",
-      "source": "Reuters",
-      "sourceUrl": "https://au.investing.com/news/world-news",
-      "publishedAt": "2026-09-09T11:30:00+08:00"
-    },
-    {
-      "id": "openai-samsung-chips-20260909",
-      "category": "科技",
-      "headline": "OpenAI 与三星深化下一代芯片合作",
-      "summary": "OpenAI 表示正与三星电子扩大芯片联合研发，并加强半导体和企业 AI 服务合作。其自研推理芯片 Jalapeño 由 OpenAI 与博通共同设计，目标是降低模型推理成本并缓解算力供应约束。",
-      "whyItMatters": "头部模型公司正把竞争延伸到芯片和供应链，可能改变英伟达之外的 AI 基础设施格局。",
-      "source": "Reuters",
-      "sourceUrl": "https://www.marketscreener.com/news/openai-says-working-with-samsung-on-next-generation-chips-deepening-cooperation-ce785bd9db8ef123",
-      "publishedAt": "2026-09-09T09:57:00+08:00"
-    },
-    {
-      "id": "openai-industry-ai-pricing-20260909",
-      "category": "商业",
-      "headline": "OpenAI 把 AI 推向芯片设计、生命科学和金融服务",
-      "summary": "OpenAI CFO 表示，公司正加速提供面向垂直行业的 AI，并尝试按业务结果而非单纯用量收费。公司还称利用自家模型把 Jalapeño 芯片设计推进到流片阶段只用了九个月。",
-      "whyItMatters": "AI 商业模式正在从通用助手转向可量化产出的行业系统，企业采购标准也会随之改变。",
-      "source": "Reuters",
-      "sourceUrl": "https://www.investing.com/news/economy-news/openai-offers-ai-for-chip-design-touts-cost-advantage-over-opensource-cfo-says-4892636",
-      "publishedAt": "2026-09-09T08:43:00+08:00"
-    },
-    {
-      "id": "fda-leadership-ai-20260909",
-      "category": "医疗",
-      "headline": "美国 FDA 固化药品与疫苗审评领导层，并新设技术与 AI 主管",
-      "summary": "美国卫生部门将两名代理负责人正式任命为 FDA 药品审评与生物制品审评中心主任，同时任命首位负责技术与人工智能的副局长。",
-      "whyItMatters": "FDA 的组织稳定性直接影响新药和疫苗审批节奏，新设 AI 职位也预示监管流程将更深地引入自动化。",
-      "source": "Reuters",
-      "sourceUrl": "https://ae.marketscreener.com/news/latest/US-names-acting-FDA-drug-vaccine-chiefs-to-permanent-posts-11893704/",
-      "publishedAt": "2026-09-09T05:48:00+08:00"
-    },
-    {
-      "id": "roivant-lung-trial-20260908",
-      "category": "医疗",
-      "headline": "Roivant 肺病候选药在中期试验达到主要目标",
-      "summary": "mosliciguat 在一项 135 人试验中显著降低与间质性肺病相关的肺高压患者肺血管阻力，并改善六分钟步行距离。公司已启动约 375 人的后期试验。",
-      "whyItMatters": "这类患者治疗选择有限；如果后期数据延续，中重度肺病治疗可能出现新的用药路径。",
-      "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/healthcare/articles/roivants-experimental-lung-disease-drug-110005292.html",
-      "publishedAt": "2026-09-08T19:00:00+08:00"
-    },
-    {
-      "id": "ukraine-us-envoys-20260906",
-      "category": "国际",
-      "headline": "美方特使访问基辅，俄乌谈判仍未突破核心分歧",
-      "summary": "美国特使在与普京会面后访问乌克兰，并称会谈具有建设性，但领土让步等核心问题仍无突破。外交接触增加，距离可执行的停火框架仍然很远。",
-      "whyItMatters": "战争走向持续影响欧洲安全、能源价格、军费和全球粮食贸易。",
-      "source": "AP",
-      "sourceUrl": "https://apnews.com/article/44bba3b57b480560d9f48dba7d28534e",
-      "publishedAt": "2026-09-06T15:53:00+08:00"
-    }
+    {"id":"iran-us-jordan-hormuz-20260909","category":"国际","priority":1,"headline":"伊朗称袭击美军约旦基地与霍尔木兹附近目标","summary":"伊朗革命卫队称向美军设施及海上目标发射导弹；此前美方称已摧毁多艘伊朗油轮，冲突继续向海上能源通道扩散。","whyItMatters":"霍尔木兹风险会直接传导至油价、航运保险与全球供应链。","source":"Reuters","sourceUrl":"https://www.investing.com/news/world-news","publishedAt":"2026-09-09T14:30:00+08:00"},
+    {"id":"openai-samsung-chips-20260909","category":"科技","priority":1,"headline":"OpenAI 与三星深化下一代 AI 芯片合作","summary":"OpenAI 表示正扩大与三星电子在芯片研发、半导体供应链和企业 AI 服务上的合作，自研推理芯片计划继续推进。","whyItMatters":"模型公司正把竞争延伸至芯片和供应链，AI 基础设施格局可能重排。","source":"Reuters","sourceUrl":"https://www.marketscreener.com/news/openai-says-working-with-samsung-on-next-generation-chips-deepening-cooperation-ce785bd9db8ef123","publishedAt":"2026-09-09T13:57:00+08:00"},
+    {"id":"yen-oil-markets-20260909","category":"能源","priority":1,"headline":"油价逼近 100 美元，日元走强压低风险偏好","summary":"中东冲突带动油价上行，日元接近七个月高位；市场重新评估通胀与主要央行继续紧缩的概率。","whyItMatters":"能源冲击与汇率避险同步出现，常常是全球资产重新定价的早期信号。","source":"Reuters","sourceUrl":"https://ca.marketscreener.com/news/yen-stands-tall-as-dollar-drifts-oil-s-run-towards-100-chills-sentiment-ce785bd9db8fff21","publishedAt":"2026-09-09T13:46:00+08:00"},
+    {"id":"china-exports-high-tech-20260909","category":"财经","priority":1,"headline":"中国 8 月出口受高技术与 AI 产品需求支撑加速增长","summary":"路透社报道称，中国出口增速加快，高技术和 AI 相关产品的海外需求提供支撑，但内需仍显疲弱。","whyItMatters":"出口与内需的分化，将影响中国增长结构、制造业链条和后续政策重心。","source":"Reuters","sourceUrl":"https://www.marketscreener.com/news/china-s-exports-surge-as-demand-for-high-tech-ai-help-prop-up-economic-growth-ce785bd8d888f727","publishedAt":"2026-09-09T13:24:00+08:00"},
+    {"id":"china-inflation-divergence-20260909","category":"财经","priority":2,"headline":"中国通胀数据反映能源推升价格、内需仍偏弱","summary":"生产者与消费者价格受能源和食品带动回升，但服务消费与房地产相关板块仍较疲软，市场把它视作复苏不均衡的信号。","whyItMatters":"这决定了政策刺激、利率和中国资产定价的下一步节奏。","source":"Reuters","sourceUrl":"https://www.indopremier.com/ipotnews/newsDetail.php/newsDetail.php?group_news=IPOTNEWS&halaman=1&jdl=China_stocks_inch_higher__HK_muted__as_inflation_data_highlights_sector_divergence&name=&news_id=239875&q=china+stocks%2C+shanghai+composite%2C+CSI300%2C&search=y_general&taging_subtype=MARKETOVERVIEW","publishedAt":"2026-09-09T12:48:00+08:00"},
+    {"id":"oil-100-asia-stocks-20260909","category":"能源","priority":1,"headline":"布伦特原油逼近每桶 100 美元，亚洲股市承压","summary":"沙特能源设施遭袭及美伊冲突升级加剧供应中断担忧；油价走高令亚洲风险资产偏谨慎。","whyItMatters":"高油价会同时抬升运输、制造和居民成本，并压缩全球降息空间。","source":"Reuters","sourceUrl":"https://ae.marketscreener.com/news/oil-heads-for-100-asia-stocks-subdued-as-middle-east-tensions-escalate-ce785bd9d880f227","publishedAt":"2026-09-09T12:26:00+08:00"},
+    {"id":"qualcomm-amazon-custom-chips-20260909","category":"科技","priority":2,"headline":"高通与亚马逊合作开发定制 AI 芯片","summary":"在美股交易中，高通因与亚马逊开发定制 AI 芯片的消息上涨，市场继续把算力供给和专用芯片视作 AI 投资主线。","whyItMatters":"云厂商与芯片设计公司的直连合作，会影响 AI 算力成本和供应商份额。","source":"Reuters","sourceUrl":"https://hk.marketscreener.com/news/wall-st-slips-as-steep-oil-prices-stoke-inflation-concerns-ahead-of-cpi-ce785bd8de80fe26","publishedAt":"2026-09-09T12:08:00+08:00"},
+    {"id":"intel-cpu-terafab-20260909","category":"科技","priority":2,"headline":"英特尔受 CPU 调价与 AI 数据中心预期推动大涨","summary":"市场聚焦其潜在 CPU 价格调整、AI 数据中心需求和与 Terafab 项目的制造合作，股价单日涨幅超过 9%。","whyItMatters":"芯片产业对 AI 资本开支的预期，仍在重塑传统 CPU 与代工企业的估值。","source":"Seoul Economic Daily","sourceUrl":"https://en.sedaily.com/finance/2026/09/09/intel-jumps-9-percent-on-cpu-price-hike-talk-musk-terafab","publishedAt":"2026-09-09T09:18:00+08:00"},
+    {"id":"netanyahu-un-trip-20260909","category":"国际","priority":2,"headline":"内塔尼亚胡将短暂赴联合国发表讲话","summary":"以色列驻联合国代表称，内塔尼亚胡将在本月世界领导人会议期间进行 24 小时行程，背景是加沙战争相关争议持续发酵。","whyItMatters":"中东冲突的外交与法律风险仍在扩大，影响盟友协调与地区稳定。","source":"AP","sourceUrl":"https://apnews.com/article/4a2d0ce1e327b1105d87eb40081e9f81","publishedAt":"2026-09-09T08:28:00+08:00"},
+    {"id":"openai-industry-ai-pricing-20260909","category":"科技","priority":2,"headline":"OpenAI 将 AI 推向芯片设计、生命科学与金融服务","summary":"OpenAI CFO 表示，公司正尝试更深的行业解决方案与按业务结果计价，并强调使用自家模型加速芯片设计。","whyItMatters":"AI 商业模式正从通用工具转向可被企业采购、衡量和交付的垂直能力。","source":"Reuters","sourceUrl":"https://www.investing.com/news/economy-news/openai-offers-ai-for-chip-design-touts-cost-advantage-over-opensource-cfo-says-4892636","publishedAt":"2026-09-09T08:43:00+08:00"},
+    {"id":"uk-air-traffic-disruption-20260909","category":"产业","priority":2,"headline":"英国空管问题扰动主要机场航班运行","summary":"英国空管系统异常导致多座主要机场的航班受到影响，航空公司与机场运营对关键基础设施的韧性再受关注。","whyItMatters":"空管故障会迅速传导至航司成本、旅客流动和货运时效。","source":"Reuters","sourceUrl":"https://live.euronext.com/en/financial-news?_bhlid=aeccce0081dbf3511cb85b16a88c5f908dfeece3&page=0","publishedAt":"2026-09-09T07:44:00+08:00"},
+    {"id":"roivant-lung-trial-20260909","category":"健康","priority":2,"headline":"Roivant 肺病候选药在中期试验达到主要目标","summary":"mosliciguat 在一项肺高压研究中改善关键指标与步行距离，公司已启动后期临床试验。","whyItMatters":"这类患者治疗选择有限，后期数据将决定是否形成新的治疗路径。","source":"Reuters","sourceUrl":"https://finance.yahoo.com/healthcare/articles/roivants-experimental-lung-disease-drug-110005292.html","publishedAt":"2026-09-09T07:00:00+08:00"},
+    {"id":"china-russia-nk-ties-20260909","category":"国际","priority":2,"headline":"中俄借朝鲜建国纪念日重申与平壤的战略联系","summary":"中俄领导人分别向金正恩致贺电，朝鲜官方媒体披露双方均强调继续加强战略协作。","whyItMatters":"东北亚安全结构与制裁博弈，正因三边关系走近而更加复杂。","source":"Reuters","sourceUrl":"https://au.marketscreener.com/news/china-russia-stress-strategic-ties-with-north-korea-in-anniversary-messages-to-kim-ce785bd9d889f725","publishedAt":"2026-09-09T06:23:00+08:00"},
+    {"id":"fda-leadership-ai-20260909","category":"健康","priority":2,"headline":"美国 FDA 固化药品与疫苗审评领导层，并新设 AI 主管","summary":"美国卫生部门将两名代理负责人正式任命为药品与生物制品审评中心主任，同时设立技术与人工智能副局长岗位。","whyItMatters":"监管能力与组织稳定性将影响新药、疫苗审批节奏及医疗 AI 的治理路径。","source":"Reuters","sourceUrl":"https://ae.marketscreener.com/news/latest/US-names-acting-FDA-drug-vaccine-chiefs-to-permanent-posts-11893704/","publishedAt":"2026-09-09T05:48:00+08:00"},
+    {"id":"bhp-port-hedland-talks-20260909","category":"产业","priority":2,"headline":"必和必拓与工会就黑德兰港铁矿石工人谈判趋紧","summary":"围绕澳大利亚关键铁矿石出口港的劳资谈判受到市场关注，任何供应端扰动都可能影响全球铁矿石贸易。","whyItMatters":"黑德兰港是全球铁矿石供应链的重要节点，劳资摩擦会影响钢铁原料价格。","source":"Reuters","sourceUrl":"https://live.euronext.com/en/financial-news?_bhlid=aeccce0081dbf3511cb85b16a88c5f908dfeece3&page=0","publishedAt":"2026-09-09T05:24:00+08:00"},
+    {"id":"wizz-ryanair-nats-overhaul-20260909","category":"产业","priority":2,"headline":"Wizz Air 与瑞安航空呼吁重整英国空管系统","summary":"在空管故障扰动航班后，两家廉航要求对英国空管体系进行改革，行业将焦点放在基础设施可靠性。","whyItMatters":"航空运输高度依赖公共基础设施，系统性故障会放大为全行业成本。","source":"Reuters","sourceUrl":"https://live.euronext.com/en/financial-news?_bhlid=aeccce0081dbf3511cb85b16a88c5f908dfeece3&page=0","publishedAt":"2026-09-09T05:05:00+08:00"},
+    {"id":"wall-street-oil-inflation-20260909","category":"财经","priority":2,"headline":"油价抬升通胀担忧，美股主要指数走低","summary":"中东战事推高能源价格后，市场在关键通胀数据发布前转向谨慎，美股三大指数均收跌。","whyItMatters":"能源价格会改变市场对美联储路径的判断，并影响全球风险资产估值。","source":"AP","sourceUrl":"https://apnews.com/article/d3d6157a534584985987f828a940cffa","publishedAt":"2026-09-09T04:46:00+08:00"},
+    {"id":"irish-x-child-protection-probe-20260909","category":"产业","priority":2,"headline":"爱尔兰监管机构对 X 的儿童保护问题启动正式调查","summary":"爱尔兰监管方对社交平台 X 的儿童保护措施展开正式调查，欧洲平台治理监管继续加码。","whyItMatters":"这会影响大型平台在欧洲的内容审核、合规成本与产品设计。","source":"Reuters","sourceUrl":"https://live.euronext.com/en/financial-news?_bhlid=aeccce0081dbf3511cb85b16a88c5f908dfeece3&page=0","publishedAt":"2026-09-09T04:06:00+08:00"},
+    {"id":"french-energy-union-strike-20260909","category":"能源","priority":2,"headline":"法国能源工会威胁下周采取罢工行动","summary":"法国能源工会就相关提议发出罢工威胁，欧洲能源供应和价格的不确定性再增一层。","whyItMatters":"在油气价格已偏高时，欧洲本地供应扰动会放大企业与居民的成本压力。","source":"Reuters","sourceUrl":"https://live.euronext.com/en/financial-news?_bhlid=aeccce0081dbf3511cb85b16a88c5f908dfeece3&page=0","publishedAt":"2026-09-09T03:45:00+08:00"},
+    {"id":"us-treasury-yields-5pct-20260909","category":"财经","priority":2,"headline":"美国 10 年期国债收益率逼近 5%，市场评估融资压力","summary":"在财政赤字、AI 投资和能源冲击背景下，美债收益率接近长期罕见水平，企业再融资成本成为市场焦点。","whyItMatters":"长期利率上行会同时影响股市估值、住房贷款和企业资本开支。","source":"Reuters","sourceUrl":"https://wealthinsights.metrobank.com.ph/news/five-spots-to-watch-as-the-bond-market-creeps-up-on-5percent","publishedAt":"2026-09-09T03:30:00+08:00"},
+    {"id":"us-destroys-iranian-tankers-20260909","category":"国际","priority":2,"headline":"美军称摧毁多艘伊朗原油运输船","summary":"美军称其部队在遭遇导弹威胁后摧毁五艘伊朗原油运输船，海上冲突进一步牵动能源供应安全。","whyItMatters":"这会提高海运风险溢价，并令地区冲突更难与能源市场脱钩。","source":"Reuters","sourceUrl":"https://www.investing.com/news/world-news","publishedAt":"2026-09-09T02:30:00+08:00"},
+    {"id":"novartis-drug-setbacks-20260909","category":"健康","priority":2,"headline":"诺华接连披露后期管线受挫，股价承压","summary":"诺华一款肌肉萎缩症候选药未达后期试验目标，紧接着此前胆固醇药物的试验挫折，市场重新评估其研发管线。","whyItMatters":"大型药企的后期试验结果会直接影响研发估值、并购预期和患者可及性。","source":"Reuters","sourceUrl":"https://www.brecorder.com/news/40438528","publishedAt":"2026-09-09T01:39:00+08:00"},
+    {"id":"global-diesel-tightness-20260909","category":"能源","priority":2,"headline":"行业预计全球柴油供应紧张将延续至冬季","summary":"受炼化闲置产能有限、出口限制及冬季需求临近影响，行业人士预计柴油供给压力仍将持续。","whyItMatters":"柴油是物流、农业和工业的基础成本，供应紧张会迅速传导至实体经济。","source":"Reuters","sourceUrl":"https://newsletter-en.creamermedia.com/author.php?u_id=99","publishedAt":"2026-09-09T01:10:00+08:00"},
+    {"id":"congo-ebola-cases-20260909","category":"健康","priority":2,"headline":"刚果（金）埃博拉病例超过 5,000 例，防控压力上升","summary":"政府数据称确认病例已超过 5,000 例，公共卫生部门警告现有应对力度尚不足以遏制疫情。","whyItMatters":"疫情扩散会考验区域卫生系统、跨境防控与国际援助能力。","source":"Reuters","sourceUrl":"https://www.reuters.com/business/healthcare-pharmaceuticals/","publishedAt":"2026-09-09T00:50:00+08:00"},
+    {"id":"nike-climate-proposal-20260909","category":"产业","priority":2,"headline":"耐克股东否决挪威主权基金支持的气候提案","summary":"耐克股东否决了一项由挪威主权基金支持的气候相关提案，企业气候治理的股东博弈仍在持续。","whyItMatters":"大型资管机构与公司董事会的分歧，将影响企业气候披露和转型投资节奏。","source":"Reuters","sourceUrl":"https://live.euronext.com/en/financial-news?_bhlid=aeccce0081dbf3511cb85b16a88c5f908dfeece3&page=0","publishedAt":"2026-09-08T22:22:00+08:00"},
+    {"id":"copper-15000-watch-20260909","category":"产业","priority":2,"headline":"铜价或测试每吨 15,000 美元，市场等待美国数据与关税线索","summary":"分析人士认为，在库存偏紧、美元走弱和贸易政策不确定性下，铜价可能挑战关键整数关口。","whyItMatters":"铜价是电网、制造业与能源转型资本开支的重要领先指标。","source":"Reuters","sourceUrl":"https://newsletter-en.creamermedia.com/author.php?u_id=99","publishedAt":"2026-09-08T21:40:00+08:00"},
+    {"id":"food-prices-supply-risks-20260909","category":"能源","priority":2,"headline":"全球食品价格升至 2022 年来高位，供应风险叠加","summary":"联合国粮农组织数据显示，恶劣天气与海湾、黑海地区战争扰动增加了主粮供应担忧，8 月食品价格升至阶段高位。","whyItMatters":"粮价上行会推高通胀并加剧低收入国家的财政与社会压力。","source":"Reuters","sourceUrl":"https://newsletter-en.creamermedia.com/author.php?u_id=99","publishedAt":"2026-09-08T20:30:00+08:00"}
   ]
 }

@@ -2,28 +2,41 @@
 import news from '../../data/news.json';
 import newsCss from '../../styles/news.css?raw';
 
-if (!news.items.every((item) => item.id && item.category && item.headline && item.summary && item.whyItMatters && item.source && item.sourceUrl.startsWith('https://') && Number.isFinite(Date.parse(item.publishedAt)))) {
-  throw new Error('Invalid news data');
+const requiredCategories = ['国际', '财经', '科技', '产业', '健康', '能源'];
+const isTimestamp = (value: unknown) => typeof value === 'string' && Number.isFinite(Date.parse(value));
+const isValidItem = (item: typeof news.items[number]) => item.id
+  && requiredCategories.includes(item.category)
+  && item.headline
+  && item.summary
+  && item.whyItMatters
+  && item.source
+  && item.sourceUrl.startsWith('https://')
+  && Number.isFinite(item.priority)
+  && item.priority >= 1
+  && item.priority <= 3
+  && isTimestamp(item.publishedAt);
+
+if (!isTimestamp(news.coverageStart) || !isTimestamp(news.updatedAt) || Date.parse(news.coverageStart) >= Date.parse(news.updatedAt) || news.items.length < 20 || news.items.length > 30 || !news.items.every(isValidItem) || requiredCategories.some((category) => news.items.filter((item) => item.category === category).length < 3)) {
+  throw new Error('News data must contain 20–30 recent, categorized events with an actual update time');
 }
 
-const category = Astro.url.searchParams.get('category') || '全部';
-const categories = ['全部', ...new Set(news.items.map((item) => item.category))];
-const items = (category === '全部' ? news.items : news.items.filter((item) => item.category === category))
-  .toSorted((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
-const [lead, ...stories] = items;
-const dateTime = new Intl.DateTimeFormat('zh-CN', {
-  month: '2-digit',
-  day: '2-digit',
-  hour: '2-digit',
-  minute: '2-digit',
-  hour12: false,
-});
-const fullDate = new Intl.DateTimeFormat('zh-CN', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-  weekday: 'long',
-}).format(new Date(news.updatedAt));
+const categoryCounts = new Map(requiredCategories.map((value) => [value, news.items.filter((item) => item.category === value).length]));
+const requestedCategory = Astro.url.searchParams.get('category') || '全部';
+const category = requestedCategory === '全部' || requiredCategories.includes(requestedCategory) ? requestedCategory : '全部';
+const categories = ['全部', ...requiredCategories];
+const sortByNewest = (items: typeof news.items) => items.toSorted((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
+const timelineItems = sortByNewest(category === '全部' ? news.items : news.items.filter((item) => item.category === category));
+const focusItems = category === '全部' ? [...news.items].toSorted((a, b) => a.priority - b.priority || Date.parse(b.publishedAt) - Date.parse(a.publishedAt)).slice(0, 3) : [];
+const timeFormatter = new Intl.DateTimeFormat('zh-CN', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Asia/Shanghai' });
+const shortFormatter = new Intl.DateTimeFormat('zh-CN', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Asia/Shanghai' });
+const updatedFormatter = new Intl.DateTimeFormat('zh-CN', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'short', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, timeZone: 'Asia/Shanghai' });
+const dayFormatter = new Intl.DateTimeFormat('zh-CN', { month: 'long', day: 'numeric', weekday: 'short', timeZone: 'Asia/Shanghai' });
+const timelineDays = Object.values(timelineItems.reduce<Record<string, { label: string; items: typeof news.items }>>((groups, item) => {
+  const date = new Date(item.publishedAt);
+  const key = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Shanghai' }).format(date);
+  (groups[key] ||= { label: dayFormatter.format(date), items: [] }).items.push(item);
+  return groups;
+}, {}));
 const categoryHref = (value: string) => value === '全部' ? '/' : `/?category=${encodeURIComponent(value)}`;
 ---
 <!doctype html>
@@ -31,7 +44,7 @@ const categoryHref = (value: string) => value === '全部' ? '/' : `/?category=$
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="GPT 定时追踪全网各行业最重要的新闻，并用中文说明它为什么重要。" />
+    <meta name="description" content="GPT 按最近 24 小时采集窗口整理 20 至 30 条跨行业重要新闻，并以事件流呈现。" />
     <meta name="generator" content={Astro.generator} />
     <title>{category === '全部' ? '要闻追踪' : `${category}要闻`} · FEROAD NEWS</title>
     <style is:inline set:html={newsCss}></style>
@@ -39,81 +52,91 @@ const categoryHref = (value: string) => value === '全部' ? '/' : `/?category=$
   <body>
     <div class="topbar">
       <div class="topbar__inner">
-        <span class="status">GPT 定时更新中</span>
-        <span>只保留影响足够大的新闻</span>
+        <span class="status">GPT 已完成本轮采集</span>
+        <time datetime={news.updatedAt}>实际更新于 {updatedFormatter.format(new Date(news.updatedAt))}（北京时间）</time>
       </div>
     </div>
 
     <header class="masthead">
       <div class="masthead__row shell">
-        <span class="date">{fullDate}</span>
+        <p class="masthead__edition">24 小时事件流</p>
         <a class="brand" href="/" aria-label="FEROAD NEWS 首页">
           <span class="brand__cn">要闻追踪</span>
           <span class="brand__en">FEROAD NEWS</span>
         </a>
-        <a class="about" href="https://feroad.com">FEROAD.COM ↗</a>
+        <a class="about" href="https://www.feroad.com">FEROAD.COM ↗</a>
       </div>
     </header>
 
     <nav class="category-nav" aria-label="新闻行业分类">
       <div class="category-nav__inner">
         {categories.map((value) => (
-          <a class="category-link" href={categoryHref(value)} aria-current={category === value ? 'page' : undefined}>{value}</a>
+          <a class="category-link" href={categoryHref(value)} aria-current={category === value ? 'page' : undefined}>
+            {value}<small>{value === '全部' ? news.items.length : categoryCounts.get(value)}</small>
+          </a>
         ))}
       </div>
     </nav>
 
     <main class="shell">
-      <div class="edition">
-        <h1>{category === '全部' ? '今日全网要闻' : `${category} · 今日要闻`}</h1>
-        <p>最近更新 {dateTime.format(new Date(news.updatedAt))} · 北京时间</p>
-      </div>
+      <section class="edition" aria-labelledby="page-title">
+        <div>
+          <p class="kicker">{category === '全部' ? '全行业监测' : `${category}分类监测`}</p>
+          <h1 id="page-title">{category === '全部' ? '本轮重要事件' : `${category}事件流`}</h1>
+        </div>
+        <p>覆盖 {shortFormatter.format(new Date(news.coverageStart))} 至 {shortFormatter.format(new Date(news.updatedAt))}<br />共 {timelineItems.length} 条，按发生时间倒序</p>
+      </section>
 
-      {lead ? (
-        <>
-          <article class="lead">
-            <div class="lead__rank" aria-hidden="true">01</div>
-            <div>
-              <p class="eyebrow">{lead.category} · 首要关注</p>
-              <h2><a href={lead.sourceUrl} target="_blank" rel="noreferrer">{lead.headline}</a></h2>
-            </div>
-            <div class="lead__summary">
-              <p>{lead.summary}</p>
-              <p><strong>为什么重要：</strong>{lead.whyItMatters}</p>
-              <a class="source-link" href={lead.sourceUrl} target="_blank" rel="noreferrer">查看 {lead.source} 原文</a>
-            </div>
-          </article>
-
-          <section class="grid" aria-label="更多重要新闻">
-            {stories.map((story) => (
-              <article class="story">
-                <div class="story__meta">
-                  <span class="story__category">{story.category}</span>
-                  <time datetime={story.publishedAt}>{dateTime.format(new Date(story.publishedAt))}</time>
-                </div>
-                <h2><a href={story.sourceUrl} target="_blank" rel="noreferrer">{story.headline}</a></h2>
-                <p class="story__summary">{story.summary}</p>
-                <p class="why"><strong>为什么重要：</strong>{story.whyItMatters}</p>
-                <div class="story__footer">
-                  <span class="story__source">来源 · {story.source}</span>
-                  <a class="source-link" href={story.sourceUrl} target="_blank" rel="noreferrer" aria-label={`查看 ${story.source} 原文`}>原文</a>
-                </div>
+      {focusItems.length > 0 && (
+        <section class="focus" aria-labelledby="focus-title">
+          <div class="section-heading">
+            <h2 id="focus-title">本轮焦点</h2>
+            <span>影响范围与紧迫性优先</span>
+          </div>
+          <div class="focus__grid">
+            {focusItems.map((story, index) => (
+              <article class="focus-card">
+                <div class="focus-card__meta"><span>0{index + 1}</span><time datetime={story.publishedAt}>{timeFormatter.format(new Date(story.publishedAt))}</time></div>
+                <p class="category-label">{story.category}</p>
+                <h3><a href={story.sourceUrl} target="_blank" rel="noreferrer">{story.headline}</a></h3>
+                <p>{story.summary}</p>
               </article>
             ))}
-          </section>
-        </>
-      ) : (
-        <section class="empty">
-          <h2>这个分类还没有足够重要的新闻</h2>
-          <a class="source-link" href="/">返回全部要闻</a>
+          </div>
         </section>
       )}
+
+      <section class="timeline" aria-labelledby="timeline-title">
+        <div class="section-heading">
+          <h2 id="timeline-title">事件时间线</h2>
+          <span>{category === '全部' ? '跨行业要闻' : `${category}全部入选新闻`}</span>
+        </div>
+        {timelineDays.map((day) => (
+          <section class="timeline-day">
+            <h3>{day.label}<span>{day.items.length} 件</span></h3>
+            <div class="timeline-events">
+              {day.items.map((story) => (
+                <article class="event">
+                  <time class="event__time" datetime={story.publishedAt}>{timeFormatter.format(new Date(story.publishedAt))}</time>
+                  <div class="event__marker" aria-hidden="true"></div>
+                  <div class="event__card">
+                    <div class="event__meta"><span class="category-label">{story.category}</span><span>来源 · {story.source}</span></div>
+                    <h4><a href={story.sourceUrl} target="_blank" rel="noreferrer">{story.headline}</a></h4>
+                    <p>{story.summary}</p>
+                    <div class="event__impact"><strong>影响：</strong>{story.whyItMatters}<a href={story.sourceUrl} target="_blank" rel="noreferrer" aria-label={`查看 ${story.source} 原文`}>原文 ↗</a></div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        ))}
+      </section>
     </main>
 
     <footer class="footer">
       <div class="footer__inner">
-        <span>GPT 负责发现与摘要，事实以原始报道为准。</span>
-        <a href="https://blog.feroad.com">访问 Feroad 博客 ↗</a>
+        <span>GPT 负责发现与摘要；事实以原始报道为准。</span>
+        <time datetime={news.updatedAt}>本轮写入：{updatedFormatter.format(new Date(news.updatedAt))}</time>
       </div>
     </footer>
   </body>
