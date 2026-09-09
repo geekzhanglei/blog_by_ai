@@ -1,0 +1,75 @@
+{
+  "updatedAt": "2026-09-09T13:30:00+08:00",
+  "items": [
+    {
+      "id": "middle-east-oil-20260909",
+      "category": "能源",
+      "headline": "中东冲突升级，布伦特原油逼近每桶 100 美元",
+      "summary": "也门胡塞武装袭击沙特能源设施、美国与伊朗继续交火，市场重新计价石油供应中断风险。亚洲股市承压，日元走强，欧洲央行等主要央行的通胀判断也变得更难。",
+      "whyItMatters": "油价若长期站上高位，会同时推升运输、制造和居民能源成本，并压缩全球降息空间。",
+      "source": "Reuters",
+      "sourceUrl": "https://au.investing.com/news/economy-news/oil-heads-for-100-asia-stocks-subdued-as-middle-east-tensions-escalate-4633452",
+      "publishedAt": "2026-09-09T12:26:00+08:00"
+    },
+    {
+      "id": "iran-us-jordan-hormuz-20260909",
+      "category": "国际",
+      "headline": "伊朗袭击美军约旦基地及霍尔木兹海峡附近船只",
+      "summary": "伊朗革命卫队称向美军设施与海上目标发射弹道导弹。事件紧接美国摧毁多艘伊朗油轮之后，地区冲突正在从陆上目标进一步外溢至能源运输通道。",
+      "whyItMatters": "霍尔木兹海峡是全球关键能源咽喉，军事风险会迅速传导到油价、航运保险和供应链。",
+      "source": "Reuters",
+      "sourceUrl": "https://au.investing.com/news/world-news",
+      "publishedAt": "2026-09-09T11:30:00+08:00"
+    },
+    {
+      "id": "openai-samsung-chips-20260909",
+      "category": "科技",
+      "headline": "OpenAI 与三星深化下一代芯片合作",
+      "summary": "OpenAI 表示正与三星电子扩大芯片联合研发，并加强半导体和企业 AI 服务合作。其自研推理芯片 Jalapeño 由 OpenAI 与博通共同设计，目标是降低模型推理成本并缓解算力供应约束。",
+      "whyItMatters": "头部模型公司正把竞争延伸到芯片和供应链，可能改变英伟达之外的 AI 基础设施格局。",
+      "source": "Reuters",
+      "sourceUrl": "https://www.marketscreener.com/news/openai-says-working-with-samsung-on-next-generation-chips-deepening-cooperation-ce785bd9db8ef123",
+      "publishedAt": "2026-09-09T09:57:00+08:00"
+    },
+    {
+      "id": "openai-industry-ai-pricing-20260909",
+      "category": "商业",
+      "headline": "OpenAI 把 AI 推向芯片设计、生命科学和金融服务",
+      "summary": "OpenAI CFO 表示，公司正加速提供面向垂直行业的 AI，并尝试按业务结果而非单纯用量收费。公司还称利用自家模型把 Jalapeño 芯片设计推进到流片阶段只用了九个月。",
+      "whyItMatters": "AI 商业模式正在从通用助手转向可量化产出的行业系统，企业采购标准也会随之改变。",
+      "source": "Reuters",
+      "sourceUrl": "https://www.investing.com/news/economy-news/openai-offers-ai-for-chip-design-touts-cost-advantage-over-opensource-cfo-says-4892636",
+      "publishedAt": "2026-09-09T08:43:00+08:00"
+    },
+    {
+      "id": "fda-leadership-ai-20260909",
+      "category": "医疗",
+      "headline": "美国 FDA 固化药品与疫苗审评领导层，并新设技术与 AI 主管",
+      "summary": "美国卫生部门将两名代理负责人正式任命为 FDA 药品审评与生物制品审评中心主任，同时任命首位负责技术与人工智能的副局长。",
+      "whyItMatters": "FDA 的组织稳定性直接影响新药和疫苗审批节奏，新设 AI 职位也预示监管流程将更深地引入自动化。",
+      "source": "Reuters",
+      "sourceUrl": "https://ae.marketscreener.com/news/latest/US-names-acting-FDA-drug-vaccine-chiefs-to-permanent-posts-11893704/",
+      "publishedAt": "2026-09-09T05:48:00+08:00"
+    },
+    {
+      "id": "roivant-lung-trial-20260908",
+      "category": "医疗",
+      "headline": "Roivant 肺病候选药在中期试验达到主要目标",
+      "summary": "mosliciguat 在一项 135 人试验中显著降低与间质性肺病相关的肺高压患者肺血管阻力，并改善六分钟步行距离。公司已启动约 375 人的后期试验。",
+      "whyItMatters": "这类患者治疗选择有限；如果后期数据延续，中重度肺病治疗可能出现新的用药路径。",
+      "source": "Reuters",
+      "sourceUrl": "https://finance.yahoo.com/healthcare/articles/roivants-experimental-lung-disease-drug-110005292.html",
+      "publishedAt": "2026-09-08T19:00:00+08:00"
+    },
+    {
+      "id": "ukraine-us-envoys-20260906",
+      "category": "国际",
+      "headline": "美方特使访问基辅，俄乌谈判仍未突破核心分歧",
+      "summary": "美国特使在与普京会面后访问乌克兰，并称会谈具有建设性，但领土让步等核心问题仍无突破。外交接触增加，距离可执行的停火框架仍然很远。",
+      "whyItMatters": "战争走向持续影响欧洲安全、能源价格、军费和全球粮食贸易。",
+      "source": "AP",
+      "sourceUrl": "https://apnews.com/article/44bba3b57b480560d9f48dba7d28534e",
+      "publishedAt": "2026-09-06T15:53:00+08:00"
+    }
+  ]
+}

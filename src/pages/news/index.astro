@@ -1,0 +1,120 @@
+---
+import news from '../../data/news.json';
+import newsCss from '../../styles/news.css?raw';
+
+if (!news.items.every((item) => item.id && item.category && item.headline && item.summary && item.whyItMatters && item.source && item.sourceUrl.startsWith('https://') && Number.isFinite(Date.parse(item.publishedAt)))) {
+  throw new Error('Invalid news data');
+}
+
+const category = Astro.url.searchParams.get('category') || '全部';
+const categories = ['全部', ...new Set(news.items.map((item) => item.category))];
+const items = (category === '全部' ? news.items : news.items.filter((item) => item.category === category))
+  .toSorted((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
+const [lead, ...stories] = items;
+const dateTime = new Intl.DateTimeFormat('zh-CN', {
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+  hour12: false,
+});
+const fullDate = new Intl.DateTimeFormat('zh-CN', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  weekday: 'long',
+}).format(new Date(news.updatedAt));
+const categoryHref = (value: string) => value === '全部' ? '/' : `/?category=${encodeURIComponent(value)}`;
+---
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="GPT 定时追踪全网各行业最重要的新闻，并用中文说明它为什么重要。" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{category === '全部' ? '要闻追踪' : `${category}要闻`} · FEROAD NEWS</title>
+    <style is:inline set:html={newsCss}></style>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="topbar__inner">
+        <span class="status">GPT 定时更新中</span>
+        <span>只保留影响足够大的新闻</span>
+      </div>
+    </div>
+
+    <header class="masthead">
+      <div class="masthead__row shell">
+        <span class="date">{fullDate}</span>
+        <a class="brand" href="/" aria-label="FEROAD NEWS 首页">
+          <span class="brand__cn">要闻追踪</span>
+          <span class="brand__en">FEROAD NEWS</span>
+        </a>
+        <a class="about" href="https://feroad.com">FEROAD.COM ↗</a>
+      </div>
+    </header>
+
+    <nav class="category-nav" aria-label="新闻行业分类">
+      <div class="category-nav__inner">
+        {categories.map((value) => (
+          <a class="category-link" href={categoryHref(value)} aria-current={category === value ? 'page' : undefined}>{value}</a>
+        ))}
+      </div>
+    </nav>
+
+    <main class="shell">
+      <div class="edition">
+        <h1>{category === '全部' ? '今日全网要闻' : `${category} · 今日要闻`}</h1>
+        <p>最近更新 {dateTime.format(new Date(news.updatedAt))} · 北京时间</p>
+      </div>
+
+      {lead ? (
+        <>
+          <article class="lead">
+            <div class="lead__rank" aria-hidden="true">01</div>
+            <div>
+              <p class="eyebrow">{lead.category} · 首要关注</p>
+              <h2><a href={lead.sourceUrl} target="_blank" rel="noreferrer">{lead.headline}</a></h2>
+            </div>
+            <div class="lead__summary">
+              <p>{lead.summary}</p>
+              <p><strong>为什么重要：</strong>{lead.whyItMatters}</p>
+              <a class="source-link" href={lead.sourceUrl} target="_blank" rel="noreferrer">查看 {lead.source} 原文</a>
+            </div>
+          </article>
+
+          <section class="grid" aria-label="更多重要新闻">
+            {stories.map((story) => (
+              <article class="story">
+                <div class="story__meta">
+                  <span class="story__category">{story.category}</span>
+                  <time datetime={story.publishedAt}>{dateTime.format(new Date(story.publishedAt))}</time>
+                </div>
+                <h2><a href={story.sourceUrl} target="_blank" rel="noreferrer">{story.headline}</a></h2>
+                <p class="story__summary">{story.summary}</p>
+                <p class="why"><strong>为什么重要：</strong>{story.whyItMatters}</p>
+                <div class="story__footer">
+                  <span class="story__source">来源 · {story.source}</span>
+                  <a class="source-link" href={story.sourceUrl} target="_blank" rel="noreferrer" aria-label={`查看 ${story.source} 原文`}>原文</a>
+                </div>
+              </article>
+            ))}
+          </section>
+        </>
+      ) : (
+        <section class="empty">
+          <h2>这个分类还没有足够重要的新闻</h2>
+          <a class="source-link" href="/">返回全部要闻</a>
+        </section>
+      )}
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <span>GPT 负责发现与摘要，事实以原始报道为准。</span>
+        <a href="https://blog.feroad.com">访问 Feroad 博客 ↗</a>
+      </div>
+    </footer>
+  </body>
+</html>

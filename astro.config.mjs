@@ -21,6 +21,10 @@ export default defineConfig({
 				protocol: "https",
 				hostname: "blog.feroad.com",
 			},
+			{
+				protocol: "https",
+				hostname: "news.feroad.com",
+			},
 		],
 	},
 });
