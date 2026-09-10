@@ -1,7 +1,6 @@
 # ============================================================
 # GitHub Actions CI/CD 配置 (参考 beta_mysql/ci.yml 模式)
-# 策略：不用 scp 上传产物，改为在服务器上 git pull + 本地构建 + pm2 重启
-# 优势：彻底避开 scp-action 的 handshake EOF 问题，只用 1 次 SSH 会话
+# 推送仅执行构建校验；生产服务器通过本地 cron 拉取 main 的新提交。
 # ============================================================
 
 name: Node.js CI
@@ -52,56 +51,3 @@ jobs:
       # 5. 构建验证 (确保代码可构建，不上传产物)
       - name: Build Astro project
         run: pnpm build
-
-  # ==========================================================
-  # 任务 B: 部署到服务器 (CD 持续部署)
-  # ==========================================================
-  deploy:
-    name: Deploy to Server
-    # 依赖关系：build 通过后才部署
-    needs: build
-    # 限制：只有 main 分支 push 时才部署 (PR 只跑 build 不部署)
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-
-    runs-on: ubuntu-latest
-
-    steps:
-      # SSH 登录服务器执行部署 (单次 SSH 会话，最稳)
-      - name: Deploy to Server
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          command_timeout: 30m
-          script: |
-            # 用 bash -l (登录 shell) 执行所有命令，自动加载 .bash_profile/.profile/.bashrc，
-            # 彻底解决 ssh-action 非交互式 shell 下 PATH 丢失的问题。
-            bash -l <<'EOF'
-            set -e
-
-            # 1. 加载 NVM（即使 .profile 没加载到，手动再 source 一次）
-            export NVM_DIR="/root/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-            # 兑底：把 pnpm 常见的独立安装路径也加到 PATH
-            export PNPM_HOME="$HOME/.local/share/pnpm"
-            export PATH="$PNPM_HOME:/usr/local/bin:$PATH"
-            export PM2_NODE_INTERPRETER="/root/.nvm/versions/node/v24.15.0/bin/node"
-
-            # 2. 调试输出：确认工具链可用
-            echo "node: $(command -v node) $(node -v 2>/dev/null)"
-            echo "pnpm: $(command -v pnpm) $(pnpm -v 2>/dev/null)"
-            echo "pm2 : $(command -v pm2)  $(pm2 -v 2>/dev/null)"
-
-            # 3. 进入项目目录并拉取最新代码
-            cd /www/frontEnd/blog_by_ai
-            git pull origin main
-
-            # 4. 安装依赖 + 构建 + 重启 pm2
-            pnpm install --frozen-lockfile
-            pnpm build
-            mkdir -p logs
-            pm2 delete blog-by-ai || true
-            pnpm pm2:start
-            pm2 save
-            EOF

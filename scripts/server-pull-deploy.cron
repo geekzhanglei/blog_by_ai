@@ -1,0 +1,4 @@
+SHELL=/bin/bash
+PATH=/root/.nvm/versions/node/v24.15.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+*/5 * * * * root /usr/local/sbin/blog-by-ai-pull-deploy >/dev/null 2>&1
