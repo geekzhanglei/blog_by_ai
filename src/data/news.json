@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-18T19:31:31+08:00",
-  "coverageStart": "2026-09-17T19:31:31+08:00",
+  "updatedAt": "2026-09-18T23:30:15+08:00",
+  "coverageStart": "2026-09-17T23:30:15+08:00",
   "items": [
     {
       "id": "iran-hormuz-tanker-strike-20260918",
@@ -47,6 +47,17 @@
       "publishedAt": "2026-09-18T02:52:29+08:00"
     },
     {
+      "id": "russia-japan-typhon-protest-20260918",
+      "category": "国际",
+      "priority": 2,
+      "headline": "俄罗斯就日本部署美国中程导弹提出抗议",
+      "summary": "俄罗斯外交部正式抗议日本在九州部署美国“堤丰”中程导弹系统，称其威胁俄罗斯安全与地区稳定并要求撤除。",
+      "whyItMatters": "导弹部署加剧俄日安全对立，并把领土争端与美日军事合作进一步卷入东北亚军备竞争。",
+      "source": "AP",
+      "sourceUrl": "https://apnews.com/article/russia-japan-us-missiles-typhon-kyushu-fc0ee565826281e98794e9798522f2df",
+      "publishedAt": "2026-09-18T21:49:06+08:00"
+    },
+    {
       "id": "boj-rate-hike-125-20260918",
       "category": "财经",
       "priority": 1,
@@ -69,26 +80,15 @@
       "publishedAt": "2026-09-18T11:25:49+08:00"
     },
     {
-      "id": "us-jobless-claims-fall-20260917",
+      "id": "ecb-lagarde-energy-rate-bets-20260918",
       "category": "财经",
       "priority": 2,
-      "headline": "美国初请失业金人数降至 19.6 万",
-      "summary": "美国上周初请失业金人数从 20.6 万降至 19.6 万，为 7 月中旬以来最低；四周均值降至 20.325 万。",
-      "whyItMatters": "裁员维持低位说明就业市场仍有韧性，也为美联储在能源推高通胀时继续维持紧缩立场提供支撑。",
-      "source": "AP",
-      "sourceUrl": "https://apnews.com/article/unemployment-benefits-jobless-claims-layoffs-labor-dce6a66774436365a96bf3792bc1b86b",
-      "publishedAt": "2026-09-17T20:39:54+08:00"
-    },
-    {
-      "id": "us-housing-starts-august-20260917",
-      "category": "财经",
-      "priority": 2,
-      "headline": "美国 8 月住宅开工总量环比下降 2.6%",
-      "summary": "美国 8 月住宅开工折年率降至 127.5 万套，但独栋住宅开工环比增长 7.6%；新屋许可总量下降 2.7%。",
-      "whyItMatters": "总量走弱与独栋回升并存，反映高按揭利率仍压制建设活动，同时供给结构变化将影响房价、就业和材料需求。",
-      "source": "美国人口普查局",
-      "sourceUrl": "https://www.census.gov/construction/nrc/pdf/newresconst.pdf",
-      "publishedAt": "2026-09-17T20:30:00+08:00"
+      "headline": "拉加德淡化能源涨价必然触发激进加息的预期",
+      "summary": "欧洲央行行长拉加德表示利率不会与油气价格同步变动，政策还将综合评估增长、消费和更多经济数据。",
+      "whyItMatters": "市场已押注未来一年欧洲央行再加息三至四次，其表态可能重新影响欧债收益率、欧元和企业融资成本。",
+      "source": "Reuters",
+      "sourceUrl": "https://www.marketscreener.com/news/lagarde-pushes-back-on-market-rate-hike-bets-after-energy-costs-soar-ce785adada89ff24",
+      "publishedAt": "2026-09-18T19:36:00+08:00"
     },
     {
       "id": "anthropic-claude-builds-next-model-20260918",
@@ -124,37 +124,37 @@
       "publishedAt": "2026-09-18T15:27:00+08:00"
     },
     {
-      "id": "cabot-battery-materials-expansion-20260917",
+      "id": "russia-seizes-nestle-auchan-20260918",
       "category": "产业",
-      "priority": 2,
-      "headline": "Cabot 获 5000 万美元资助扩建美国电池材料产能",
-      "summary": "Cabot 将结合美国能源部 5000 万美元资助和约 7500 万美元自有投资，扩建路易斯安那州与得州的先进导电添加剂产能。",
-      "whyItMatters": "项目把资金转向现有工厂扩建，可更快补强美国电池材料本土供应，并服务储能、数据中心和电气化需求。",
-      "source": "Cabot",
-      "sourceUrl": "https://cabotog.gcs-web.com/news-releases/news-release-details/cabot-corporation-expand-north-american-battery-materials",
-      "publishedAt": "2026-09-17T21:33:00+08:00"
+      "priority": 1,
+      "headline": "俄罗斯接管雀巢与欧尚在俄业务",
+      "summary": "克里姆林宫下令把雀巢和欧尚的俄罗斯业务交由临时管理；此前类似程序曾导致西方企业资产折价出售给俄方买家。",
+      "whyItMatters": "行动进一步提高跨国企业在俄资产被强制处置的风险，也可能引发欧洲政府交涉和企业减值。",
+      "source": "AP",
+      "sourceUrl": "https://apnews.com/article/russia-ukraine-nestle-auchan-putin-db90782aa5510cef0eeba61ef8969ab5",
+      "publishedAt": "2026-09-18T21:29:04+08:00"
     },
     {
-      "id": "globalfoundries-marvell-sige-capacity-20260917",
+      "id": "uk-air-traffic-software-glitch-20260918",
       "category": "产业",
-      "priority": 2,
-      "headline": "格芯与 Marvell 扩大 AI 光互连芯片产能合作",
-      "summary": "双方扩大多年协议，将提升格芯佛蒙特州工厂的硅锗技术产能，用于高速光收发器、近封装和共封装光学产品。",
-      "whyItMatters": "AI 数据中心瓶颈正从计算芯片延伸到互连带宽，扩产将强化美国本土高性能光网络供应链。",
-      "source": "Reuters",
-      "sourceUrl": "https://www.investing.com/news/stock-market-news/globalfoundries-marvell-expand-chip-capacity-deal-for-ai-data-center-connectivity-4905799",
-      "publishedAt": "2026-09-17T21:10:00+08:00"
+      "priority": 1,
+      "headline": "英国空管称毫秒级软件缺陷导致逾 2000 架次航班取消",
+      "summary": "英国国家空中交通服务公司的初步报告把 9 月 8 日大规模航班中断归因于航班数据系统的一处软件缺陷，并称已部署缓解措施。",
+      "whyItMatters": "单点软件故障影响数十万旅客，暴露关键交通基础设施的系统韧性、测试覆盖和业务连续性风险。",
+      "source": "AP",
+      "sourceUrl": "https://apnews.com/article/britain-air-traffic-control-software-glitch-cb76f4a96aa9e03d0a2fdc503efe02da",
+      "publishedAt": "2026-09-18T22:27:13+08:00"
     },
     {
-      "id": "xpeng-foreign-automaker-tech-licensing-20260917",
+      "id": "waymo-singapore-robotaxi-20260918",
       "category": "产业",
       "priority": 2,
-      "headline": "小鹏汽车计划向更多海外车企输出技术",
-      "summary": "小鹏拟把电子电气架构、座舱、图灵 AI 芯片与辅助驾驶系统授权给大众之外的海外车企，并拓展机器人出租车和机器人方案。",
-      "whyItMatters": "中国电动车企业正从整车出口转向高毛利技术服务，可能重塑传统车企的软件采购、平台合作和竞争边界。",
+      "headline": "Waymo 计划 2028 年在新加坡推出无人驾驶叫车服务",
+      "summary": "Waymo 将与新加坡交通部门合作，先引入电动汽车并于 2027 年开展人工驾驶准备，目标 2028 年商业化运营。",
+      "whyItMatters": "这是 Waymo 首次进入东南亚，标志机器人出租车竞争加速跨境扩张，也将考验监管、安全和司机转岗安排。",
       "source": "Reuters",
-      "sourceUrl": "https://uk.marketscreener.com/news/china-s-xpeng-plans-to-offer-tech-solutions-to-foreign-automakers-ce785bd3dc8ff727",
-      "publishedAt": "2026-09-17T21:42:00+08:00"
+      "sourceUrl": "https://www.marketscreener.com/news/waymo-to-bring-autonomous-ride-hailing-to-singapore-in-2028-ce785bd3d08ef524",
+      "publishedAt": "2026-09-18T10:01:00+08:00"
     },
     {
       "id": "fda-fayuvi-sanfilippo-gene-therapy-20260918",
