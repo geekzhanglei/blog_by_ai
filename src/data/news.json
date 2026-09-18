@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-18T23:30:15+08:00",
-  "coverageStart": "2026-09-17T23:30:15+08:00",
+  "updatedAt": "2026-09-19T03:30:11+08:00",
+  "coverageStart": "2026-09-18T03:30:11+08:00",
   "items": [
     {
       "id": "iran-hormuz-tanker-strike-20260918",
@@ -36,17 +36,6 @@
       "publishedAt": "2026-09-18T16:25:00+08:00"
     },
     {
-      "id": "houthis-yemen-eastward-advance-20260918",
-      "category": "国际",
-      "priority": 1,
-      "headline": "胡塞武装沿红海推进并威胁沙特石油通道",
-      "summary": "胡塞武装夺取红海沿岸城市一周后继续觊觎也门东部，并攻击沙特石油设施和油轮；新一轮攻势已迫使约 12.5 万人逃离家园。",
-      "whyItMatters": "战线逼近关键航道和产油区，既加剧也门人道危机，也可能进一步扰乱沙特出口与全球能源供应。",
-      "source": "AP",
-      "sourceUrl": "https://apnews.com/article/yemen-houthis-saudi-oil-red-sea-shipping-explainer-22e64e72775886625da676aee92edca2",
-      "publishedAt": "2026-09-18T02:52:29+08:00"
-    },
-    {
       "id": "russia-japan-typhon-protest-20260918",
       "category": "国际",
       "priority": 2,
@@ -56,6 +45,17 @@
       "source": "AP",
       "sourceUrl": "https://apnews.com/article/russia-japan-us-missiles-typhon-kyushu-fc0ee565826281e98794e9798522f2df",
       "publishedAt": "2026-09-18T21:49:06+08:00"
+    },
+    {
+      "id": "france-infrastructure-hybrid-threat-plan-20260918",
+      "category": "国际",
+      "priority": 2,
+      "headline": "法国拟加强关键基础设施防范无人机和网络攻击",
+      "summary": "法国总统马克龙要求政府制定关键基础设施保护方案，覆盖敏感国防工业设施，以应对其所称日益加剧的俄罗斯混合威胁。",
+      "whyItMatters": "法国把无人机、网络攻击和破坏活动纳入国家级防护规划，显示欧洲安全投入正从前线军援延伸至本土基础设施韧性。",
+      "source": "AP",
+      "sourceUrl": "https://apnews.com/article/russia-macron-france-cyberattacks-29767a3fe6723ecffed343f0a4847e95",
+      "publishedAt": "2026-09-18T22:35:45+08:00"
     },
     {
       "id": "boj-rate-hike-125-20260918",
@@ -164,8 +164,8 @@
       "summary": "FDA 批准 Ultragenyx 的一次性基因疗法 Fayuvi，用于治疗会持续损害儿童大脑和神经系统的 Sanfilippo A 型综合征。",
       "whyItMatters": "这是该罕见致命遗传病首个获批疗法，为此前缺乏治疗选择的儿童提供针对基础酶缺陷的干预。",
       "source": "Reuters",
-      "sourceUrl": "https://www.boursorama.com/bourse/actualites/ultragenyx-fixe-le-prix-de-sa-therapie-genique-contre-une-maladie-rare-a-3-95-millions-de-dollars-b0af490427bbbe4c4dfb3bcdada4e882",
-      "publishedAt": "2026-09-18T06:38:00+08:00"
+      "sourceUrl": "https://www.marketscreener.com/news/ultragenyx-sets-3-95-million-price-for-rare-disease-gene-therapy-ce785bd3d181f12d",
+      "publishedAt": "2026-09-18T06:39:00+08:00"
     },
     {
       "id": "who-health-workforce-ageing-report-20260918",
@@ -197,7 +197,7 @@
       "summary": "沙特经阿曼增加装运、成品油库存上升及中国扩大燃料出口缓和供应担忧，布伦特原油一度跌至约每桶 103 美元。",
       "whyItMatters": "油价回落可缓解全球通胀和央行紧缩压力，但霍尔木兹航运仍低迷，地缘风险溢价尚未消失。",
       "source": "Reuters",
-      "sourceUrl": "https://live.euronext.com/en/financial-news/oil-prices-set-weekly-fall-easing-fears-over-saudi-supply-disruption",
+      "sourceUrl": "https://za.investing.com/news/commodities-news/oil-prices-fall-1-on-hopes-of-limited-supply-disruptions-4469375",
       "publishedAt": "2026-09-18T18:15:00+08:00"
     },
     {
@@ -212,15 +212,15 @@
       "publishedAt": "2026-09-18T15:37:09+08:00"
     },
     {
-      "id": "lng-canada-phase-two-talks-20260918",
+      "id": "g7-energy-crisis-reserves-meeting-20260918",
       "category": "能源",
       "priority": 1,
-      "headline": "LNG Canada 二期扩建最早或于 10 月获批",
-      "summary": "消息人士称，壳牌牵头的合作方正推进二期最终投资决定，拟新增每年 1400 万吨产能，使项目总产能翻倍至 2800 万吨。",
-      "whyItMatters": "中东冲突和红海运输风险正促使亚洲买家分散供应，扩建将显著提升加拿大面向亚洲的 LNG 出口能力。",
+      "headline": "马克龙称 G7 将开会协调能源危机应对",
+      "summary": "法国总统马克龙表示，G7 将在未来数周讨论加强能源供应合作，并评估释放战略储备或放宽限制等选项。",
+      "whyItMatters": "主要经济体若协调释放储备或调整供应限制，可能直接影响油气价格、通胀路径和各国能源安全安排。",
       "source": "Reuters",
-      "sourceUrl": "https://ca.marketscreener.com/news/shell-led-lng-canada-could-approve-phase-2-expansion-by-early-october-sources-say-ce785bd3de8af02c",
-      "publishedAt": "2026-09-18T02:14:00+08:00"
+      "sourceUrl": "https://www.marketscreener.com/news/france-s-macron-says-g7-will-meet-to-discuss-energy-crisis-in-coming-weeks-ce785adada8fff2c",
+      "publishedAt": "2026-09-18T20:47:00+08:00"
     }
   ]
 }
