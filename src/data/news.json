@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-19T03:30:11+08:00",
-  "coverageStart": "2026-09-18T03:30:11+08:00",
+  "updatedAt": "2026-09-19T07:33:09+08:00",
+  "coverageStart": "2026-09-18T07:33:09+08:00",
   "items": [
     {
       "id": "iran-hormuz-tanker-strike-20260918",
@@ -36,26 +36,26 @@
       "publishedAt": "2026-09-18T16:25:00+08:00"
     },
     {
-      "id": "russia-japan-typhon-protest-20260918",
+      "id": "us-russia-sanctions-law-20260919",
       "category": "国际",
-      "priority": 2,
-      "headline": "俄罗斯就日本部署美国中程导弹提出抗议",
-      "summary": "俄罗斯外交部正式抗议日本在九州部署美国“堤丰”中程导弹系统，称其威胁俄罗斯安全与地区稳定并要求撤除。",
-      "whyItMatters": "导弹部署加剧俄日安全对立，并把领土争端与美日军事合作进一步卷入东北亚军备竞争。",
+      "priority": 1,
+      "headline": "特朗普签署针对俄罗斯的全面制裁法案",
+      "summary": "美国新法制裁俄罗斯官员、银行和影子油轮船队，并要求对俄罗斯油气前五大进口国最高加征 100% 关税，但设置有限豁免。",
+      "whyItMatters": "新制裁把金融、航运和第三国贸易同时纳入施压范围，可能重塑俄罗斯能源出口、全球油气流向及美国与主要进口国关系。",
       "source": "AP",
-      "sourceUrl": "https://apnews.com/article/russia-japan-us-missiles-typhon-kyushu-fc0ee565826281e98794e9798522f2df",
-      "publishedAt": "2026-09-18T21:49:06+08:00"
+      "sourceUrl": "https://apnews.com/article/donald-trump-russia-sanctions-ukraine-lindsey-graham-d1715ad5e8feccba76bfae51c5f28c45",
+      "publishedAt": "2026-09-19T06:13:55+08:00"
     },
     {
-      "id": "france-infrastructure-hybrid-threat-plan-20260918",
+      "id": "trump-rodriguez-venezuela-meeting-20260919",
       "category": "国际",
       "priority": 2,
-      "headline": "法国拟加强关键基础设施防范无人机和网络攻击",
-      "summary": "法国总统马克龙要求政府制定关键基础设施保护方案，覆盖敏感国防工业设施，以应对其所称日益加剧的俄罗斯混合威胁。",
-      "whyItMatters": "法国把无人机、网络攻击和破坏活动纳入国家级防护规划，显示欧洲安全投入正从前线军援延伸至本土基础设施韧性。",
+      "headline": "特朗普将与委内瑞拉代总统罗德里格斯首次会面",
+      "summary": "白宫称特朗普下周将在纽约联大期间与委内瑞拉代总统德尔西·罗德里格斯短暂会晤，这是马杜罗被捕后两国领导人首次见面。",
+      "whyItMatters": "会面可能推动两国在委内瑞拉石油开发和政治过渡上的安排，并影响美国在拉美的能源与外交政策。",
       "source": "AP",
-      "sourceUrl": "https://apnews.com/article/russia-macron-france-cyberattacks-29767a3fe6723ecffed343f0a4847e95",
-      "publishedAt": "2026-09-18T22:35:45+08:00"
+      "sourceUrl": "https://apnews.com/article/trump-delcy-rodriguez-meeting-venezuela-47d8027590fea4b3009ae48ce3842942",
+      "publishedAt": "2026-09-19T06:20:57+08:00"
     },
     {
       "id": "boj-rate-hike-125-20260918",
@@ -157,15 +157,15 @@
       "publishedAt": "2026-09-18T10:01:00+08:00"
     },
     {
-      "id": "fda-fayuvi-sanfilippo-gene-therapy-20260918",
+      "id": "who-pathogen-benefit-sharing-talks-20260918",
       "category": "健康",
       "priority": 1,
-      "headline": "美国批准首款 Sanfilippo A 型综合征基因疗法",
-      "summary": "FDA 批准 Ultragenyx 的一次性基因疗法 Fayuvi，用于治疗会持续损害儿童大脑和神经系统的 Sanfilippo A 型综合征。",
-      "whyItMatters": "这是该罕见致命遗传病首个获批疗法，为此前缺乏治疗选择的儿童提供针对基础酶缺陷的干预。",
-      "source": "Reuters",
-      "sourceUrl": "https://www.marketscreener.com/news/ultragenyx-sets-3-95-million-price-for-rare-disease-gene-therapy-ce785bd3d181f12d",
-      "publishedAt": "2026-09-18T06:39:00+08:00"
+      "headline": "世卫成员推进病原体获取与利益分享机制谈判",
+      "summary": "世卫成员国结束疫情协定工作组第八次会议，继续推进病原体材料与序列共享、疫苗药物及诊断产品公平分配的 PABS 附件。",
+      "whyItMatters": "附件完成后，各国才可推进签署和批准疫情协定；其规则将影响下一次大流行中的样本共享、研发速度和医疗产品可及性。",
+      "source": "WHO",
+      "sourceUrl": "https://www.who.int/news/item/18-09-2026-member-states-advance-negotiations-on-pathogen-access-and-benefit-sharing-ahead-of-un-general-assembly-meeting-on-pandemics",
+      "publishedAt": "2026-09-18T22:39:50+08:00"
     },
     {
       "id": "who-health-workforce-ageing-report-20260918",
@@ -197,8 +197,8 @@
       "summary": "沙特经阿曼增加装运、成品油库存上升及中国扩大燃料出口缓和供应担忧，布伦特原油一度跌至约每桶 103 美元。",
       "whyItMatters": "油价回落可缓解全球通胀和央行紧缩压力，但霍尔木兹航运仍低迷，地缘风险溢价尚未消失。",
       "source": "Reuters",
-      "sourceUrl": "https://za.investing.com/news/commodities-news/oil-prices-fall-1-on-hopes-of-limited-supply-disruptions-4469375",
-      "publishedAt": "2026-09-18T18:15:00+08:00"
+      "sourceUrl": "https://live.euronext.com/en/financial-news/oil-prices-set-weekly-fall-easing-fears-over-saudi-supply-disruption",
+      "publishedAt": "2026-09-18T19:15:00+08:00"
     },
     {
       "id": "iea-korea-energy-security-talks-20260918",
