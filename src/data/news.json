@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-19T07:33:09+08:00",
-  "coverageStart": "2026-09-18T07:33:09+08:00",
+  "updatedAt": "2026-09-19T11:31:16+08:00",
+  "coverageStart": "2026-09-18T11:31:16+08:00",
   "items": [
     {
       "id": "iran-hormuz-tanker-strike-20260918",
@@ -14,15 +14,15 @@
       "publishedAt": "2026-09-18T14:34:56+08:00"
     },
     {
-      "id": "russia-parliament-election-voting-20260918",
+      "id": "us-big-bend-border-wall-20260919",
       "category": "国际",
       "priority": 2,
-      "headline": "俄罗斯启动为期三天的国家杜马选举",
-      "summary": "俄罗斯选民开始参加议会选举，投票将持续三天；在反对派受压和乌克兰战争延续的背景下，执政力量预计继续控制议会。",
-      "whyItMatters": "选举结果将影响俄罗斯战时预算、国内治理与对乌政策，并检验克里姆林宫在长期冲突中的政治控制力。",
+      "headline": "美国在得州 Big Bend 地区启动首段大规模边墙施工",
+      "summary": "美国海关与边境保护局开始在得州西部 Big Bend 1 项目区安装 30 英尺高钢制墙板，相关区段长 47 英里。",
+      "whyItMatters": "这是长期面临土地、环保与社区反对的 Big Bend 地区首次大规模开工，也是美国 460 亿美元边境基础设施计划的重要节点。",
       "source": "AP",
-      "sourceUrl": "https://apnews.com/article/russia-putin-election-parliament-duma-ukraine-war-7f10803a87456051be876c0c33375af8",
-      "publishedAt": "2026-09-18T14:20:12+08:00"
+      "sourceUrl": "https://apnews.com/article/border-wall-immigration-trump-texas-customs-border-protection-cdcdc43cd541cf0b42cb43c7cf9d0d8f",
+      "publishedAt": "2026-09-19T01:10:48+08:00"
     },
     {
       "id": "iran-mass-rally-war-readiness-20260918",
@@ -58,26 +58,26 @@
       "publishedAt": "2026-09-19T06:20:57+08:00"
     },
     {
-      "id": "boj-rate-hike-125-20260918",
-      "category": "财经",
-      "priority": 1,
-      "headline": "日本央行加息至 1.25%，创 31 年新高",
-      "summary": "日本央行把无担保隔夜拆借利率从 1.0% 上调至 1.25%，以应对能源冲击、日元波动和通胀上行风险。",
-      "whyItMatters": "日本加快退出超宽松政策将影响日元、全球债券收益率和套息交易，并抬高日本政府与企业的融资成本。",
-      "source": "AP",
-      "sourceUrl": "https://apnews.com/article/japan-economy-interest-rates-inflation-67e71246d3af41bcfc61aa788f9959c7",
-      "publishedAt": "2026-09-18T11:20:26+08:00"
-    },
-    {
-      "id": "asia-markets-oil-boj-20260918",
+      "id": "canada-europe-investment-pivot-20260919",
       "category": "财经",
       "priority": 2,
-      "headline": "油价回落推动亚洲股市多数上涨",
-      "summary": "日本央行加息后日经 225 指数收涨 1.4%，亚洲主要市场多数走高；欧洲早盘回落，美国股指期货小幅上涨。",
-      "whyItMatters": "市场正同时消化能源价格下降和全球央行收紧，资产价格对油价、债券收益率与政策预期的联动进一步增强。",
+      "headline": "加拿大以低税率与欧洲联盟吸引近半万亿美元投资",
+      "summary": "加拿大总理卡尼称该国正降低对美国的依赖，并推动与欧盟建立更深联盟；政府本周公布的投资承诺接近 5000 亿美元。",
+      "whyItMatters": "加拿大把新投资有效税率降至 6.4%，并向欧洲拓展能源、关键矿产和 AI 合作，可能重塑北美资本与供应链流向。",
       "source": "AP",
-      "sourceUrl": "https://apnews.com/article/stock-markets-oil-war-inflation-rates-1ff3311788bcc4555d00e283a57289fe",
-      "publishedAt": "2026-09-18T11:25:49+08:00"
+      "sourceUrl": "https://apnews.com/article/canada-carney-trump-europe-tariffs-4b3925afa8fdfe76de2e7deb2b59b538",
+      "publishedAt": "2026-09-19T04:19:07+08:00"
+    },
+    {
+      "id": "global-markets-central-bank-tightening-20260919",
+      "category": "财经",
+      "priority": 1,
+      "headline": "全球股市震荡收官，主要央行同步转向抗通胀",
+      "summary": "全球股指周五微涨 0.07%，美股尾盘反弹抵消欧洲下跌；美联储、日本央行与欧洲央行的紧缩信号推高全球债券收益率。",
+      "whyItMatters": "能源冲击把通胀重新推上政策核心，利率长期维持高位将压缩企业融资、房地产和 AI 基础设施投资空间。",
+      "source": "Reuters",
+      "sourceUrl": "https://in.marketscreener.com/news/global-shares-edge-higher-as-central-banks-double-down-on-inflation-fight-ce785adadf8afe2c",
+      "publishedAt": "2026-09-19T05:03:00+08:00"
     },
     {
       "id": "ecb-lagarde-energy-rate-bets-20260918",
@@ -91,15 +91,15 @@
       "publishedAt": "2026-09-18T19:36:00+08:00"
     },
     {
-      "id": "anthropic-claude-builds-next-model-20260918",
+      "id": "anthropic-accenture-ai-evaluation-investment-20260919",
       "category": "科技",
       "priority": 1,
-      "headline": "Anthropic 称 Claude 已主导四分之一模型研发",
-      "summary": "Anthropic 表示 Claude 主导约 26% 的模型研发任务，并参与约 90% 的研发工作，但端到端任务仍处于人类监督之下。",
-      "whyItMatters": "前沿模型开始实质参与下一代模型开发，可能加快能力迭代，也使自主性、透明度和安全治理更加紧迫。",
-      "source": "AP",
-      "sourceUrl": "https://apnews.com/article/anthropic-claude-ai-model-self-improvement-4d3a7430f57cbc7c39e1c5f2b7d7e132",
-      "publishedAt": "2026-09-18T09:51:12+08:00"
+      "headline": "Anthropic 与埃森哲将投入 20 亿美元建设独立 AI 评估能力",
+      "summary": "双方未来五年各投入至少 10 亿美元，由埃森哲旗下 Faculty 对前沿模型进行红队、安全防护与对齐评估。",
+      "whyItMatters": "外部评估者将以接近员工的权限嵌入模型公司，可能为高风险 AI 的独立审计、事故披露和监管验证建立新范式。",
+      "source": "Reuters",
+      "sourceUrl": "https://au.marketscreener.com/news/anthropic-accenture-to-invest-2-billion-in-ai-model-evaluation-as-safety-concerns-rise-ce785adadf8aff22",
+      "publishedAt": "2026-09-19T05:01:00+08:00"
     },
     {
       "id": "anthropic-physical-biology-lab-20260918",
@@ -146,15 +146,15 @@
       "publishedAt": "2026-09-18T22:27:13+08:00"
     },
     {
-      "id": "waymo-singapore-robotaxi-20260918",
+      "id": "us-industrial-production-stalls-20260918",
       "category": "产业",
       "priority": 2,
-      "headline": "Waymo 计划 2028 年在新加坡推出无人驾驶叫车服务",
-      "summary": "Waymo 将与新加坡交通部门合作，先引入电动汽车并于 2027 年开展人工驾驶准备，目标 2028 年商业化运营。",
-      "whyItMatters": "这是 Waymo 首次进入东南亚，标志机器人出租车竞争加速跨境扩张，也将考验监管、安全和司机转岗安排。",
-      "source": "Reuters",
-      "sourceUrl": "https://www.marketscreener.com/news/waymo-to-bring-autonomous-ride-hailing-to-singapore-in-2028-ce785bd3d08ef524",
-      "publishedAt": "2026-09-18T10:01:00+08:00"
+      "headline": "美国 8 月制造业产出下降 0.3%",
+      "summary": "美联储数据显示，美国整体工业产出环比持平，制造业产出下降 0.3%，汽车及零部件和建筑材料是主要拖累。",
+      "whyItMatters": "制造业结束连续七个月增长，显示高油价与融资成本开始抵消 AI 投资支撑，并可能影响企业库存、就业和资本开支。",
+      "source": "Federal Reserve",
+      "sourceUrl": "https://www.federalreserve.gov/releases/g17/current/table0.htm",
+      "publishedAt": "2026-09-18T21:15:00+08:00"
     },
     {
       "id": "who-pathogen-benefit-sharing-talks-20260918",
@@ -193,12 +193,12 @@
       "id": "oil-prices-third-day-decline-20260918",
       "category": "能源",
       "priority": 1,
-      "headline": "供应忧虑缓解推动国际油价连续第三天下跌",
-      "summary": "沙特经阿曼增加装运、成品油库存上升及中国扩大燃料出口缓和供应担忧，布伦特原油一度跌至约每桶 103 美元。",
-      "whyItMatters": "油价回落可缓解全球通胀和央行紧缩压力，但霍尔木兹航运仍低迷，地缘风险溢价尚未消失。",
+      "headline": "中国出面约束胡塞袭击后国际油价收跌",
+      "summary": "中国应沙特请求敦促伊朗限制胡塞武装袭击沙特石油设施后，布伦特原油收于每桶 104.87 美元，跌 0.93%。",
+      "whyItMatters": "外交介入暂时缓和第二条中东出口通道受袭风险，但霍尔木兹航运仍接近停滞，炼油瓶颈和供应溢价继续推高燃料成本。",
       "source": "Reuters",
-      "sourceUrl": "https://live.euronext.com/en/financial-news/oil-prices-set-weekly-fall-easing-fears-over-saudi-supply-disruption",
-      "publishedAt": "2026-09-18T19:15:00+08:00"
+      "sourceUrl": "https://live.euronext.com/en/financial-news/oil-slides-after-china-asks-iran-limit-houthi-attacks-saudi-oil-facilities",
+      "publishedAt": "2026-09-19T03:58:00+08:00"
     },
     {
       "id": "iea-korea-energy-security-talks-20260918",
