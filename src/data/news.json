@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-19T19:33:09+08:00",
-  "coverageStart": "2026-09-18T19:33:09+08:00",
+  "updatedAt": "2026-09-19T23:32:15+08:00",
+  "coverageStart": "2026-09-18T23:32:15+08:00",
   "items": [
     {
       "id": "un-world-food-program-lindberg-20260919",
@@ -80,15 +80,15 @@
       "publishedAt": "2026-09-19T05:03:00+08:00"
     },
     {
-      "id": "ecb-lagarde-energy-rate-bets-20260918",
+      "id": "china-ai-demand-imbalance-warning-20260919",
       "category": "财经",
       "priority": 2,
-      "headline": "拉加德淡化能源涨价必然触发激进加息的预期",
-      "summary": "欧洲央行行长拉加德表示利率不会与油气价格同步变动，政策还将综合评估增长、消费和更多经济数据。",
-      "whyItMatters": "市场已押注未来一年欧洲央行再加息三至四次，其表态可能重新影响欧债收益率、欧元和企业融资成本。",
+      "headline": "中国央行顾问警告 AI 或加剧供强需弱失衡",
+      "summary": "中国央行货币政策委员会委员黄益平表示，AI 广泛应用和创新加速可能延长供给强、需求弱的结构性矛盾，并建议中央政府加杠杆修复资产负债表。",
+      "whyItMatters": "这一判断强化了扩大消费、化解地方债和调整出口依赖的政策压力，也关系到 AI 投资能否真正转化为内需与生产率增长。",
       "source": "Reuters",
-      "sourceUrl": "https://www.marketscreener.com/news/lagarde-pushes-back-on-market-rate-hike-bets-after-energy-costs-soar-ce785adada89ff24",
-      "publishedAt": "2026-09-18T19:36:00+08:00"
+      "sourceUrl": "https://www.marketscreener.com/news/china-central-bank-advisor-says-ai-could-deepen-supply-demand-imbalance-ce785adade81f424",
+      "publishedAt": "2026-09-19T16:03:00+08:00"
     },
     {
       "id": "anthropic-accenture-ai-evaluation-investment-20260919",
@@ -124,70 +124,70 @@
       "publishedAt": "2026-09-19T05:53:44+08:00"
     },
     {
-      "id": "russia-seizes-nestle-auchan-20260918",
+      "id": "china-platform-antitrust-probes-20260919",
       "category": "产业",
       "priority": 1,
-      "headline": "俄罗斯接管雀巢与欧尚在俄业务",
-      "summary": "克里姆林宫下令把雀巢和欧尚的俄罗斯业务交由临时管理；此前类似程序曾导致西方企业资产折价出售给俄方买家。",
-      "whyItMatters": "行动进一步提高跨国企业在俄资产被强制处置的风险，也可能引发欧洲政府交涉和企业减值。",
-      "source": "AP",
-      "sourceUrl": "https://apnews.com/article/russia-ukraine-nestle-auchan-putin-db90782aa5510cef0eeba61ef8969ab5",
-      "publishedAt": "2026-09-18T21:29:04+08:00"
+      "headline": "中国调查美团及阿里等平台涉嫌不正当竞争",
+      "summary": "北京市市场监管部门对美团旗下三快科技、阿里旗下杭州淘美航空以及同程、途家相关主体启动调查，企业表示将配合监管。",
+      "whyItMatters": "继携程因在线酒店预订垄断被重罚后，监管范围扩至多家生活服务与旅游平台，可能改变平台佣金、流量分配和行业竞争规则。",
+      "source": "Reuters",
+      "sourceUrl": "https://uk.marketscreener.com/news/china-investigates-meituan-and-alibaba-units-for-suspected-antitrust-violations-ce785adade8cfe23",
+      "publishedAt": "2026-09-19T12:42:00+08:00"
     },
     {
-      "id": "uk-air-traffic-software-glitch-20260918",
-      "category": "产业",
-      "priority": 1,
-      "headline": "英国空管称毫秒级软件缺陷导致逾 2000 架次航班取消",
-      "summary": "英国国家空中交通服务公司的初步报告把 9 月 8 日大规模航班中断归因于航班数据系统的一处软件缺陷，并称已部署缓解措施。",
-      "whyItMatters": "单点软件故障影响数十万旅客，暴露关键交通基础设施的系统韧性、测试覆盖和业务连续性风险。",
-      "source": "AP",
-      "sourceUrl": "https://apnews.com/article/britain-air-traffic-control-software-glitch-cb76f4a96aa9e03d0a2fdc503efe02da",
-      "publishedAt": "2026-09-18T22:27:13+08:00"
-    },
-    {
-      "id": "us-industrial-production-stalls-20260918",
+      "id": "gac-cambodia-kd-production-20260919",
       "category": "产业",
       "priority": 2,
-      "headline": "美国 8 月制造业产出下降 0.3%",
-      "summary": "美联储数据显示，美国整体工业产出环比持平，制造业产出下降 0.3%，汽车及零部件和建筑材料是主要拖累。",
-      "whyItMatters": "制造业结束连续七个月增长，显示高油价与融资成本开始抵消 AI 投资支撑，并可能影响企业库存、就业和资本开支。",
-      "source": "Federal Reserve",
-      "sourceUrl": "https://www.federalreserve.gov/releases/g17/current/table0.htm",
-      "publishedAt": "2026-09-18T21:15:00+08:00"
+      "headline": "广汽柬埔寨 KD 工厂投产，年设计产能约万辆",
+      "summary": "广汽与当地合作方 TH Group 启动柬埔寨汽车组装厂，由后者负责投资建设和组装，广汽提供散件、技术标准及全链条支持。",
+      "whyItMatters": "项目把广汽在柬业务从整车出口推进至本地制造，显示中国车企正用区域组装降低贸易与物流成本并深化东南亚供应链。",
+      "source": "GAC",
+      "sourceUrl": "https://www.prnewswire.com/news-releases/gac-cambodia-kd-plant-starts-production-setting-a-new-benchmark-for-localized-manufacturing-302883780.html",
+      "publishedAt": "2026-09-19T17:29:00+08:00"
     },
     {
-      "id": "who-pathogen-benefit-sharing-talks-20260918",
+      "id": "uae-aridge-flying-car-sandbox-20260919",
+      "category": "产业",
+      "priority": 2,
+      "headline": "阿联酋与 ARIDGE 共建个人飞行汽车监管沙盒",
+      "summary": "阿联酋哈伊马角与 ARIDGE 签署协议，在民航监管下开展沙漠环境飞行验证、适航活动，并规划阿布扎比至哈伊马角示范航线。",
+      "whyItMatters": "国家级沙盒把低空飞行器从展示推向受控测试和跨酋长国运营准备，可能加快飞行汽车安全标准、适航认证与商业化进程。",
+      "source": "ARIDGE",
+      "sourceUrl": "https://www.prnewswire.com/news-releases/aridge-and-uae-authorities-to-jointly-establish-the-worlds-first-personal-flying-car-regulatory-sandbox-302883801.html",
+      "publishedAt": "2026-09-19T22:33:00+08:00"
+    },
+    {
+      "id": "us-medicaid-mfn-drug-pricing-20260919",
       "category": "健康",
       "priority": 1,
-      "headline": "世卫成员推进病原体获取与利益分享机制谈判",
-      "summary": "世卫成员国结束疫情协定工作组第八次会议，继续推进病原体材料与序列共享、疫苗药物及诊断产品公平分配的 PABS 附件。",
-      "whyItMatters": "附件完成后，各国才可推进签署和批准疫情协定；其规则将影响下一次大流行中的样本共享、研发速度和医疗产品可及性。",
-      "source": "WHO",
-      "sourceUrl": "https://www.who.int/news/item/18-09-2026-member-states-advance-negotiations-on-pathogen-access-and-benefit-sharing-ahead-of-un-general-assembly-meeting-on-pandemics",
-      "publishedAt": "2026-09-18T22:39:50+08:00"
+      "headline": "美国将最惠国药价覆盖全部州 Medicaid 项目",
+      "summary": "白宫宣布 50 个州、哥伦比亚特区及波多黎各的 Medicaid 项目将通过 GENEROUS 模式获得品牌药返利，使净价不高于其他发达经济体最低水平。",
+      "whyItMatters": "官方估算未来十年联邦与州政府可合计节省 643 亿美元；政策覆盖癌症、糖尿病和哮喘等药物，也将重塑药企在美国的定价与研发回报。",
+      "source": "White House",
+      "sourceUrl": "https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-announces-lower-drug-prices-for-all-50-state-medicaid-programs/",
+      "publishedAt": "2026-09-19T03:47:36+08:00"
     },
     {
-      "id": "relacorilant-eu-ovarian-cancer-opinion-20260918",
+      "id": "inluriyo-verzenio-fda-approval-20260919",
       "category": "健康",
       "priority": 1,
-      "headline": "欧盟药委会建议批准复发性卵巢癌新联合疗法",
-      "summary": "欧洲药品管理局药委会建议批准 relacorilant 联合白蛋白紫杉醇，用于铂耐药卵巢癌；建议基于二期与关键三期试验结果。",
-      "whyItMatters": "该方案在试验中改善无进展及总生存期，若获欧盟委员会批准，将为治疗选择有限的铂耐药患者增加新路径。",
-      "source": "Corcept Therapeutics",
-      "sourceUrl": "https://ir.corcept.com/news-releases/news-release-details/corcept-announces-chmp-opinion-recommending-eu-marketing",
-      "publishedAt": "2026-09-18T20:00:00+08:00"
+      "headline": "美国批准 Inluriyo 与 Verzenio 联用治疗特定晚期乳腺癌",
+      "summary": "FDA 全面批准 imlunestrant 与 abemaciclib 联用，用于经内分泌治疗后进展的 ER 阳性、HER2 阴性且携带 ESR1 突变的晚期或转移性乳腺癌。",
+      "whyItMatters": "EMBER-3 试验中联合方案把中位无进展生存期由 5.5 个月延长至 11.1 个月，为常见耐药突变患者增加全口服治疗选择。",
+      "source": "Eli Lilly",
+      "sourceUrl": "https://investor.lilly.com/news-releases/news-release-details/us-fda-approves-inluriyo-imlunestrant-combination-verzenio",
+      "publishedAt": "2026-09-19T01:54:00+08:00"
     },
     {
-      "id": "nu3-diabetic-foot-trial-ready-20260918",
+      "id": "pentagon-testosterone-screening-20260919",
       "category": "健康",
       "priority": 2,
-      "headline": "新型抗菌药 Nu-3 获准启动糖尿病足感染二期试验",
-      "summary": "Lakewood-Amedex 获得中央及各试验点伦理批准，确认可启动 Nu-3 治疗轻度感染性糖尿病足溃疡的二期临床试验。",
-      "whyItMatters": "糖尿病足感染常受耐药性与慢性伤口影响，新机制抗菌候选物进入患者试验有望补充现有治疗并降低截肢风险。",
-      "source": "Lakewood-Amedex",
-      "sourceUrl": "https://www.prnewswire.com/news-releases/lakewood-amedex-biotherapeutics-announces-irb-approval-and-clinical-site-readiness-to-initiate-phase-2a-clinical-trial-of-nu-3-for-the-treatment-of-infected-diabetic-foot-ulcers-302883237.html",
-      "publishedAt": "2026-09-18T20:13:00+08:00"
+      "headline": "五角大楼要求多数 30 岁以上男性军人检测睾酮",
+      "summary": "美国国防部发布正式临床指南，要求 30 岁及以上男性军人接受睾酮缺乏筛查；女性指南仍在审查，医学专家对普筛必要性提出质疑。",
+      "whyItMatters": "强制筛查将影响庞大军人群体的诊断和激素治疗需求，也凸显军事战备政策与循证医学、性别公平之间的争议。",
+      "source": "AP",
+      "sourceUrl": "https://apnews.com/article/testosterone-testing-troops-pentagon-hegseth-09e50f1b2b272c089e667d615091c66b",
+      "publishedAt": "2026-09-19T01:19:51+08:00"
     },
     {
       "id": "oil-prices-third-day-decline-20260918",
@@ -212,15 +212,15 @@
       "publishedAt": "2026-09-19T12:08:33+08:00"
     },
     {
-      "id": "g7-energy-crisis-reserves-meeting-20260918",
+      "id": "us-china-lng-tariff-talks-20260919",
       "category": "能源",
       "priority": 1,
-      "headline": "马克龙称 G7 将开会协调能源危机应对",
-      "summary": "法国总统马克龙表示，G7 将在未来数周讨论加强能源供应合作，并评估释放战略储备或放宽限制等选项。",
-      "whyItMatters": "主要经济体若协调释放储备或调整供应限制，可能直接影响油气价格、通胀路径和各国能源安全安排。",
+      "headline": "中美讨论下调或取消美国液化天然气关税",
+      "summary": "中美正磋商把美国 LNG 关税减免纳入更广泛的能源和农产品协议，相关安排可能在下周两国元首会晤时公布，但尚未最终确定。",
+      "whyItMatters": "中国重返美国 LNG 市场可为美国新增出口产能提供关键买家，并在中东供应受扰之际重新调整亚洲与欧洲之间的天然气流向。",
       "source": "Reuters",
-      "sourceUrl": "https://www.marketscreener.com/news/france-s-macron-says-g7-will-meet-to-discuss-energy-crisis-in-coming-weeks-ce785adada8fff2c",
-      "publishedAt": "2026-09-18T20:47:00+08:00"
+      "sourceUrl": "https://au.marketscreener.com/news/us-china-discuss-cutting-tariffs-on-us-lng-ahead-of-xi-visit-ce785adadf89ff22",
+      "publishedAt": "2026-09-19T04:15:00+08:00"
     }
   ]
 }
