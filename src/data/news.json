@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-19T15:30:52+08:00",
-  "coverageStart": "2026-09-18T15:30:52+08:00",
+  "updatedAt": "2026-09-19T19:33:09+08:00",
+  "coverageStart": "2026-09-18T19:33:09+08:00",
   "items": [
     {
       "id": "un-world-food-program-lindberg-20260919",
@@ -25,15 +25,15 @@
       "publishedAt": "2026-09-19T01:10:48+08:00"
     },
     {
-      "id": "iran-mass-rally-war-readiness-20260918",
+      "id": "denmark-greenland-security-deal-20260919",
       "category": "国际",
-      "priority": 2,
-      "headline": "伊朗举行开战以来最大规模政府组织集会",
-      "summary": "数十万伊朗民众参加政府组织的集会并宣示参战准备，这是美以今年 2 月发动攻击以来规模最大的此类动员。",
-      "whyItMatters": "大规模动员显示德黑兰在制裁、海上封锁和经济恶化下强化国内凝聚力，也增加地面战与地区冲突扩大的不确定性。",
+      "priority": 1,
+      "headline": "丹麦与格陵兰对美国安全协议表示审慎乐观",
+      "summary": "丹麦政府称美丹格三方拟在联合国大会期间签署格陵兰安全协议，美国将扩大军事存在，但格陵兰继续留在丹麦王国内。",
+      "whyItMatters": "协议有望缓和美国此前吞并威胁引发的北约裂痕，并限制中俄在北极关键航道与矿产地区的军事和投资活动。",
       "source": "AP",
-      "sourceUrl": "https://apnews.com/article/iran-war-rally-volunteers-03488b5cc4c13ecac1a27096b1641972",
-      "publishedAt": "2026-09-18T16:25:00+08:00"
+      "sourceUrl": "https://apnews.com/article/trump-greenland-military-denmark-0eac9ad2196551525bcb8c71e80c480e",
+      "publishedAt": "2026-09-19T17:37:44+08:00"
     },
     {
       "id": "us-russia-sanctions-law-20260919",
@@ -102,15 +102,15 @@
       "publishedAt": "2026-09-19T05:01:00+08:00"
     },
     {
-      "id": "anthropic-physical-biology-lab-20260918",
+      "id": "ai-recursive-self-improvement-20260919",
       "category": "科技",
       "priority": 1,
-      "headline": "Anthropic 建立实体生物实验室推进 AI 药物研发",
-      "summary": "Anthropic 证实已在旧金山湾区开展湿实验室工作，把 AI 从计算模拟延伸到真实生物实验，并与外部伙伴共同推进。",
-      "whyItMatters": "AI 实验室直接进入药物与生物实验执行环节，可能缩短研发周期，同时扩大模型安全、生物安全和验证责任。",
-      "source": "Reuters",
-      "sourceUrl": "https://www.marketscreener.com/news/anthropic-quietly-sets-up-biology-lab-as-it-ramps-ai-drug-program-ce785adadb8bf020",
-      "publishedAt": "2026-09-18T18:05:00+08:00"
+      "headline": "前沿 AI 实验室称模型自主迭代能力正加速逼近",
+      "summary": "Anthropic 称 Claude 已承担其 26% 的模型研发工作，可在人工监督下端到端完成多数任务；业界正评估递归式自我改进的现实距离。",
+      "whyItMatters": "模型参与开发下一代模型可能显著压缩研发周期，也会放大失控、审计与人类监督机制能否跟上能力增长的争议。",
+      "source": "AP",
+      "sourceUrl": "https://apnews.com/article/ai-recursive-self-improvement-1526da03842cfeef12d0fb69b6b7ad28",
+      "publishedAt": "2026-09-19T18:00:19+08:00"
     },
     {
       "id": "california-ai-oversight-order-20260919",
@@ -168,26 +168,26 @@
       "publishedAt": "2026-09-18T22:39:50+08:00"
     },
     {
-      "id": "who-health-workforce-ageing-report-20260918",
+      "id": "relacorilant-eu-ovarian-cancer-opinion-20260918",
       "category": "健康",
       "priority": 1,
-      "headline": "世卫警告全球近四分之一医生将在十年内退休",
-      "summary": "世卫新报告称全球卫生工作者已超过 7000 万，但 122 国数据显示近四分之一医生年龄超过 55 岁，2030 年缺口或达 1110 万。",
-      "whyItMatters": "医务人员老龄化与人口老龄化形成双重压力，可能扩大国家间医疗可及性差距并削弱卫生系统韧性。",
-      "source": "WHO",
-      "sourceUrl": "https://www.who.int/news/item/18-09-2026-one-in-four-doctors-nearing-retirement-age-as-who-warns-of-global-health-workforce-gap",
-      "publishedAt": "2026-09-18T17:00:00+08:00"
+      "headline": "欧盟药委会建议批准复发性卵巢癌新联合疗法",
+      "summary": "欧洲药品管理局药委会建议批准 relacorilant 联合白蛋白紫杉醇，用于铂耐药卵巢癌；建议基于二期与关键三期试验结果。",
+      "whyItMatters": "该方案在试验中改善无进展及总生存期，若获欧盟委员会批准，将为治疗选择有限的铂耐药患者增加新路径。",
+      "source": "Corcept Therapeutics",
+      "sourceUrl": "https://ir.corcept.com/news-releases/news-release-details/corcept-announces-chmp-opinion-recommending-eu-marketing",
+      "publishedAt": "2026-09-18T20:00:00+08:00"
     },
     {
-      "id": "who-women-violence-data-brief-20260918",
+      "id": "nu3-diabetic-foot-trial-ready-20260918",
       "category": "健康",
       "priority": 2,
-      "headline": "世卫发布女性非伴侣性暴力数据改进建议",
-      "summary": "世卫技术简报指出，全球约 2.63 亿名 15 岁以上女性和女孩曾遭非伴侣性暴力，但调查口径不一、陈旧与漏报使规模被低估。",
-      "whyItMatters": "更一致且安全的调查方法将影响公共卫生资源配置、幸存者支持和各国落实消除针对女性暴力目标的问责。",
-      "source": "WHO",
-      "sourceUrl": "https://www.who.int/news/item/18-09-2026-new-brief-highlights-gaps-and-recommendations-for-improving-violence-data-on-women",
-      "publishedAt": "2026-09-18T15:49:23+08:00"
+      "headline": "新型抗菌药 Nu-3 获准启动糖尿病足感染二期试验",
+      "summary": "Lakewood-Amedex 获得中央及各试验点伦理批准，确认可启动 Nu-3 治疗轻度感染性糖尿病足溃疡的二期临床试验。",
+      "whyItMatters": "糖尿病足感染常受耐药性与慢性伤口影响，新机制抗菌候选物进入患者试验有望补充现有治疗并降低截肢风险。",
+      "source": "Lakewood-Amedex",
+      "sourceUrl": "https://www.prnewswire.com/news-releases/lakewood-amedex-biotherapeutics-announces-irb-approval-and-clinical-site-readiness-to-initiate-phase-2a-clinical-trial-of-nu-3-for-the-treatment-of-infected-diabetic-foot-ulcers-302883237.html",
+      "publishedAt": "2026-09-18T20:13:00+08:00"
     },
     {
       "id": "oil-prices-third-day-decline-20260918",
@@ -210,17 +210,6 @@
       "source": "AP",
       "sourceUrl": "https://apnews.com/article/trump-xi-iran-oil-china-78b8ccd21cbc4bc0ab19a79f68372ec0",
       "publishedAt": "2026-09-19T12:08:33+08:00"
-    },
-    {
-      "id": "iea-korea-energy-security-talks-20260918",
-      "category": "能源",
-      "priority": 2,
-      "headline": "国际能源署与韩国讨论能源安全和电气化战略",
-      "summary": "国际能源署署长比罗尔与韩国总统李在明讨论中东冲突下的能源市场，并就可再生能源、核电和亚洲能源安全深化合作。",
-      "whyItMatters": "韩国高度依赖进口能源，其电气化与能源组合调整将影响亚洲 LNG、核电设备和可再生能源需求。",
-      "source": "IEA",
-      "sourceUrl": "https://www.iea.org/news/executive-director-meets-with-president-lee-of-korea-to-discuss-key-energy-priorities",
-      "publishedAt": "2026-09-18T15:37:09+08:00"
     },
     {
       "id": "g7-energy-crisis-reserves-meeting-20260918",
