@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-09-19T11:31:16+08:00",
-  "coverageStart": "2026-09-18T11:31:16+08:00",
+  "updatedAt": "2026-09-19T15:30:52+08:00",
+  "coverageStart": "2026-09-18T15:30:52+08:00",
   "items": [
     {
-      "id": "iran-hormuz-tanker-strike-20260918",
+      "id": "un-world-food-program-lindberg-20260919",
       "category": "国际",
-      "priority": 1,
-      "headline": "伊朗称在霍尔木兹海峡击中一艘油轮",
-      "summary": "伊朗革命卫队称击中试图“非法通行”的多哥籍油轮 Trend；韩国同时考虑扩大亚丁湾海军行动以保护本国船舶与能源航线。",
-      "whyItMatters": "霍尔木兹海峡承担全球关键油气运输，商船遇袭会直接抬高航运保险、能源价格与地区军事升级风险。",
+      "priority": 2,
+      "headline": "联合国任命美国农业官员林德伯格执掌粮食计划署",
+      "summary": "联合国秘书长与粮农组织总干事任命美国农业部官员卢克·林德伯格为世界粮食计划署执行主任，接替今年离任的辛迪·麦凯恩。",
+      "whyItMatters": "粮食计划署因资金削减只能覆盖约 1.1 亿名急需援助者，新领导层将影响全球饥荒救济的筹资、优先顺序与执行能力。",
       "source": "AP",
-      "sourceUrl": "https://apnews.com/article/mideast-roundup-news-september-18-2026-024350a0820dfc5dd433b4e13445fab5",
-      "publishedAt": "2026-09-18T14:34:56+08:00"
+      "sourceUrl": "https://apnews.com/article/world-food-program-un-lindberg-trump-96aa238f519ef1ab7f8bf71217324867",
+      "publishedAt": "2026-09-19T07:07:48+08:00"
     },
     {
       "id": "us-big-bend-border-wall-20260919",
@@ -113,15 +113,15 @@
       "publishedAt": "2026-09-18T18:05:00+08:00"
     },
     {
-      "id": "nvidia-chip-sales-double-outlook-20260918",
+      "id": "california-ai-oversight-order-20260919",
       "category": "科技",
-      "priority": 2,
-      "headline": "黄仁勋预计英伟达明年芯片销量翻倍",
-      "summary": "英伟达首席执行官黄仁勋表示，受全球 AI 投资加速推动，公司明年芯片销量有望较今年翻倍。",
-      "whyItMatters": "这一判断强化了 AI 基础设施需求仍将快速扩张的预期，也意味着先进制程、存储、网络和电力供应链压力可能延续。",
-      "source": "MarketScreener",
-      "sourceUrl": "https://www.marketscreener.com/news/jensen-huang-expects-nvidia-chip-sales-to-double-next-year-ce785bd3de80f021",
-      "publishedAt": "2026-09-18T15:27:00+08:00"
+      "priority": 1,
+      "headline": "加州加速实施 AI 独立监督与紧急关停规则",
+      "summary": "加州州长纽森签署行政令，加快落实要求 AI 公司接受独立监督并具备紧急关停能力的州法律；多州政治人物同时推动更严格的联邦规则。",
+      "whyItMatters": "美国州级监管正把前沿模型安全从企业承诺转向可验证的外部监督，可能影响模型发布、审计责任和全国立法节奏。",
+      "source": "AP",
+      "sourceUrl": "https://apnews.com/article/ai-trump-democrats-newsom-shapiro-warnings-danger-10cdebf21fd6dfcfc46676b0f095bb2c",
+      "publishedAt": "2026-09-19T05:53:44+08:00"
     },
     {
       "id": "russia-seizes-nestle-auchan-20260918",
@@ -199,6 +199,17 @@
       "source": "Reuters",
       "sourceUrl": "https://live.euronext.com/en/financial-news/oil-slides-after-china-asks-iran-limit-houthi-attacks-saudi-oil-facilities",
       "publishedAt": "2026-09-19T03:58:00+08:00"
+    },
+    {
+      "id": "china-oil-buffer-iran-war-20260919",
+      "category": "能源",
+      "priority": 2,
+      "headline": "中国储备与能源转型缓冲伊朗战争的全球油价冲击",
+      "summary": "美方估算中国去年底战略石油储备约 14 亿桶；战争爆发后中国削减原油进口并动用库存，第二季度日均进口量较首季下降约 32%。",
+      "whyItMatters": "全球第二大石油消费国的需求回落成为压低油价涨幅的关键力量，但霍尔木兹航运与沙特管线风险仍可能把油价推向更高区间。",
+      "source": "AP",
+      "sourceUrl": "https://apnews.com/article/trump-xi-iran-oil-china-78b8ccd21cbc4bc0ab19a79f68372ec0",
+      "publishedAt": "2026-09-19T12:08:33+08:00"
     },
     {
       "id": "iea-korea-energy-security-talks-20260918",
