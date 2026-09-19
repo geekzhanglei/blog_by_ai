@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-19T23:32:15+08:00",
-  "coverageStart": "2026-09-18T23:32:15+08:00",
+  "updatedAt": "2026-09-20T03:29:07+08:00",
+  "coverageStart": "2026-09-19T03:29:07+08:00",
   "items": [
     {
       "id": "un-world-food-program-lindberg-20260919",
@@ -14,15 +14,15 @@
       "publishedAt": "2026-09-19T07:07:48+08:00"
     },
     {
-      "id": "us-big-bend-border-wall-20260919",
+      "id": "saudi-air-raid-alerts-20260919",
       "category": "国际",
-      "priority": 2,
-      "headline": "美国在得州 Big Bend 地区启动首段大规模边墙施工",
-      "summary": "美国海关与边境保护局开始在得州西部 Big Bend 1 项目区安装 30 英尺高钢制墙板，相关区段长 47 英里。",
-      "whyItMatters": "这是长期面临土地、环保与社区反对的 Big Bend 地区首次大规模开工，也是美国 460 亿美元边境基础设施计划的重要节点。",
+      "priority": 1,
+      "headline": "沙特首都首次拉响空袭警报，中东战事外溢风险上升",
+      "summary": "沙特全国发布敌对空中威胁警报，利雅得传出爆炸并出现烟柱；胡塞武装声称袭击首都敏感目标和延布的沙特阿美设施，但未获独立证实。",
+      "whyItMatters": "也门与沙特冲突正向人口和能源中心扩散，可能进一步威胁红海石油出口通道，并增加地区平民与基础设施风险。",
       "source": "AP",
-      "sourceUrl": "https://apnews.com/article/border-wall-immigration-trump-texas-customs-border-protection-cdcdc43cd541cf0b42cb43c7cf9d0d8f",
-      "publishedAt": "2026-09-19T01:10:48+08:00"
+      "sourceUrl": "https://apnews.com/article/mideast-roundup-news-september-19-2026-24211a3b34731a669f3e7ab93314afdf",
+      "publishedAt": "2026-09-19T15:11:22+08:00"
     },
     {
       "id": "denmark-greenland-security-deal-20260919",
@@ -168,26 +168,37 @@
       "publishedAt": "2026-09-19T03:47:36+08:00"
     },
     {
-      "id": "inluriyo-verzenio-fda-approval-20260919",
-      "category": "健康",
-      "priority": 1,
-      "headline": "美国批准 Inluriyo 与 Verzenio 联用治疗特定晚期乳腺癌",
-      "summary": "FDA 全面批准 imlunestrant 与 abemaciclib 联用，用于经内分泌治疗后进展的 ER 阳性、HER2 阴性且携带 ESR1 突变的晚期或转移性乳腺癌。",
-      "whyItMatters": "EMBER-3 试验中联合方案把中位无进展生存期由 5.5 个月延长至 11.1 个月，为常见耐药突变患者增加全口服治疗选择。",
-      "source": "Eli Lilly",
-      "sourceUrl": "https://investor.lilly.com/news-releases/news-release-details/us-fda-approves-inluriyo-imlunestrant-combination-verzenio",
-      "publishedAt": "2026-09-19T01:54:00+08:00"
-    },
-    {
-      "id": "pentagon-testosterone-screening-20260919",
+      "id": "italy-west-nile-spread-20260919",
       "category": "健康",
       "priority": 2,
-      "headline": "五角大楼要求多数 30 岁以上男性军人检测睾酮",
-      "summary": "美国国防部发布正式临床指南，要求 30 岁及以上男性军人接受睾酮缺乏筛查；女性指南仍在审查，医学专家对普筛必要性提出质疑。",
-      "whyItMatters": "强制筛查将影响庞大军人群体的诊断和激素治疗需求，也凸显军事战备政策与循证医学、性别公平之间的争议。",
+      "headline": "意大利西尼罗河病毒传播范围与季节继续扩大",
+      "summary": "意大利今年已报告超过 650 例西尼罗河感染，约占欧洲病例一半；卫生部门称升温和暖季延长正把传播推向更多地区和月份。",
+      "whyItMatters": "欧洲北部也开始出现本地病例和死亡，气候驱动的蚊媒疾病扩张将增加监测、防蚊和高风险人群保护压力。",
       "source": "AP",
-      "sourceUrl": "https://apnews.com/article/testosterone-testing-troops-pentagon-hegseth-09e50f1b2b272c089e667d615091c66b",
-      "publishedAt": "2026-09-19T01:19:51+08:00"
+      "sourceUrl": "https://apnews.com/article/italy-west-nile-virus-health-disease-mosquitoes-infection-88055098d0edba4dee15afbb82a8a791",
+      "publishedAt": "2026-09-19T12:05:58+08:00"
+    },
+    {
+      "id": "florida-dengue-death-20260919",
+      "category": "健康",
+      "priority": 1,
+      "headline": "佛州本地登革热暴发确认死亡病例",
+      "summary": "佛罗里达州卫生部门确认一名患者死亡；该州今年已有 152 例本地感染，希尔斯伯勒县超过 130 例，为数十年来最严重的暴发之一。",
+      "whyItMatters": "本土病例快速增加显示暖化与天气条件正扩大蚊媒病毒传播范围，也可能低估无症状感染规模并推高公共卫生负担。",
+      "source": "AP",
+      "sourceUrl": "https://apnews.com/article/dengue-death-florida-mosquito-climate-57574815fdca4f8bc3336bb429a3d1fc",
+      "publishedAt": "2026-09-19T05:45:14+08:00"
+    },
+    {
+      "id": "congo-ebola-frontline-vaccination-20260920",
+      "category": "健康",
+      "priority": 1,
+      "headline": "刚果在埃博拉重灾区为一线医护启动接种",
+      "summary": "刚果在布尼亚为医护和其他一线人员接种 Ervebo，计划在伊图里和北基伍覆盖 2 万人；当前暴发已报告 7541 例确诊和 3639 例死亡。",
+      "whyItMatters": "疫情仍在失控扩散，而现用疫苗针对的毒株与本轮 Bundibugyo 型不同；保护医护能力将直接影响追踪、隔离和救治能否持续。",
+      "source": "AP",
+      "sourceUrl": "https://apnews.com/article/ebola-vaccine-congo-bundibugyo-ervebo-3f28becb36c401084cb3b19183edb940",
+      "publishedAt": "2026-09-20T01:01:37+08:00"
     },
     {
       "id": "oil-prices-third-day-decline-20260918",
