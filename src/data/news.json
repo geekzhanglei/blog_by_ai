@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-09-21T03:33:53+08:00",
-  "coverageStart": "2026-09-20T03:33:53+08:00",
+  "updatedAt": "2026-09-21T07:29:30+08:00",
+  "coverageStart": "2026-09-20T07:29:30+08:00",
   "items": [
     {
-      "id": "saudi-houthi-riyadh-confirmed-20260920",
+      "id": "oil-rises-houthi-riyadh-20260921",
       "category": "能源",
       "priority": 1,
-      "headline": "沙特确认拦截胡塞导弹，延布能源设施亦遭锁定",
-      "summary": "沙特联军确认胡塞武装向利雅得发射弹道导弹，并试图袭击延布等地民用基础设施；胡塞称目标包括沙特阿美设施。",
-      "whyItMatters": "延布是沙特东西输油管道终点，袭击把冲突风险直接推向替代霍尔木兹航线的关键节点，可能抬高油价与运输风险。",
-      "source": "AP",
-      "sourceUrl": "https://apnews.com/article/yemen-saudi-arabia-b1286cad816dd3e553f50f6dd5205972",
-      "publishedAt": "2026-09-20T04:10:52+08:00"
+      "headline": "胡塞袭击利雅得后国际油价上行",
+      "summary": "胡塞对沙特首都发动导弹和无人机袭击后，布伦特原油一度升至每桶 104.68 美元，WTI 升至 101.06 美元。",
+      "whyItMatters": "沙特安全风险与美伊僵局同步加剧，供应中断溢价继续传导至能源成本、运输和全球通胀预期。",
+      "source": "Reuters",
+      "sourceUrl": "https://au.investing.com/news/commodities-news/oil-rises-after-houthi-attack-on-saudi-capital-4649875",
+      "publishedAt": "2026-09-21T06:12:00+08:00"
     },
     {
       "id": "us-caribbean-vessel-strike-20260920",
