@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-09-20T11:29:22+08:00",
-  "coverageStart": "2026-09-19T11:29:22+08:00",
+  "updatedAt": "2026-09-20T15:29:53+08:00",
+  "coverageStart": "2026-09-19T15:29:53+08:00",
   "items": [
     {
-      "id": "saudi-houthi-riyadh-attack-20260919",
-      "category": "国际",
+      "id": "saudi-houthi-riyadh-confirmed-20260920",
+      "category": "能源",
       "priority": 1,
-      "headline": "胡塞武装首次在本轮升级中袭击沙特首都",
-      "summary": "沙特确认拦截一枚飞向利雅得的弹道导弹，并称延布、塔伊夫等地的民用基础设施也遭袭；暂无人员伤亡报告。",
-      "whyItMatters": "战事已从红海航运和边境地区外溢至沙特首都及石油运输节点，增加地区冲突升级与全球能源供应受扰风险。",
+      "headline": "沙特确认拦截胡塞导弹，延布能源设施亦遭锁定",
+      "summary": "沙特联军确认胡塞武装向利雅得发射弹道导弹，并试图袭击延布等地民用基础设施；胡塞称目标包括沙特阿美设施。",
+      "whyItMatters": "延布是沙特东西输油管道终点，袭击把冲突风险直接推向替代霍尔木兹航线的关键节点，可能抬高油价与运输风险。",
       "source": "AP",
-      "sourceUrl": "https://apnews.com/article/mideast-roundup-news-september-19-2026-24211a3b34731a669f3e7ab93314afdf",
-      "publishedAt": "2026-09-19T15:11:22+08:00"
+      "sourceUrl": "https://apnews.com/article/yemen-saudi-arabia-b1286cad816dd3e553f50f6dd5205972",
+      "publishedAt": "2026-09-20T04:10:52+08:00"
     },
     {
       "id": "denmark-greenland-security-deal-20260919",
@@ -47,6 +47,28 @@
       "publishedAt": "2026-09-20T03:04:00+08:00"
     },
     {
+      "id": "us-caribbean-vessel-strike-20260920",
+      "category": "国际",
+      "priority": 2,
+      "headline": "美军在加勒比海袭击疑似运毒船并致 4 人死亡",
+      "summary": "美军南方司令部称在加勒比海打击一艘涉嫌参与毒品走私的船只，造成 4 人死亡，但未公布船上载有毒品的证据。",
+      "whyItMatters": "美国以武装冲突逻辑持续扩大反毒军事行动，累计死亡人数升至至少 231 人，合法性争议及地区主权摩擦可能加剧。",
+      "source": "AP",
+      "sourceUrl": "https://apnews.com/article/trump-cartels-military-strike-caribbean-95f3d4ae10f8e2a4a193f601101898d9",
+      "publishedAt": "2026-09-20T08:38:15+08:00"
+    },
+    {
+      "id": "north-korea-projectile-launch-20260920",
+      "category": "国际",
+      "priority": 2,
+      "headline": "朝鲜向东部海域发射不明飞行器",
+      "summary": "韩国联合参谋本部通报，朝鲜周日向海上发射一枚尚未识别的飞行器，韩方最初未公布型号、轨迹或落点等细节。",
+      "whyItMatters": "在半岛安全紧张和区域军演背景下，新一轮发射将检验日韩预警体系，并可能推动美日韩追加军事与外交回应。",
+      "source": "AP",
+      "sourceUrl": "https://apnews.com/article/north-south-korea-launch-ad020d996b61dedd358cc689db614fdb",
+      "publishedAt": "2026-09-20T14:31:04+08:00"
+    },
+    {
       "id": "china-ai-demand-imbalance-warning-20260919",
       "category": "财经",
       "priority": 2,
@@ -59,7 +81,7 @@
     },
     {
       "id": "nippon-life-us-data-center-financing-20260920",
-      "category": "财经",
+      "category": "产业",
       "priority": 2,
       "headline": "日本生命拟向美国数据中心融资约 127.5 亿美元",
       "summary": "日本生命计划通过项目融资投入 2 万亿日元，支持美国数据中心等基础设施，并考虑在日本扩大同类贷款。",
@@ -80,15 +102,15 @@
       "publishedAt": "2026-09-20T02:29:00+08:00"
     },
     {
-      "id": "anduril-taiwan-arms-delay-20260919",
-      "category": "科技",
+      "id": "china-lpr-unchanged-20260920",
+      "category": "财经",
       "priority": 2,
-      "headline": "Anduril 称美国延迟对台军售已影响业务",
-      "summary": "Anduril 创始人帕尔默·拉基表示，美国迟迟未批准价值 140 亿美元的对台军售，正拖慢该公司与台湾的合作进展。",
-      "whyItMatters": "军售延迟把中美谈判、稀土供应与台湾无人机和导弹现代化相互绑定，可能改变防务科技订单和区域安全部署节奏。",
+      "headline": "中国连续第 16 个月维持贷款市场报价利率",
+      "summary": "中国 1 年期和 5 年期 LPR 分别维持在 3.00% 和 3.50%，符合全部 21 名受访市场人士预期。",
+      "whyItMatters": "全球主要央行转向偏紧、银行息差承压之际，利率不变显示全面宽松空间有限，政策重心仍需在稳汇率与托需求间权衡。",
       "source": "Reuters",
-      "sourceUrl": "https://uk.marketscreener.com/news/defence-firm-anduril-says-us-delay-on-taiwan-arms-sales-affecting-its-business-ce785adade8ff52d",
-      "publishedAt": "2026-09-19T12:23:00+08:00"
+      "sourceUrl": "https://sa.marketscreener.com/news/china-keeps-benchmark-lending-rates-unchanged-for-16th-month-in-september-ce785adad18ff520",
+      "publishedAt": "2026-09-20T09:06:00+08:00"
     },
     {
       "id": "ai-recursive-self-improvement-20260919",
@@ -124,15 +146,15 @@
       "publishedAt": "2026-09-20T01:21:00+08:00"
     },
     {
-      "id": "china-platform-antitrust-probes-20260919",
-      "category": "产业",
-      "priority": 1,
-      "headline": "中国调查美团及阿里等平台涉嫌不正当竞争",
-      "summary": "北京市市场监管部门对美团、阿里旗下企业以及同程、途家相关主体启动调查，涉及在线酒店和旅游预订领域。",
-      "whyItMatters": "继携程因酒店预订垄断被重罚后，监管扩至多家平台，可能改变佣金、流量分配和行业竞争规则。",
+      "id": "us-health-research-grant-control-20260920",
+      "category": "健康",
+      "priority": 2,
+      "headline": "特朗普拟让政治任命官员共同决定 NIH 科研拨款",
+      "summary": "报道称特朗普要求起草行政令，设立由预算主管与 NIH 负责人等组成的委员会，以一致同意方式决定国家卫生研究院拨款。",
+      "whyItMatters": "把国会拨款的科研资金置于政治任命官员直接控制之下，可能改变美国生物医学研究方向，并加剧学术独立与经费稳定性争议。",
       "source": "Reuters",
-      "sourceUrl": "https://uk.marketscreener.com/news/china-investigates-meituan-and-alibaba-units-for-suspected-antitrust-violations-ce785adade8cfe23",
-      "publishedAt": "2026-09-19T12:42:00+08:00"
+      "sourceUrl": "https://in.marketscreener.com/news/trump-seeks-to-bring-health-research-funding-under-his-control-politico-reports-ce785adad18ff425",
+      "publishedAt": "2026-09-20T10:28:00+08:00"
     },
     {
       "id": "gac-cambodia-kd-production-20260919",
@@ -157,15 +179,15 @@
       "publishedAt": "2026-09-19T23:57:00+08:00"
     },
     {
-      "id": "italy-west-nile-spread-20260919",
-      "category": "健康",
+      "id": "moscow-refinery-drone-strike-20260920",
+      "category": "能源",
       "priority": 2,
-      "headline": "意大利西尼罗河病毒传播范围与季节继续扩大",
-      "summary": "意大利今年已报告超过 650 例感染，约占欧洲病例一半；卫生专家称升温与暖季延长正把传播推向更多地区和月份。",
-      "whyItMatters": "欧洲北部也开始出现本地病例和死亡，气候驱动的蚊媒疾病扩张将增加监测、防蚊和高风险人群保护压力。",
-      "source": "AP",
-      "sourceUrl": "https://apnews.com/article/italy-west-nile-virus-health-disease-mosquitoes-infection-88055098d0edba4dee15afbb82a8a791",
-      "publishedAt": "2026-09-19T12:05:58+08:00"
+      "headline": "乌克兰大规模无人机袭击击中莫斯科炼油厂",
+      "summary": "俄方称在莫斯科地区拦截大批乌克兰无人机，但仍有无人机进入莫斯科炼油厂；损毁规模尚未明确，周边另有 2 人死亡。",
+      "whyItMatters": "该厂年加工原油约 1160 万吨，若受损将进一步压缩俄罗斯炼化能力，并加剧国内成品油短缺、价格与供应压力。",
+      "source": "Reuters",
+      "sourceUrl": "https://in.marketscreener.com/news/two-dead-in-moscow-region-drones-hit-oil-refinery-in-russian-capital-ce785adad18ff027",
+      "publishedAt": "2026-09-20T13:31:00+08:00"
     },
     {
       "id": "telehealth-medical-data-risks-20260919",
@@ -190,17 +212,6 @@
       "publishedAt": "2026-09-20T01:01:37+08:00"
     },
     {
-      "id": "china-oil-buffer-iran-war-20260919",
-      "category": "能源",
-      "priority": 2,
-      "headline": "中国储备与能源转型缓冲伊朗战争的油价冲击",
-      "summary": "美国能源信息署估算中国去年底战略石油储备约 14 亿桶；战争爆发后中国削减进口并动用库存，第二季度日均进口量环比下降约 32%。",
-      "whyItMatters": "全球第二大石油消费国的需求回落抑制油价涨幅，但霍尔木兹航运与沙特管线风险仍可能迅速推升价格。",
-      "source": "AP",
-      "sourceUrl": "https://apnews.com/article/trump-xi-iran-oil-china-78b8ccd21cbc4bc0ab19a79f68372ec0",
-      "publishedAt": "2026-09-19T12:08:33+08:00"
-    },
-    {
       "id": "totalenergies-suriname-granmorgu-20260919",
       "category": "能源",
       "priority": 2,
@@ -208,7 +219,7 @@
       "summary": "TotalEnergies、Staatsolie 与 APA 的 GranMorgu 项目已投入约一半计划资金，目标在 2028 年中启动苏里南首个海上油气生产。",
       "whyItMatters": "项目可能把苏里南带入海上产油国行列，改变圭亚那盆地的投资、出口能力和南美能源版图。",
       "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/energy/totalenergies-offshore-project-suriname-track-first-output-mid-2028-2026-09-19/",
+      "sourceUrl": "https://ca.marketscreener.com/news/totalenergies-offshore-project-in-suriname-on-track-for-first-output-in-mid-2028-ce785adad18df522",
       "publishedAt": "2026-09-19T23:34:47+08:00"
     },
     {
@@ -219,7 +230,7 @@
       "summary": "巴西石油董事会批准参加政府柴油补贴，30 天内每升补贴 1 雷亚尔并可延长；公司此前上调批发价后给予等额折扣。",
       "whyItMatters": "巴西正用财政补贴缓冲伊朗战争推高的燃料成本，短期稳定消费者价格，但会增加公共支出和国企定价干预。",
       "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/energy/brazils-petrobras-board-approves-joining-diesel-subsidy-program-2026-09-19/",
+      "sourceUrl": "https://www.marketscreener.com/news/brazil-s-petrobras-board-approves-joining-diesel-subsidy-program-ce785adad18cf323",
       "publishedAt": "2026-09-20T02:11:00+08:00"
     }
   ]
