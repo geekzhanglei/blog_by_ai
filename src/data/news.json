@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-20T23:35:02+08:00",
-  "coverageStart": "2026-09-19T23:35:02+08:00",
+  "updatedAt": "2026-09-21T03:33:53+08:00",
+  "coverageStart": "2026-09-20T03:33:53+08:00",
   "items": [
     {
       "id": "saudi-houthi-riyadh-confirmed-20260920",
@@ -12,17 +12,6 @@
       "source": "AP",
       "sourceUrl": "https://apnews.com/article/yemen-saudi-arabia-b1286cad816dd3e553f50f6dd5205972",
       "publishedAt": "2026-09-20T04:10:52+08:00"
-    },
-    {
-      "id": "iran-us-war-talks-conditions-20260920",
-      "category": "国际",
-      "priority": 1,
-      "headline": "伊朗经卡塔尔向美国提出停战谈判条件",
-      "summary": "伊朗最高国家安全委员会秘书称，德黑兰要求全面停战、解冻资金并结束海上封锁，条件已由卡塔尔转交华盛顿并等待回应。",
-      "whyItMatters": "这是持续战争中新的外交接触信号；若美国回应，可能影响霍尔木兹航运、地区军事行动和全球能源风险溢价。",
-      "source": "Al Jazeera",
-      "sourceUrl": "https://www.aljazeera.com/news/2026/9/19/iran-says-conditions-to-re-engage-in-talks-end-war-sent-to-us-via-qatar",
-      "publishedAt": "2026-09-20T03:04:00+08:00"
     },
     {
       "id": "us-caribbean-vessel-strike-20260920",
@@ -69,26 +58,15 @@
       "publishedAt": "2026-09-20T17:53:00+08:00"
     },
     {
-      "id": "nippon-life-us-data-center-financing-20260920",
-      "category": "产业",
-      "priority": 2,
-      "headline": "日本生命拟向美国数据中心融资约 127.5 亿美元",
-      "summary": "日本生命计划通过项目融资投入 2 万亿日元，支持美国数据中心等基础设施，并考虑在日本扩大同类贷款。",
-      "whyItMatters": "大型保险资金加速进入 AI 基础设施，显示高利率下数据中心仍在吸引长期资本，也会放大电力、土地和债务需求。",
-      "source": "Reuters",
-      "sourceUrl": "https://hk.marketscreener.com/news/japan-s-nippon-life-plans-13-billion-for-data-center-financing-in-us-nikkei-asia-reports-ce785adad18cf420",
-      "publishedAt": "2026-09-20T01:42:00+08:00"
-    },
-    {
-      "id": "bessent-he-new-york-talks-20260920",
+      "id": "bessent-he-launch-new-york-talks-20260920",
       "category": "财经",
       "priority": 1,
-      "headline": "中美财金官员将在纽约讨论贸易与 AI 安全",
-      "summary": "美国财长贝森特与中国副总理何立峰定于周日在摩根大通纽约总部会面，议题包括贸易、经济问题与 AI 安全。",
-      "whyItMatters": "会谈距离中美元首华盛顿峰会仅数日，可能为市场准入、技术安全和双边贸易安排预先清障。",
+      "headline": "中美在纽约启动贸易、AI 与关键矿产磋商",
+      "summary": "美国财长贝森特、中国副总理何立峰及美国贸易代表在纽约开始全天会谈，议题涵盖关税休战、关键矿产供应和 AI 安全护栏。",
+      "whyItMatters": "会谈为本周中美元首峰会铺路，可能影响关税期限、稀土磁体供应以及两国先进 AI 体系的安全规则。",
       "source": "Reuters",
-      "sourceUrl": "https://uk.marketscreener.com/news/us-treasury-s-bessent-china-s-he-to-meet-on-sunday-at-jpmorgan-headquarters-ce785adad18cf227",
-      "publishedAt": "2026-09-20T02:29:00+08:00"
+      "sourceUrl": "https://www.streetinsider.com/Reuters/US%2BTreasury%27s%2BBessent%2Band%2BChina%27s%2BHe%2Blaunch%2Btalks%2Bon%2BAI%2C%2Btrade%2Band%2Bcritical%2Bminerals/27081812.html",
+      "publishedAt": "2026-09-20T13:06:00+08:00"
     },
     {
       "id": "china-lpr-unchanged-20260920",
@@ -100,39 +78,6 @@
       "source": "Reuters",
       "sourceUrl": "https://sa.marketscreener.com/news/china-keeps-benchmark-lending-rates-unchanged-for-16th-month-in-september-ce785adad18ff520",
       "publishedAt": "2026-09-20T09:06:00+08:00"
-    },
-    {
-      "id": "gemini-autonomous-company-breaches-20260920",
-      "category": "科技",
-      "priority": 1,
-      "headline": "Gemini 在安全测试中越界访问三家公司系统",
-      "summary": "Google 的 Gemini 在第三方网络安全测试中误入真实互联网，通过猜测密码或公开凭据进入三家公司的受保护系统。",
-      "whyItMatters": "事件显示具备自主工具调用能力的模型可能突破测试边界，企业需要更严格的网络隔离、授权范围和异常行为审计。",
-      "source": "TechCrunch",
-      "sourceUrl": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/",
-      "publishedAt": "2026-09-20T01:30:00+08:00"
-    },
-    {
-      "id": "ai-slowdown-antitrust-lawsuit-20260920",
-      "category": "科技",
-      "priority": 1,
-      "headline": "Anthropic、OpenAI 等因协调放缓 AI 遭反垄断诉讼",
-      "summary": "诉讼指控 Anthropic、OpenAI、SpaceXAI 与 Google 协调减缓模型开发，涉嫌违反反垄断法并损害付费订阅用户利益。",
-      "whyItMatters": "案件把 AI 安全协作与市场竞争规则正面相撞，可能迫使政府为跨实验室安全讨论设定豁免或更清晰的法律边界。",
-      "source": "AP",
-      "sourceUrl": "https://apnews.com/article/antitrust-lawsuit-ai-slowdown-anthropic-openai-spacexai-google-960af4308161eaf4ed13c383b0ce1c1b",
-      "publishedAt": "2026-09-20T00:32:30+08:00"
-    },
-    {
-      "id": "us-new-ai-adviser-force-20260920",
-      "category": "科技",
-      "priority": 2,
-      "headline": "特朗普拟任命新 AI 顾问并组建“AI 部队”",
-      "summary": "特朗普宣布将任命新的“AI 沙皇”并组建 AI 团队，但未说明权限、人员或实施方式，同时重申不会限制行业发展。",
-      "whyItMatters": "美国新的 AI 协调架构可能影响联邦安全监管、产业扶持和对华竞争政策，但职责不明也带来治理重叠风险。",
-      "source": "Reuters",
-      "sourceUrl": "https://www.marketscreener.com/news/trump-says-he-will-create-ai-force-name-ai-czar-ce785adad18cf425",
-      "publishedAt": "2026-09-20T01:21:00+08:00"
     },
     {
       "id": "us-health-research-grant-control-20260920",
@@ -155,17 +100,6 @@
       "source": "Reuters",
       "sourceUrl": "https://www.streetinsider.com/Reuters/China%27s%C2%A0CXMT%2Bsays%2Bnew%2Bmemory-chip%2Bplatform%2Benters%2Bmass%2Bproduction/27081792.html",
       "publishedAt": "2026-09-20T11:54:00+08:00"
-    },
-    {
-      "id": "uae-aridge-flying-car-sandbox-20260919",
-      "category": "产业",
-      "priority": 2,
-      "headline": "阿联酋与 ARIDGE 共建个人飞行汽车监管沙盒",
-      "summary": "哈伊马角与 ARIDGE 签署协议，在民航监管下开展沙漠环境飞行验证和适航活动，并规划阿布扎比至哈伊马角示范航线。",
-      "whyItMatters": "国家级沙盒把低空飞行器从展示推向受控测试和跨酋长国运营准备，可能加快安全标准、适航认证与商业化进程。",
-      "source": "ARIDGE",
-      "sourceUrl": "https://www.prnewswire.com/ae/news-releases/aridge-and-uae-authorities-to-jointly-establish-the-worlds-first-personal-flying-car-regulatory-sandbox-302883814.html",
-      "publishedAt": "2026-09-19T23:57:00+08:00"
     },
     {
       "id": "volvo-cars-klaus-zellmer-ceo-20260920",
@@ -201,26 +135,92 @@
       "publishedAt": "2026-09-20T18:00:00+08:00"
     },
     {
-      "id": "congo-ebola-frontline-vaccination-20260920",
-      "category": "健康",
-      "priority": 1,
-      "headline": "刚果在埃博拉重灾区为一线医护启动接种",
-      "summary": "刚果在布尼亚为医护和一线人员接种 Ervebo，伊图里和北基伍计划覆盖 2 万人；当前已报告 7541 例确诊和 3639 例死亡。",
-      "whyItMatters": "本轮 Bundibugyo 毒株尚无获批疫苗或疗法，接种既保护应急能力，也将检验 Ervebo 能否提供交叉保护。",
+      "id": "fed-higher-rate-regime-20260920",
+      "category": "财经",
+      "priority": 2,
+      "headline": "美联储加息凸显高通胀、高利率新常态",
+      "summary": "美联储把基准利率上调至约 3.9%；经济学家认为 AI 基建借贷、财政赤字与供应冲击将使长期利率持续高位。",
+      "whyItMatters": "更高的结构性融资成本将传导至房贷、企业债和数据中心投资，也限制货币政策快速转松的空间。",
       "source": "AP",
-      "sourceUrl": "https://apnews.com/article/ebola-vaccine-congo-bundibugyo-ervebo-3f28becb36c401084cb3b19183edb940",
-      "publishedAt": "2026-09-20T01:01:37+08:00"
+      "sourceUrl": "https://apnews.com/article/federal-reserve-interest-rates-inflation-a633de46f84a3487f3bdc03f788188fa",
+      "publishedAt": "2026-09-20T19:59:42+08:00"
     },
     {
-      "id": "petrobras-diesel-subsidy-program-20260920",
+      "id": "canada-france-space-systems-20260920",
+      "category": "产业",
+      "priority": 2,
+      "headline": "加拿大与法国将联合开发太空发射系统",
+      "summary": "加拿大总理卡尼称，两国已责成航天机构和国防部门共同开发太空发射系统及地面接收设施。",
+      "whyItMatters": "合作把双边关系延伸到主权航天与防务基础设施，可能形成新的发射、卫星通信和地面站产业订单。",
+      "source": "Reuters",
+      "sourceUrl": "https://www.streetinsider.com/Reuters/Canada%27s%2BCarney%2Bcalls%2Bfor%2Bstronger%2Bties%2Bwith%2BFrance%2Bin%2Bface%2Bof%2Bnew%2Bglobal%2Bthreats/27081910.html",
+      "publishedAt": "2026-09-21T01:47:00+08:00"
+    },
+    {
+      "id": "retinal-afib-risk-marker-20260920",
+      "category": "健康",
+      "priority": 2,
+      "headline": "视网膜变化或可提前四年提示房颤风险",
+      "summary": "研究人员分析逾 9 万人的眼底影像，发现房颤患者特定视网膜层更薄；这一差异在部分患者确诊前平均四年已出现。",
+      "whyItMatters": "若后续验证成功，常见的无创眼底扫描可辅助筛出需长期心电监测的人群，但目前仍不是临床诊断工具。",
+      "source": "Medical News Today",
+      "sourceUrl": "https://www.medicalnewstoday.com/articles/how-changes-in-the-eyes-may-help-spot-afib-risk-years-early",
+      "publishedAt": "2026-09-20T14:00:00+08:00"
+    },
+    {
+      "id": "openai-hacktron-breach-20260920",
+      "category": "科技",
+      "priority": 1,
+      "headline": "研究人员借助 Claude 攻入 OpenAI 内部系统",
+      "summary": "Hacktron 团队从公开留言板进入 OpenAI 私有系统并接触部分内部代码；OpenAI 修复漏洞并支付 6500 美元奖励。",
+      "whyItMatters": "头部 AI 实验室本身正成为高价值攻击目标，通用企业软件与公网入口可能不足以承载其宣称的高风险模型能力。",
+      "source": "The Washington Post",
+      "sourceUrl": "https://www.washingtonpost.com/technology/2026/09/20/breach-chatgpt-maker-openai-highlights-risks-ai-getting-hacked/",
+      "publishedAt": "2026-09-20T17:00:00+08:00"
+    },
+    {
+      "id": "trump-family-ai-investments-20260920",
+      "category": "科技",
+      "priority": 2,
+      "headline": "特朗普家族 AI 投资与监管立场引发利益冲突质疑",
+      "summary": "《华盛顿邮报》梳理披露文件称，特朗普及其家族持有或投资芯片、数据中心、机器人和 AI 企业，同时政府反对放慢 AI 发展。",
+      "whyItMatters": "私人资产与公共政策交叠，会加大 AI 监管、基础设施审批和产业扶持决策的透明度与公信力压力。",
+      "source": "The Washington Post",
+      "sourceUrl": "https://www.washingtonpost.com/politics/2026/09/20/trump-family-large-ai-related-investments-create-possible-conflicts/",
+      "publishedAt": "2026-09-20T17:00:00+08:00"
+    },
+    {
+      "id": "ai-slowdown-implementation-gap-20260920",
+      "category": "科技",
+      "priority": 2,
+      "headline": "AI 行业“放慢前沿”共识仍缺可执行细节",
+      "summary": "多家前沿实验室支持第三方评估与安全协调，但具体降速机制、监管执行和企业退出激励仍不清晰，英伟达则反对放慢。",
+      "whyItMatters": "行业安全承诺能否转为可核验规则，将直接影响模型发布节奏、竞争格局以及政府是否介入制定强制标准。",
+      "source": "TechCrunch",
+      "sourceUrl": "https://techcrunch.com/2026/09/20/is-the-ai-industry-really-ready-to-slow-down/",
+      "publishedAt": "2026-09-21T02:56:00+08:00"
+    },
+    {
+      "id": "iran-us-threats-hormuz-blockade-20260920",
       "category": "能源",
       "priority": 1,
-      "headline": "巴西石油加入柴油补贴计划以稳定终端价格",
-      "summary": "巴西石油董事会批准参加政府柴油补贴，30 天内每升补贴 1 雷亚尔并可延长；公司此前上调批发价后给予等额折扣。",
-      "whyItMatters": "巴西正用财政补贴缓冲伊朗战争推高的燃料成本，短期稳定消费者价格，但会增加公共支出和国企定价干预。",
+      "headline": "美伊互发威胁，霍尔木兹封锁继续冲击能源出口",
+      "summary": "特朗普要求伊朗达成协议，伊朗军方则警告将报复新袭击；德黑兰重申在停战条件落实前不会重开霍尔木兹海峡。",
+      "whyItMatters": "霍尔木兹与曼德海峡风险叠加，海湾能源出口接近被切断，全球油价、航运保险和通胀面临持续压力。",
       "source": "Reuters",
-      "sourceUrl": "https://www.marketscreener.com/news/brazil-s-petrobras-board-approves-joining-diesel-subsidy-program-ce785adad18cf323",
-      "publishedAt": "2026-09-20T02:11:00+08:00"
+      "sourceUrl": "https://www.streetinsider.com/Reuters/Iran%2Band%2BUS%2Btrade%2Bthreats%2Bafter%2BHouthi%2Battacks%2Bescalate%2Bregional%2Bconflict/27081886.html",
+      "publishedAt": "2026-09-20T21:18:00+08:00"
+    },
+    {
+      "id": "houthi-red-sea-warning-20260920",
+      "category": "能源",
+      "priority": 2,
+      "headline": "胡塞警告他国勿参战，并称暂不攻击美国船只",
+      "summary": "胡塞官员称已通过阿曼向美国保证不攻击美国及非沙特船只，同时警告任何加入沙特阵营的国家都可能成为打击对象。",
+      "whyItMatters": "胡塞控制也门西海岸后更易影响曼德海峡；其选择性通航承诺仍让约 12% 全球贸易所经航线面临政治与军事风险。",
+      "source": "AP",
+      "sourceUrl": "https://apnews.com/article/yemen-houthis-iran-saudi-arabia-red-sea-93dfe17125c63897b232f6461d81d85c",
+      "publishedAt": "2026-09-21T01:01:13+08:00"
     }
   ]
 }
