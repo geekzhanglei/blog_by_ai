@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-20T19:30:26+08:00",
-  "coverageStart": "2026-09-19T19:30:26+08:00",
+  "updatedAt": "2026-09-20T23:35:02+08:00",
+  "coverageStart": "2026-09-19T23:35:02+08:00",
   "items": [
     {
       "id": "saudi-houthi-riyadh-confirmed-20260920",
@@ -12,17 +12,6 @@
       "source": "AP",
       "sourceUrl": "https://apnews.com/article/yemen-saudi-arabia-b1286cad816dd3e553f50f6dd5205972",
       "publishedAt": "2026-09-20T04:10:52+08:00"
-    },
-    {
-      "id": "white-house-media-access-ban-20260919",
-      "category": "国际",
-      "priority": 2,
-      "headline": "白宫撤销 CNN、MS NOW 与 Politico 记者通行证",
-      "summary": "三家媒体的白宫记者在特朗普宣布禁令后被拒绝入内并遭没收证件，相关机构表示将捍卫新闻自由并暗示采取法律行动。",
-      "whyItMatters": "政府以报道内容为由限制媒体采访权，可能引发美国宪法第一修正案诉讼，并影响其他新闻机构的政府问责能力。",
-      "source": "AP",
-      "sourceUrl": "https://apnews.com/article/trump-ban-ms-now-media-d160e253453229600ce54f8e91351523",
-      "publishedAt": "2026-09-19T20:33:39+08:00"
     },
     {
       "id": "iran-us-war-talks-conditions-20260920",
@@ -50,12 +39,23 @@
       "id": "north-korea-projectile-launch-20260920",
       "category": "国际",
       "priority": 2,
-      "headline": "朝鲜发射短程弹道导弹及另一枚飞行器",
-      "summary": "韩军称朝鲜向东部海域发射一枚飞行约 450 公里的短程弹道导弹，数小时后又发射一枚型号尚未公布的飞行器。",
+      "headline": "朝鲜接连发射两枚短程弹道导弹",
+      "summary": "韩军称朝鲜从元山一带向东部海域发射两枚短程弹道导弹，间隔约三小时，飞行距离分别约 450 公里和 600 多公里。",
       "whyItMatters": "在半岛安全紧张和区域军演背景下，新一轮发射将检验日韩预警体系，并可能推动美日韩追加军事与外交回应。",
       "source": "AP",
       "sourceUrl": "https://apnews.com/article/north-south-korea-launch-ad020d996b61dedd358cc689db614fdb",
       "publishedAt": "2026-09-20T14:31:04+08:00"
+    },
+    {
+      "id": "west-bank-deadly-violence-20260920",
+      "category": "国际",
+      "priority": 2,
+      "headline": "约旦河西岸两起冲突致以巴双方各 1 人死亡",
+      "summary": "一名疑似巴勒斯坦枪手在拉姆安拉附近射杀一名以色列人并随后被捕；以军另称击毙一名试图驾车冲撞士兵的巴勒斯坦司机。",
+      "whyItMatters": "事件发生在赎罪日前夕，以色列已下令增派安全力量并扩大逮捕行动，可能进一步推高约旦河西岸的暴力与报复风险。",
+      "source": "Reuters",
+      "sourceUrl": "https://sa.marketscreener.com/news/palestinian-gunman-shoots-dead-israeli-in-the-west-bank-soldiers-kill-motorist-ce785adad180f526",
+      "publishedAt": "2026-09-20T20:00:00+08:00"
     },
     {
       "id": "hong-kong-dim-sum-bond-expansion-20260920",
@@ -168,6 +168,17 @@
       "publishedAt": "2026-09-19T23:57:00+08:00"
     },
     {
+      "id": "volvo-cars-klaus-zellmer-ceo-20260920",
+      "category": "产业",
+      "priority": 2,
+      "headline": "沃尔沃汽车任命斯柯达掌门泽尔默为新 CEO",
+      "summary": "沃尔沃汽车董事会任命斯柯达现任 CEO 克劳斯·泽尔默为总裁兼 CEO，最迟于 2027 年 10 月 1 日履职。",
+      "whyItMatters": "在汽车业电动化与区域化竞争加剧之际，这项人事变动将影响沃尔沃的产品转型、成本控制及与吉利体系的协同。",
+      "source": "Volvo Cars",
+      "sourceUrl": "https://www.volvocars.com/intl/media/press-releases/48E93ADCB2CC7F6A/",
+      "publishedAt": "2026-09-20T18:46:00+08:00"
+    },
+    {
       "id": "moscow-refinery-drone-strike-20260920",
       "category": "能源",
       "priority": 2,
@@ -179,15 +190,15 @@
       "publishedAt": "2026-09-20T13:31:00+08:00"
     },
     {
-      "id": "telehealth-medical-data-risks-20260919",
+      "id": "cue221-hives-phase2-results-20260920",
       "category": "健康",
       "priority": 2,
-      "headline": "美国远程医疗平台再陷患者数据与处方合规争议",
-      "summary": "监管机构指控多家远程医疗企业未经同意向平台分享健康数据、设置难取消订阅，并在缺少实时问诊的情况下快速开药。",
-      "whyItMatters": "大量消费级健康数据不受传统医疗隐私法充分覆盖，GLP-1 等药物的快速处方也可能扩大患者安全与监管缺口。",
-      "source": "AP",
-      "sourceUrl": "https://apnews.com/article/telehealth-prescription-glp1-ftc-hims-e6821ac2ff88d76bbfe71c08ad21cc3a",
-      "publishedAt": "2026-09-19T20:00:44+08:00"
+      "headline": "CUE-221 慢性荨麻疹二期试验达到主要终点",
+      "summary": "CUE-221 在 145 人二期试验中呈剂量相关疗效，最高剂量组第 12 周有 54% 患者荨麻疹完全消退，安慰剂组为 11%。",
+      "whyItMatters": "这款双机制抗 IgE 抗体的疗效最长维持至停药 12 周，且未出现治疗相关严重不良事件，为进入二期后段及三期试验提供依据。",
+      "source": "Cue Biopharma",
+      "sourceUrl": "https://www.globenewswire.com/news-release/2026/09/20/3365072/0/en/cue-biopharma-announces-positive-topline-results-from-cue-221-phase-2-study-in-chronic-spontaneous-urticaria.html",
+      "publishedAt": "2026-09-20T18:00:00+08:00"
     },
     {
       "id": "congo-ebola-frontline-vaccination-20260920",
@@ -199,17 +210,6 @@
       "source": "AP",
       "sourceUrl": "https://apnews.com/article/ebola-vaccine-congo-bundibugyo-ervebo-3f28becb36c401084cb3b19183edb940",
       "publishedAt": "2026-09-20T01:01:37+08:00"
-    },
-    {
-      "id": "totalenergies-suriname-granmorgu-20260919",
-      "category": "能源",
-      "priority": 2,
-      "headline": "苏里南 120 亿美元海上油气项目计划 2028 年投产",
-      "summary": "TotalEnergies、Staatsolie 与 APA 的 GranMorgu 项目已投入约一半计划资金，目标在 2028 年中启动苏里南首个海上油气生产。",
-      "whyItMatters": "项目可能把苏里南带入海上产油国行列，改变圭亚那盆地的投资、出口能力和南美能源版图。",
-      "source": "Reuters",
-      "sourceUrl": "https://ca.marketscreener.com/news/totalenergies-offshore-project-in-suriname-on-track-for-first-output-in-mid-2028-ce785adad18df522",
-      "publishedAt": "2026-09-19T23:34:47+08:00"
     },
     {
       "id": "petrobras-diesel-subsidy-program-20260920",
