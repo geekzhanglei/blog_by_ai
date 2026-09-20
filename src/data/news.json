@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-20T07:33:16+08:00",
-  "coverageStart": "2026-09-19T07:33:16+08:00",
+  "updatedAt": "2026-09-20T11:29:22+08:00",
+  "coverageStart": "2026-09-19T11:29:22+08:00",
   "items": [
     {
       "id": "saudi-houthi-riyadh-attack-20260919",
@@ -80,15 +80,15 @@
       "publishedAt": "2026-09-20T02:29:00+08:00"
     },
     {
-      "id": "anthropic-new-model-before-ipo-20260919",
+      "id": "anduril-taiwan-arms-delay-20260919",
       "category": "科技",
-      "priority": 1,
-      "headline": "Anthropic 考虑在 IPO 前发布新模型迎战 GPT-6 Astra",
-      "summary": "知情人士称，Anthropic 正评估推出新模型，以应对 OpenAI 在企业市场的增长；公司同时进行安全评估并权衡盈利压力。",
-      "whyItMatters": "产品竞赛与安全减速倡议形成直接张力，可能影响两家头部 AI 企业的市场份额、融资节奏和安全承诺可信度。",
+      "priority": 2,
+      "headline": "Anduril 称美国延迟对台军售已影响业务",
+      "summary": "Anduril 创始人帕尔默·拉基表示，美国迟迟未批准价值 140 亿美元的对台军售，正拖慢该公司与台湾的合作进展。",
+      "whyItMatters": "军售延迟把中美谈判、稀土供应与台湾无人机和导弹现代化相互绑定，可能改变防务科技订单和区域安全部署节奏。",
       "source": "Reuters",
-      "sourceUrl": "https://uk.marketscreener.com/news/anthropic-considers-releasing-new-ai-model-ahead-of-ipo-sources-say-ce785adade88f620",
-      "publishedAt": "2026-09-19T08:04:00+08:00"
+      "sourceUrl": "https://uk.marketscreener.com/news/defence-firm-anduril-says-us-delay-on-taiwan-arms-sales-affecting-its-business-ce785adade8ff52d",
+      "publishedAt": "2026-09-19T12:23:00+08:00"
     },
     {
       "id": "ai-recursive-self-improvement-20260919",
