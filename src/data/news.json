@@ -1,28 +1,17 @@
 {
-  "updatedAt": "2026-09-21T07:29:30+08:00",
-  "coverageStart": "2026-09-20T07:29:30+08:00",
+  "updatedAt": "2026-09-21T11:29:00+08:00",
+  "coverageStart": "2026-09-20T11:29:00+08:00",
   "items": [
     {
-      "id": "oil-rises-houthi-riyadh-20260921",
+      "id": "oil-diplomacy-saudi-exports-20260921",
       "category": "能源",
       "priority": 1,
-      "headline": "胡塞袭击利雅得后国际油价上行",
-      "summary": "胡塞对沙特首都发动导弹和无人机袭击后，布伦特原油一度升至每桶 104.68 美元，WTI 升至 101.06 美元。",
-      "whyItMatters": "沙特安全风险与美伊僵局同步加剧，供应中断溢价继续传导至能源成本、运输和全球通胀预期。",
+      "headline": "外交预期与沙特出口恢复推动油价跌至一周低点",
+      "summary": "市场押注联合国大会期间美伊外交可能重启，加之沙特改道霍尔木兹海峡后本月出口恢复至每日逾 400 万桶，布伦特原油跌至 101.71 美元。",
+      "whyItMatters": "中东风险溢价开始回落，但胡塞袭击与关键航道安全仍可能迅速扭转油价，影响通胀和运输成本。",
       "source": "Reuters",
       "sourceUrl": "https://au.investing.com/news/commodities-news/oil-rises-after-houthi-attack-on-saudi-capital-4649875",
-      "publishedAt": "2026-09-21T06:12:00+08:00"
-    },
-    {
-      "id": "us-caribbean-vessel-strike-20260920",
-      "category": "国际",
-      "priority": 2,
-      "headline": "美军在加勒比海袭击疑似运毒船并致 4 人死亡",
-      "summary": "美军南方司令部称在加勒比海打击一艘涉嫌参与毒品走私的船只，造成 4 人死亡，但未公布船上载有毒品的证据。",
-      "whyItMatters": "美国以武装冲突逻辑持续扩大反毒军事行动，累计死亡人数升至至少 231 人，合法性争议及地区主权摩擦可能加剧。",
-      "source": "AP",
-      "sourceUrl": "https://apnews.com/article/trump-cartels-military-strike-caribbean-95f3d4ae10f8e2a4a193f601101898d9",
-      "publishedAt": "2026-09-20T08:38:15+08:00"
+      "publishedAt": "2026-09-21T10:34:00+08:00"
     },
     {
       "id": "north-korea-projectile-launch-20260920",
@@ -58,37 +47,15 @@
       "publishedAt": "2026-09-20T17:53:00+08:00"
     },
     {
-      "id": "bessent-he-launch-new-york-talks-20260920",
+      "id": "us-china-ai-alert-proposal-20260921",
       "category": "财经",
       "priority": 1,
-      "headline": "中美在纽约启动贸易、AI 与关键矿产磋商",
-      "summary": "美国财长贝森特、中国副总理何立峰及美国贸易代表在纽约开始全天会谈，议题涵盖关税休战、关键矿产供应和 AI 安全护栏。",
-      "whyItMatters": "会谈为本周中美元首峰会铺路，可能影响关税期限、稀土磁体供应以及两国先进 AI 体系的安全规则。",
+      "headline": "中美纽约会谈提出 AI 安全事件通报机制",
+      "summary": "中美结束纽约磋商，美方提议建立涉及国家安全的 AI 事件通报机制；双方还推进非敏感商品降税的“贸易委员会”安排。",
+      "whyItMatters": "会谈为本周中美元首峰会形成两项可落地议题，可能影响 AI 风险治理及部分消费品、农产品、能源和医疗器械关税。",
       "source": "Reuters",
-      "sourceUrl": "https://www.streetinsider.com/Reuters/US%2BTreasury%27s%2BBessent%2Band%2BChina%27s%2BHe%2Blaunch%2Btalks%2Bon%2BAI%2C%2Btrade%2Band%2Bcritical%2Bminerals/27081812.html",
-      "publishedAt": "2026-09-20T13:06:00+08:00"
-    },
-    {
-      "id": "china-lpr-unchanged-20260920",
-      "category": "财经",
-      "priority": 2,
-      "headline": "中国连续第 16 个月维持贷款市场报价利率",
-      "summary": "中国 1 年期和 5 年期 LPR 分别维持在 3.00% 和 3.50%，符合全部 21 名受访市场人士预期。",
-      "whyItMatters": "全球主要央行转向偏紧、银行息差承压之际，利率不变显示全面宽松空间有限，政策重心仍需在稳汇率与托需求间权衡。",
-      "source": "Reuters",
-      "sourceUrl": "https://sa.marketscreener.com/news/china-keeps-benchmark-lending-rates-unchanged-for-16th-month-in-september-ce785adad18ff520",
-      "publishedAt": "2026-09-20T09:06:00+08:00"
-    },
-    {
-      "id": "us-health-research-grant-control-20260920",
-      "category": "健康",
-      "priority": 2,
-      "headline": "特朗普拟让政治任命官员共同决定 NIH 科研拨款",
-      "summary": "报道称特朗普要求起草行政令，设立由预算主管与 NIH 负责人等组成的委员会，以一致同意方式决定国家卫生研究院拨款。",
-      "whyItMatters": "把国会拨款的科研资金置于政治任命官员直接控制之下，可能改变美国生物医学研究方向，并加剧学术独立与经费稳定性争议。",
-      "source": "Reuters",
-      "sourceUrl": "https://in.marketscreener.com/news/trump-seeks-to-bring-health-research-funding-under-his-control-politico-reports-ce785adad18ff425",
-      "publishedAt": "2026-09-20T10:28:00+08:00"
+      "sourceUrl": "https://finance.yahoo.com/news/us-treasurys-bessent-chinas-launch-050623893.html",
+      "publishedAt": "2026-09-21T09:16:00+08:00"
     },
     {
       "id": "cxmt-fifth-gen-dram-mass-production-20260920",
@@ -221,6 +188,39 @@
       "source": "AP",
       "sourceUrl": "https://apnews.com/article/yemen-houthis-iran-saudi-arabia-red-sea-93dfe17125c63897b232f6461d81d85c",
       "publishedAt": "2026-09-21T01:01:13+08:00"
+    },
+    {
+      "id": "typhoon-dujuan-japan-warnings-20260921",
+      "category": "国际",
+      "priority": 2,
+      "headline": "台风杜鹃逼近日本关东，多地发布洪水和滑坡警报",
+      "summary": "日本气象厅称台风杜鹃将贴近东京所在的关东地区，部分太平洋沿岸自周六以来降雨已超过 300 毫米。",
+      "whyItMatters": "强降雨带可能引发山洪和滑坡，并已导致亚运赛事延期，东京都市圈交通与公共安全面临短时冲击。",
+      "source": "Reuters",
+      "sourceUrl": "https://www.streetinsider.com/Reuters/Typhoon%2Bapproaches%2Beastern%2BJapan%2C%2Bprompting%2Bflood%2Band%2Blandslide%2Bwarnings/27082010.html",
+      "publishedAt": "2026-09-21T10:10:00+08:00"
+    },
+    {
+      "id": "vietnam-ftse-emerging-market-20260921",
+      "category": "财经",
+      "priority": 2,
+      "headline": "越南股票正式纳入富时罗素新兴市场指数",
+      "summary": "越南股票进入富时罗素新兴市场指数，纳入将在 2027 年前分四阶段完成，指数公司估计最多可引入 60 亿美元资金。",
+      "whyItMatters": "升级将扩大越南资本市场的被动资金配置，并推动其继续改善外资持股限制、自由流通量和中央对手方清算机制。",
+      "source": "Reuters",
+      "sourceUrl": "https://malaysia.news.yahoo.com/vietnam-joins-ftse-russell-emerging-023503417.html",
+      "publishedAt": "2026-09-21T10:35:00+08:00"
+    },
+    {
+      "id": "mifepristone-emergency-contraception-review-20260920",
+      "category": "健康",
+      "priority": 2,
+      "headline": "系统综述显示米非司酮紧急避孕效果优于常用药物",
+      "summary": "Cochrane 汇总约 3.6 万名女性参与的 87 项随机试验，低至中剂量米非司酮较左炔诺孕酮减少约 27% 的妊娠风险，整体副作用也更少。",
+      "whyItMatters": "高确定性证据为扩大紧急避孕选择提供依据，但药物在多国仍受适应证审批和政治法律限制。",
+      "source": "Medical Xpress",
+      "sourceUrl": "https://medicalxpress.com/news/2026-09-mifepristone-effective-common-emergency-contraception.html",
+      "publishedAt": "2026-09-20T22:00:00+08:00"
     }
   ]
 }
