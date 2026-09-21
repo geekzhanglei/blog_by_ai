@@ -1,28 +1,28 @@
 {
-  "updatedAt": "2026-09-22T03:31:33+08:00",
-  "coverageStart": "2026-09-21T03:31:33+08:00",
+  "updatedAt": "2026-09-22T07:28:47+08:00",
+  "coverageStart": "2026-09-21T07:28:47+08:00",
   "items": [
     {
       "id": "oil-diplomacy-saudi-exports-20260921",
       "category": "能源",
       "priority": 1,
       "headline": "外交预期与沙特出口恢复推动油价跌至 12 天低点",
-      "summary": "市场押注联合国大会期间美伊外交可能重启，加之沙特部分出口恢复；布伦特原油盘中跌破每桶 100 美元，纽约时间下午 1 时 16 分报 99.51 美元。",
+      "summary": "市场押注联合国大会期间美伊外交可能重启，加之沙特部分出口恢复；布伦特原油结算价下跌 3.4% 至每桶 100.34 美元，美国 WTI 近月合约跌至 95.78 美元。",
       "whyItMatters": "中东风险溢价开始回落，但胡塞袭击与关键航道安全仍可能迅速扭转油价，影响通胀和运输成本。",
       "source": "Reuters",
-      "sourceUrl": "https://au.investing.com/news/commodities-news/oil-rises-after-houthi-attack-on-saudi-capital-4649875",
-      "publishedAt": "2026-09-22T02:09:00+08:00"
+      "sourceUrl": "https://in.marketscreener.com/news/oil-hits-over-1-week-low-on-hopes-of-boost-to-diplomacy-in-iran-war-ce785adad08df727",
+      "publishedAt": "2026-09-22T03:39:00+08:00"
     },
     {
       "id": "us-china-ai-alert-proposal-20260921",
       "category": "科技",
       "priority": 1,
-      "headline": "中美纽约会谈提出 AI 安全事件通报机制",
-      "summary": "中美结束纽约磋商，美方提议建立涉及国家安全的 AI 事件通报机制；双方还推进非敏感商品降税的“贸易委员会”安排。",
-      "whyItMatters": "会谈为本周中美元首峰会形成两项可落地议题，可能影响 AI 风险治理及部分消费品、农产品、能源和医疗器械关税。",
+      "headline": "中美同意设 AI 安全对话，两个月后在深圳再会",
+      "summary": "美国财长贝森特称，双方同意建立 AI 安全正式对话和事件沟通热线，高层官员预计约两个月后在深圳讨论风险和通报规则。",
+      "whyItMatters": "这使纽约会谈提出的 AI 风险沟通机制向定期磋商推进；贸易休战是否延长则尚未宣布。",
       "source": "Reuters",
-      "sourceUrl": "https://www.marketscreener.com/news/us-treasury-s-bessent-and-china-s-he-launch-talks-on-ai-trade-and-critical-minerals-ce785adad089f425",
-      "publishedAt": "2026-09-21T11:01:00+08:00"
+      "sourceUrl": "https://www.marketscreener.com/news/us-china-to-meet-again-on-ai-safety-in-two-months-in-shenzhen-bessent-says-ce785adbdc8ef722",
+      "publishedAt": "2026-09-21T21:23:00+08:00"
     },
     {
       "id": "typhoon-dujuan-japan-warnings-20260921",
@@ -91,15 +91,15 @@
       "publishedAt": "2026-09-21T14:00:00+08:00"
     },
     {
-      "id": "bangladesh-garment-cooling-study-20260921",
+      "id": "paramount-warner-settlement-20260922",
       "category": "产业",
-      "priority": 3,
-      "headline": "研究称孟加拉成衣厂降温投入四年内可回本",
-      "summary": "康奈尔大学研究团队在达卡八家工厂测温，估算热应激平均侵蚀工厂年收入 4.1%；屋顶隔热、通风等降温投资可在四年内回本。",
-      "whyItMatters": "极端高温正同时影响工人安全和服装供应链产能，研究为品牌与供应商分担改造成本提供依据。",
-      "source": "Reuters",
-      "sourceUrl": "https://in.marketscreener.com/news/costs-to-cool-bangladesh-garment-factories-can-be-recovered-within-four-years-study-shows-ce785adad08af722",
-      "publishedAt": "2026-09-21T06:02:00+08:00"
+      "priority": 1,
+      "headline": "派拉蒙与 12 州就华纳合并诉讼达成和解",
+      "summary": "加州总检察长宣布，和解尚待法院批准；派拉蒙承诺五年内增加至少 15 亿美元美国电影制作投入，并设立 4750 万美元受影响员工基金。",
+      "whyItMatters": "这一和解扫除大型传媒合并的关键法律障碍，也为电影产量、就业及有线电视议价设定约束。",
+      "source": "Associated Press",
+      "sourceUrl": "https://apnews.com/article/warner-bros-paramount-skydance-merger-settlement-1aaa7c471d8ba286ccfad92b18bc1ecf",
+      "publishedAt": "2026-09-22T01:07:38+08:00"
     },
     {
       "id": "german-auto-workers-action-20260921",
@@ -171,12 +171,12 @@
       "id": "eu-russia-sanctions-renewal-20260921",
       "category": "国际",
       "priority": 1,
-      "headline": "欧盟使节同意延长对俄制裁，并有条件移除两名商人",
-      "summary": "欧盟外交官称，27 国使节同意把对数千名俄罗斯个人和实体的制裁续期三年，同时拟在成员国不反对的条件下移除乌斯马诺夫和弗里德曼。",
-      "whyItMatters": "三年续期改变以往半年或一年的节奏；有条件除名也暴露成员国围绕制裁与双边利益的分歧。",
+      "headline": "欧盟对俄制裁续期与两名商人除名交易仍待敲定",
+      "summary": "欧盟使节提出以对约 3000 个俄相关个人和实体的制裁续期三年，换取移除乌斯马诺夫和弗里德曼；拉脱维亚周一晚未同意，各国将继续磋商。",
+      "whyItMatters": "续期和除名均尚未生效，成员国对制裁力度与妥协条件的分歧仍可能影响最后决定。",
       "source": "Reuters",
-      "sourceUrl": "https://www.marketscreener.com/news/eu-to-lift-sanctions-on-russia-linked-usmanov-and-fridman-diplomats-say-ce785adbdc80f02c",
-      "publishedAt": "2026-09-21T22:03:00+08:00"
+      "sourceUrl": "https://in.marketscreener.com/news/latest/EU-continues-talks-on-deal-to-lift-sanctions-on-Russia-linked-billionaires-Usmanov-and-Fridman-dip-12139796/",
+      "publishedAt": "2026-09-22T03:12:00+08:00"
     },
     {
       "id": "ethiopia-armed-groups-alliance-20260921",
