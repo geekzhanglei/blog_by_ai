@@ -1,28 +1,17 @@
 {
-  "updatedAt": "2026-09-21T19:32:47+08:00",
-  "coverageStart": "2026-09-20T19:32:47+08:00",
+  "updatedAt": "2026-09-21T23:32:44+08:00",
+  "coverageStart": "2026-09-20T23:32:44+08:00",
   "items": [
     {
       "id": "oil-diplomacy-saudi-exports-20260921",
       "category": "能源",
       "priority": 1,
       "headline": "外交预期与沙特出口恢复推动油价跌至 11 天低点",
-      "summary": "市场押注联合国大会期间美伊外交可能重启，加之沙特改道霍尔木兹海峡后恢复部分出口，布伦特原油一度跌至每桶 101.75 美元。",
+      "summary": "市场押注联合国大会期间美伊外交可能重启，加之沙特改道霍尔木兹海峡后恢复部分出口，布伦特原油报每桶约 101.18 美元。",
       "whyItMatters": "中东风险溢价开始回落，但胡塞袭击与关键航道安全仍可能迅速扭转油价，影响通胀和运输成本。",
       "source": "Reuters",
       "sourceUrl": "https://au.investing.com/news/commodities-news/oil-rises-after-houthi-attack-on-saudi-capital-4649875",
       "publishedAt": "2026-09-21T10:34:00+08:00"
-    },
-    {
-      "id": "west-bank-deadly-violence-20260920",
-      "category": "国际",
-      "priority": 2,
-      "headline": "约旦河西岸两起冲突致以巴双方各 1 人死亡",
-      "summary": "一名疑似巴勒斯坦枪手在拉姆安拉附近射杀一名以色列人并随后被捕；以军另称击毙一名试图驾车冲撞士兵的巴勒斯坦司机。",
-      "whyItMatters": "事件发生在赎罪日前夕，以色列已下令增派安全力量并扩大逮捕行动，可能进一步推高约旦河西岸的暴力与报复风险。",
-      "source": "Reuters",
-      "sourceUrl": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/20/palestinian-gunman-shoots-dead-israeli-in-the-west-bank-soldiers-kill-motorist",
-      "publishedAt": "2026-09-20T20:00:00+08:00"
     },
     {
       "id": "us-china-ai-alert-proposal-20260921",
@@ -33,18 +22,7 @@
       "whyItMatters": "会谈为本周中美元首峰会形成两项可落地议题，可能影响 AI 风险治理及部分消费品、农产品、能源和医疗器械关税。",
       "source": "Reuters",
       "sourceUrl": "https://www.marketscreener.com/news/us-treasury-s-bessent-and-china-s-he-launch-talks-on-ai-trade-and-critical-minerals-ce785adad089f425",
-      "publishedAt": "2026-09-21T09:16:00+08:00"
-    },
-    {
-      "id": "fed-higher-rate-regime-20260920",
-      "category": "财经",
-      "priority": 2,
-      "headline": "美联储加息凸显高通胀、高利率新常态",
-      "summary": "美联储把基准利率上调至约 3.9%；经济学家认为 AI 基建借贷、财政赤字与供应冲击将使长期利率持续高位。",
-      "whyItMatters": "更高的结构性融资成本将传导至房贷、企业债和数据中心投资，也限制货币政策快速转松的空间。",
-      "source": "AP",
-      "sourceUrl": "https://apnews.com/article/federal-reserve-interest-rates-inflation-a633de46f84a3487f3bdc03f788188fa",
-      "publishedAt": "2026-09-20T19:59:42+08:00"
+      "publishedAt": "2026-09-21T11:01:00+08:00"
     },
     {
       "id": "canada-france-space-systems-20260920",
@@ -56,28 +34,6 @@
       "source": "Reuters",
       "sourceUrl": "https://www.investing.com/news/world-news/canadas-carney-calls-for-stronger-ties-with-france-in-face-of-new-global-threats-4908187",
       "publishedAt": "2026-09-21T01:47:00+08:00"
-    },
-    {
-      "id": "iran-us-threats-hormuz-blockade-20260920",
-      "category": "能源",
-      "priority": 1,
-      "headline": "美伊互发威胁，霍尔木兹封锁继续冲击能源出口",
-      "summary": "特朗普要求伊朗达成协议，伊朗军方则警告将报复新袭击；德黑兰重申在停战条件落实前不会重开霍尔木兹海峡。",
-      "whyItMatters": "霍尔木兹与曼德海峡风险叠加，海湾能源运输、航运保险和全球通胀仍面临进一步冲击。",
-      "source": "Reuters",
-      "sourceUrl": "https://www.marketscreener.com/news/iran-warns-against-new-escalation-by-us-and-allies-ce785adad180ff2c",
-      "publishedAt": "2026-09-20T21:18:00+08:00"
-    },
-    {
-      "id": "houthi-red-sea-warning-20260920",
-      "category": "能源",
-      "priority": 2,
-      "headline": "胡塞警告他国勿参战，并称暂不攻击美国船只",
-      "summary": "胡塞官员称已通过阿曼向美国保证不攻击美国及非沙特船只，同时警告任何加入沙特阵营的国家都可能成为打击对象。",
-      "whyItMatters": "胡塞控制也门西海岸后更易影响曼德海峡；其选择性通航承诺仍让约 12% 全球贸易所经航线面临政治与军事风险。",
-      "source": "AP",
-      "sourceUrl": "https://apnews.com/article/yemen-houthis-iran-saudi-arabia-red-sea-93dfe17125c63897b232f6461d81d85c",
-      "publishedAt": "2026-09-21T01:01:13+08:00"
     },
     {
       "id": "typhoon-dujuan-japan-warnings-20260921",
@@ -100,17 +56,6 @@
       "source": "Reuters",
       "sourceUrl": "https://www.investing.com/news/stock-market-news/vietnam-joins-ftse-russell-emerging-market-benchmark-4908233",
       "publishedAt": "2026-09-21T10:35:00+08:00"
-    },
-    {
-      "id": "mifepristone-emergency-contraception-review-20260920",
-      "category": "健康",
-      "priority": 2,
-      "headline": "系统综述显示米非司酮紧急避孕效果优于常用药物",
-      "summary": "Cochrane 汇总约 3.6 万名女性参与的 87 项随机试验，低至中剂量米非司酮较左炔诺孕酮减少约 27% 的妊娠风险，整体副作用也更少。",
-      "whyItMatters": "高确定性证据为扩大紧急避孕选择提供依据，但药物在多国仍受适应证审批和政治法律限制。",
-      "source": "Medical Xpress",
-      "sourceUrl": "https://medicalxpress.com/news/2026-09-mifepristone-effective-common-emergency-contraception.html",
-      "publishedAt": "2026-09-20T22:00:00+08:00"
     },
     {
       "id": "nz-navy-taiwan-strait-20260921",
@@ -176,7 +121,7 @@
       "whyItMatters": "AI 芯片需求带动韩国贸易顺差扩大，也为全球半导体景气提供了最新高频指标。",
       "source": "Yonhap",
       "sourceUrl": "https://en.yna.co.kr/view/AEN20260921001751320",
-      "publishedAt": "2026-09-21T09:19:00+08:00"
+      "publishedAt": "2026-09-21T08:19:27+08:00"
     },
     {
       "id": "spain-ai-regulation-roadmap-20260921",
@@ -221,6 +166,72 @@
       "source": "Reuters",
       "sourceUrl": "https://ca.marketscreener.com/news/houthis-push-for-control-of-yemen-highlands-as-trump-reported-to-have-called-off-airstrikes-ce785adbdd8df624",
       "publishedAt": "2026-09-21T19:04:00+08:00"
+    },
+    {
+      "id": "eu-russia-sanctions-renewal-20260921",
+      "category": "国际",
+      "priority": 1,
+      "headline": "欧盟使节同意延长对俄制裁，并有条件移除两名商人",
+      "summary": "欧盟外交官称，27 国使节同意把对数千名俄罗斯个人和实体的制裁续期三年，同时拟在成员国不反对的条件下移除乌斯马诺夫和弗里德曼。",
+      "whyItMatters": "三年续期改变以往半年或一年的节奏；有条件除名也暴露成员国围绕制裁与双边利益的分歧。",
+      "source": "Reuters",
+      "sourceUrl": "https://www.marketscreener.com/news/eu-to-lift-sanctions-on-russia-linked-usmanov-and-fridman-diplomats-say-ce785adbdc80f02c",
+      "publishedAt": "2026-09-21T22:03:00+08:00"
+    },
+    {
+      "id": "ethiopia-armed-groups-alliance-20260921",
+      "category": "国际",
+      "priority": 2,
+      "headline": "埃塞俄比亚七支武装宣布组建反政府联盟",
+      "summary": "来自提格雷、阿姆哈拉等地区的七支武装组织宣布结盟，其中包括曾在内战期间敌对的派别；政府指控联盟得到厄立特里亚支持，后者此前否认类似说法。",
+      "whyItMatters": "跨地区结盟可能加剧停火协议后的安全风险，但各组织的地域与政治分歧仍限制其协同行动。",
+      "source": "Reuters",
+      "sourceUrl": "https://ca.marketscreener.com/news/seven-ethiopian-armed-groups-announce-anti-government-alliance-ce785adbdd88f526",
+      "publishedAt": "2026-09-21T18:31:00+08:00"
+    },
+    {
+      "id": "softbank-openai-bond-sale-20260921",
+      "category": "财经",
+      "priority": 2,
+      "headline": "软银启动约 111.5 亿美元债券发行以支持 OpenAI 投资",
+      "summary": "交易文件显示，软银拟发行 100 亿美元及 10 亿欧元无担保债券，主要用于支付对 OpenAI 后续投资的第三笔 100 亿美元款项；债券预计本周定价。",
+      "whyItMatters": "若按计划完成，将成为亚太地区规模最大的非金融企业债券交易之一，也显示 AI 投资对大型集团融资结构的影响。",
+      "source": "Reuters",
+      "sourceUrl": "https://www.marketscreener.com/news/softbank-group-launches-over-10-billion-in-bonds-for-openai-investment-term-sheet-shows-ce785adbd989f523",
+      "publishedAt": "2026-09-21T09:37:00+08:00"
+    },
+    {
+      "id": "amd-trillion-valuation-20260921",
+      "category": "财经",
+      "priority": 2,
+      "headline": "AMD 市值盘中首次突破 1 万亿美元",
+      "summary": "AMD 股价周一盘中一度上涨约 9.6% 并创纪录，市值首次越过 1 万亿美元，随后仍随行情波动。",
+      "whyItMatters": "市场对 AI 算力芯片竞争和持续资本支出的预期，正重新定价主要半导体企业。",
+      "source": "Reuters",
+      "sourceUrl": "https://www.marketscreener.com/news/amd-becomes-latest-chipmaker-to-reach-1-trillion-valuation-on-ai-demand-ce785adbdf88f625",
+      "publishedAt": "2026-09-21T22:20:00+08:00"
+    },
+    {
+      "id": "avalyn-inhaled-nintedanib-phase1-paper-20260921",
+      "category": "健康",
+      "priority": 3,
+      "headline": "吸入型尼达尼布一期研究披露肺部药物暴露数据",
+      "summary": "Avalyn 公布发表于《Respiratory Research》的两项一期试验细节：雾化 AP02 的预测肺部暴露较口服方案更高，部分剂量的全身暴露更低；疗效尚待二期验证。",
+      "whyItMatters": "特发性肺纤维化患者常需长期服药；局部给药若后续证实有效，可能改善现有抗纤维化治疗的耐受性。",
+      "source": "Avalyn Pharma",
+      "sourceUrl": "https://www.globenewswire.com/news-release/2026/09/21/3365508/0/en/avalyn-publishes-phase-1-data-highlighting-ap02-s-lung-targeted-delivery-and-encouraging-safety-profile.html",
+      "publishedAt": "2026-09-21T21:00:00+08:00"
+    },
+    {
+      "id": "indian-oil-south-gas-pipeline-20260921",
+      "category": "能源",
+      "priority": 2,
+      "headline": "印度石油公司拟投约 2.56 亿美元建设南部天然气管线",
+      "summary": "公司称将投资 244.9 亿卢比建设并运营连接科钦与杜蒂戈林的约 425 公里天然气管道，设计输气能力每日 684 万标准立方米。",
+      "whyItMatters": "管线扩充印度南部供气网络，关系工业燃料替代和天然气基础设施的区域覆盖。",
+      "source": "Reuters",
+      "sourceUrl": "https://uk.marketscreener.com/news/indian-oil-to-invest-256-million-for-kochi-thoothukudi-natural-gas-pipeline-ce785adbda89f525",
+      "publishedAt": "2026-09-21T16:26:00+08:00"
     }
   ]
 }
