@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-21T11:29:00+08:00",
-  "coverageStart": "2026-09-20T11:29:00+08:00",
+  "updatedAt": "2026-09-21T15:32:37+08:00",
+  "coverageStart": "2026-09-20T15:32:37+08:00",
   "items": [
     {
       "id": "oil-diplomacy-saudi-exports-20260921",
@@ -14,17 +14,6 @@
       "publishedAt": "2026-09-21T10:34:00+08:00"
     },
     {
-      "id": "north-korea-projectile-launch-20260920",
-      "category": "国际",
-      "priority": 2,
-      "headline": "朝鲜接连发射两枚短程弹道导弹",
-      "summary": "韩军称朝鲜从元山一带向东部海域发射两枚短程弹道导弹，间隔约三小时，飞行距离分别约 450 公里和 600 多公里。",
-      "whyItMatters": "在半岛安全紧张和区域军演背景下，新一轮发射将检验日韩预警体系，并可能推动美日韩追加军事与外交回应。",
-      "source": "AP",
-      "sourceUrl": "https://apnews.com/article/north-south-korea-launch-ad020d996b61dedd358cc689db614fdb",
-      "publishedAt": "2026-09-20T14:31:04+08:00"
-    },
-    {
       "id": "west-bank-deadly-violence-20260920",
       "category": "国际",
       "priority": 2,
@@ -32,7 +21,7 @@
       "summary": "一名疑似巴勒斯坦枪手在拉姆安拉附近射杀一名以色列人并随后被捕；以军另称击毙一名试图驾车冲撞士兵的巴勒斯坦司机。",
       "whyItMatters": "事件发生在赎罪日前夕，以色列已下令增派安全力量并扩大逮捕行动，可能进一步推高约旦河西岸的暴力与报复风险。",
       "source": "Reuters",
-      "sourceUrl": "https://sa.marketscreener.com/news/palestinian-gunman-shoots-dead-israeli-in-the-west-bank-soldiers-kill-motorist-ce785adad180f526",
+      "sourceUrl": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/20/palestinian-gunman-shoots-dead-israeli-in-the-west-bank-soldiers-kill-motorist",
       "publishedAt": "2026-09-20T20:00:00+08:00"
     },
     {
@@ -48,25 +37,14 @@
     },
     {
       "id": "us-china-ai-alert-proposal-20260921",
-      "category": "财经",
+      "category": "科技",
       "priority": 1,
       "headline": "中美纽约会谈提出 AI 安全事件通报机制",
       "summary": "中美结束纽约磋商，美方提议建立涉及国家安全的 AI 事件通报机制；双方还推进非敏感商品降税的“贸易委员会”安排。",
       "whyItMatters": "会谈为本周中美元首峰会形成两项可落地议题，可能影响 AI 风险治理及部分消费品、农产品、能源和医疗器械关税。",
       "source": "Reuters",
-      "sourceUrl": "https://finance.yahoo.com/news/us-treasurys-bessent-chinas-launch-050623893.html",
+      "sourceUrl": "https://www.marketscreener.com/news/us-treasury-s-bessent-and-china-s-he-launch-talks-on-ai-trade-and-critical-minerals-ce785adad089f425",
       "publishedAt": "2026-09-21T09:16:00+08:00"
-    },
-    {
-      "id": "cxmt-fifth-gen-dram-mass-production-20260920",
-      "category": "产业",
-      "priority": 1,
-      "headline": "长鑫存储第五代 DRAM 平台进入量产",
-      "summary": "长鑫存储称第五代技术平台及两款 24Gb LPDDR5X 芯片已量产，新平台每片晶圆的芯片毛产出较上一代至少提高 50%。",
-      "whyItMatters": "量产进展将增强中国存储芯片本土供给，并加大长鑫与三星、SK 海力士和美光在移动 DRAM 市场的竞争。",
-      "source": "Reuters",
-      "sourceUrl": "https://www.streetinsider.com/Reuters/China%27s%C2%A0CXMT%2Bsays%2Bnew%2Bmemory-chip%2Bplatform%2Benters%2Bmass%2Bproduction/27081792.html",
-      "publishedAt": "2026-09-20T11:54:00+08:00"
     },
     {
       "id": "volvo-cars-klaus-zellmer-ceo-20260920",
@@ -78,17 +56,6 @@
       "source": "Volvo Cars",
       "sourceUrl": "https://www.volvocars.com/intl/media/press-releases/48E93ADCB2CC7F6A/",
       "publishedAt": "2026-09-20T18:46:00+08:00"
-    },
-    {
-      "id": "moscow-refinery-drone-strike-20260920",
-      "category": "能源",
-      "priority": 2,
-      "headline": "乌克兰大规模无人机袭击击中莫斯科炼油厂",
-      "summary": "俄方称在莫斯科地区拦截大批乌克兰无人机，但仍有无人机进入莫斯科炼油厂；损毁规模尚未明确，周边另有 2 人死亡。",
-      "whyItMatters": "该厂年加工原油约 1160 万吨，若受损将进一步压缩俄罗斯炼化能力，并加剧国内成品油短缺、价格与供应压力。",
-      "source": "Reuters",
-      "sourceUrl": "https://in.marketscreener.com/news/two-dead-in-moscow-region-drones-hit-oil-refinery-in-russian-capital-ce785adad18ff027",
-      "publishedAt": "2026-09-20T13:31:00+08:00"
     },
     {
       "id": "cue221-hives-phase2-results-20260920",
@@ -120,19 +87,8 @@
       "summary": "加拿大总理卡尼称，两国已责成航天机构和国防部门共同开发太空发射系统及地面接收设施。",
       "whyItMatters": "合作把双边关系延伸到主权航天与防务基础设施，可能形成新的发射、卫星通信和地面站产业订单。",
       "source": "Reuters",
-      "sourceUrl": "https://www.streetinsider.com/Reuters/Canada%27s%2BCarney%2Bcalls%2Bfor%2Bstronger%2Bties%2Bwith%2BFrance%2Bin%2Bface%2Bof%2Bnew%2Bglobal%2Bthreats/27081910.html",
+      "sourceUrl": "https://www.investing.com/news/world-news/canadas-carney-calls-for-stronger-ties-with-france-in-face-of-new-global-threats-4908187",
       "publishedAt": "2026-09-21T01:47:00+08:00"
-    },
-    {
-      "id": "retinal-afib-risk-marker-20260920",
-      "category": "健康",
-      "priority": 2,
-      "headline": "视网膜变化或可提前四年提示房颤风险",
-      "summary": "研究人员分析逾 9 万人的眼底影像，发现房颤患者特定视网膜层更薄；这一差异在部分患者确诊前平均四年已出现。",
-      "whyItMatters": "若后续验证成功，常见的无创眼底扫描可辅助筛出需长期心电监测的人群，但目前仍不是临床诊断工具。",
-      "source": "Medical News Today",
-      "sourceUrl": "https://www.medicalnewstoday.com/articles/how-changes-in-the-eyes-may-help-spot-afib-risk-years-early",
-      "publishedAt": "2026-09-20T14:00:00+08:00"
     },
     {
       "id": "openai-hacktron-breach-20260920",
@@ -157,25 +113,14 @@
       "publishedAt": "2026-09-20T17:00:00+08:00"
     },
     {
-      "id": "ai-slowdown-implementation-gap-20260920",
-      "category": "科技",
-      "priority": 2,
-      "headline": "AI 行业“放慢前沿”共识仍缺可执行细节",
-      "summary": "多家前沿实验室支持第三方评估与安全协调，但具体降速机制、监管执行和企业退出激励仍不清晰，英伟达则反对放慢。",
-      "whyItMatters": "行业安全承诺能否转为可核验规则，将直接影响模型发布节奏、竞争格局以及政府是否介入制定强制标准。",
-      "source": "TechCrunch",
-      "sourceUrl": "https://techcrunch.com/2026/09/20/is-the-ai-industry-really-ready-to-slow-down/",
-      "publishedAt": "2026-09-21T02:56:00+08:00"
-    },
-    {
       "id": "iran-us-threats-hormuz-blockade-20260920",
       "category": "能源",
       "priority": 1,
       "headline": "美伊互发威胁，霍尔木兹封锁继续冲击能源出口",
       "summary": "特朗普要求伊朗达成协议，伊朗军方则警告将报复新袭击；德黑兰重申在停战条件落实前不会重开霍尔木兹海峡。",
-      "whyItMatters": "霍尔木兹与曼德海峡风险叠加，海湾能源出口接近被切断，全球油价、航运保险和通胀面临持续压力。",
+      "whyItMatters": "霍尔木兹与曼德海峡风险叠加，海湾能源运输、航运保险和全球通胀仍面临进一步冲击。",
       "source": "Reuters",
-      "sourceUrl": "https://www.streetinsider.com/Reuters/Iran%2Band%2BUS%2Btrade%2Bthreats%2Bafter%2BHouthi%2Battacks%2Bescalate%2Bregional%2Bconflict/27081886.html",
+      "sourceUrl": "https://www.marketscreener.com/news/iran-warns-against-new-escalation-by-us-and-allies-ce785adad180ff2c",
       "publishedAt": "2026-09-20T21:18:00+08:00"
     },
     {
@@ -197,7 +142,7 @@
       "summary": "日本气象厅称台风杜鹃将贴近东京所在的关东地区，部分太平洋沿岸自周六以来降雨已超过 300 毫米。",
       "whyItMatters": "强降雨带可能引发山洪和滑坡，并已导致亚运赛事延期，东京都市圈交通与公共安全面临短时冲击。",
       "source": "Reuters",
-      "sourceUrl": "https://www.streetinsider.com/Reuters/Typhoon%2Bapproaches%2Beastern%2BJapan%2C%2Bprompting%2Bflood%2Band%2Blandslide%2Bwarnings/27082010.html",
+      "sourceUrl": "https://uk.marketscreener.com/news/typhoon-approaches-eastern-japan-prompting-flood-and-landslide-warnings-ce785adbd988f123",
       "publishedAt": "2026-09-21T10:10:00+08:00"
     },
     {
@@ -208,7 +153,7 @@
       "summary": "越南股票进入富时罗素新兴市场指数，纳入将在 2027 年前分四阶段完成，指数公司估计最多可引入 60 亿美元资金。",
       "whyItMatters": "升级将扩大越南资本市场的被动资金配置，并推动其继续改善外资持股限制、自由流通量和中央对手方清算机制。",
       "source": "Reuters",
-      "sourceUrl": "https://malaysia.news.yahoo.com/vietnam-joins-ftse-russell-emerging-023503417.html",
+      "sourceUrl": "https://www.investing.com/news/stock-market-news/vietnam-joins-ftse-russell-emerging-market-benchmark-4908233",
       "publishedAt": "2026-09-21T10:35:00+08:00"
     },
     {
@@ -221,6 +166,61 @@
       "source": "Medical Xpress",
       "sourceUrl": "https://medicalxpress.com/news/2026-09-mifepristone-effective-common-emergency-contraception.html",
       "publishedAt": "2026-09-20T22:00:00+08:00"
+    },
+    {
+      "id": "nz-navy-taiwan-strait-20260921",
+      "category": "国际",
+      "priority": 2,
+      "headline": "新西兰确认两艘军舰穿越台湾海峡",
+      "summary": "新西兰国防军称护卫舰“特玛纳”号和补给舰“奥特亚罗瓦”号于 9 月 18 日穿越台湾海峡，属于三个月印太部署。",
+      "whyItMatters": "台海是全球重要航运通道；新西兰公开确认航行将受到区域安全和外交关系关注。",
+      "source": "Reuters",
+      "sourceUrl": "https://uk.marketscreener.com/news/new-zealand-naval-ships-transit-contested-taiwan-strait-ce785adbd98ef424",
+      "publishedAt": "2026-09-21T11:39:00+08:00"
+    },
+    {
+      "id": "tsmc-kaohsiung-packaging-park-20260921",
+      "category": "产业",
+      "priority": 2,
+      "headline": "台积电参与的高雄先进封装园区动工",
+      "summary": "高雄百璞产业园区动工，台积电计划建设技术验证实验室和人才培训中心，设施预计 2029 年第四季度启用。",
+      "whyItMatters": "先进封装是 AI 芯片供应链瓶颈之一，园区将为设备和材料厂商提供就近验证能力。",
+      "source": "Reuters",
+      "sourceUrl": "https://in.marketscreener.com/news/taiwan-breaks-ground-on-advanced-packaging-park-anchored-by-tsmc-ce785adbd889f025",
+      "publishedAt": "2026-09-21T12:26:00+08:00"
+    },
+    {
+      "id": "europe-jet-fuel-deficit-20260921",
+      "category": "能源",
+      "priority": 2,
+      "headline": "欧洲第四季度航煤或短缺每日 51 万桶",
+      "summary": "Energy Aspects 预计欧洲第四季度航空燃油每日缺口为 51 万桶；韩国 9 月对欧出口升至近四年高位，仍难填补中东供应损失。",
+      "whyItMatters": "航煤短缺将推高欧洲航空业燃料成本，并促使进口转向亚洲、北美和非洲。",
+      "source": "Reuters",
+      "sourceUrl": "https://uk.marketscreener.com/news/europe-faces-q4-jet-fuel-supply-deficit-even-as-south-korea-becomes-latest-big-supplier-ce785adad08af22c",
+      "publishedAt": "2026-09-21T08:01:00+08:00"
+    },
+    {
+      "id": "beacon-xlrp-vista-results-20260921",
+      "category": "健康",
+      "priority": 2,
+      "headline": "遗传性视网膜病基因疗法关键试验达到主要终点",
+      "summary": "Beacon 称其 laru-zova 基因疗法在 85 人 VISTA 试验中改善 X 连锁视网膜色素变性患者低照度视力，高剂量组 31% 达到预设应答标准，对照组无人达到。",
+      "whyItMatters": "该病尚缺有效治疗；试验结果支持与监管机构讨论申报，但疗法仍未获批。",
+      "source": "Beacon Therapeutics",
+      "sourceUrl": "https://www.globenewswire.com/news-release/2026/09/21/3365149/30580/en/beacon-therapeutics-reports-positive-topline-data-from-the-pivotal-vista-trial-of-laru-zova-for-the-treatment-of-x-linked-retinitis-pigmentosa-xlrp.html",
+      "publishedAt": "2026-09-21T14:00:00+08:00"
+    },
+    {
+      "id": "bangladesh-garment-cooling-study-20260921",
+      "category": "产业",
+      "priority": 3,
+      "headline": "研究称孟加拉成衣厂降温投入四年内可回本",
+      "summary": "康奈尔大学研究团队在达卡八家工厂测温，估算热应激平均侵蚀工厂年收入 4.1%；屋顶隔热、通风等降温投资可在四年内回本。",
+      "whyItMatters": "极端高温正同时影响工人安全和服装供应链产能，研究为品牌与供应商分担改造成本提供依据。",
+      "source": "Reuters",
+      "sourceUrl": "https://in.marketscreener.com/news/costs-to-cool-bangladesh-garment-factories-can-be-recovered-within-four-years-study-shows-ce785adad08af722",
+      "publishedAt": "2026-09-21T06:02:00+08:00"
     }
   ]
 }
