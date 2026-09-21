@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-09-21T23:32:44+08:00",
-  "coverageStart": "2026-09-20T23:32:44+08:00",
+  "updatedAt": "2026-09-22T03:31:33+08:00",
+  "coverageStart": "2026-09-21T03:31:33+08:00",
   "items": [
     {
       "id": "oil-diplomacy-saudi-exports-20260921",
       "category": "能源",
       "priority": 1,
-      "headline": "外交预期与沙特出口恢复推动油价跌至 11 天低点",
-      "summary": "市场押注联合国大会期间美伊外交可能重启，加之沙特改道霍尔木兹海峡后恢复部分出口，布伦特原油报每桶约 101.18 美元。",
+      "headline": "外交预期与沙特出口恢复推动油价跌至 12 天低点",
+      "summary": "市场押注联合国大会期间美伊外交可能重启，加之沙特部分出口恢复；布伦特原油盘中跌破每桶 100 美元，纽约时间下午 1 时 16 分报 99.51 美元。",
       "whyItMatters": "中东风险溢价开始回落，但胡塞袭击与关键航道安全仍可能迅速扭转油价，影响通胀和运输成本。",
       "source": "Reuters",
       "sourceUrl": "https://au.investing.com/news/commodities-news/oil-rises-after-houthi-attack-on-saudi-capital-4649875",
-      "publishedAt": "2026-09-21T10:34:00+08:00"
+      "publishedAt": "2026-09-22T02:09:00+08:00"
     },
     {
       "id": "us-china-ai-alert-proposal-20260921",
@@ -23,17 +23,6 @@
       "source": "Reuters",
       "sourceUrl": "https://www.marketscreener.com/news/us-treasury-s-bessent-and-china-s-he-launch-talks-on-ai-trade-and-critical-minerals-ce785adad089f425",
       "publishedAt": "2026-09-21T11:01:00+08:00"
-    },
-    {
-      "id": "canada-france-space-systems-20260920",
-      "category": "产业",
-      "priority": 2,
-      "headline": "加拿大与法国将联合开发太空发射系统",
-      "summary": "加拿大总理卡尼称，两国已责成航天机构和国防部门共同开发太空发射系统及地面接收设施。",
-      "whyItMatters": "合作把双边关系延伸到主权航天与防务基础设施，可能形成新的发射、卫星通信和地面站产业订单。",
-      "source": "Reuters",
-      "sourceUrl": "https://www.investing.com/news/world-news/canadas-carney-calls-for-stronger-ties-with-france-in-face-of-new-global-threats-4908187",
-      "publishedAt": "2026-09-21T01:47:00+08:00"
     },
     {
       "id": "typhoon-dujuan-japan-warnings-20260921",
@@ -54,8 +43,8 @@
       "summary": "越南股票进入富时罗素新兴市场指数，纳入将在 2027 年前分四阶段完成，指数公司估计最多可引入 60 亿美元资金。",
       "whyItMatters": "升级将扩大越南资本市场的被动资金配置，并推动其继续改善外资持股限制、自由流通量和中央对手方清算机制。",
       "source": "Reuters",
-      "sourceUrl": "https://www.investing.com/news/stock-market-news/vietnam-joins-ftse-russell-emerging-market-benchmark-4908233",
-      "publishedAt": "2026-09-21T10:35:00+08:00"
+      "sourceUrl": "https://www.marketscreener.com/news/vietnam-joins-ftse-russell-emerging-market-benchmark-ce785adad08aff22",
+      "publishedAt": "2026-09-21T08:31:18+08:00"
     },
     {
       "id": "nz-navy-taiwan-strait-20260921",
@@ -111,6 +100,17 @@
       "source": "Reuters",
       "sourceUrl": "https://in.marketscreener.com/news/costs-to-cool-bangladesh-garment-factories-can-be-recovered-within-four-years-study-shows-ce785adad08af722",
       "publishedAt": "2026-09-21T06:02:00+08:00"
+    },
+    {
+      "id": "german-auto-workers-action-20260921",
+      "category": "产业",
+      "priority": 2,
+      "headline": "德国约 17.5 万汽车业员工参与全国行动日",
+      "summary": "IG Metall 称，汽车厂及供应商员工在德国各地参加超过 280 场集会等活动，抗议裁员并要求企业投资新产品与本土工厂。",
+      "whyItMatters": "德国汽车业就业与产能调整进入全国性劳资角力，或影响车企投资、供应链及产业政策讨论。",
+      "source": "Reuters",
+      "sourceUrl": "https://www.onvista.de/news/2026/09-21-protest-im-ganzen-land-gegen-kahlschlag-in-der-autoindustrie-0-20-26555834",
+      "publishedAt": "2026-09-21T22:24:07+08:00"
     },
     {
       "id": "korea-chip-exports-record-20260921",
