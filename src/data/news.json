@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-22T15:29:14+08:00",
-  "coverageStart": "2026-09-21T15:29:14+08:00",
+  "updatedAt": "2026-09-22T19:34:02+08:00",
+  "coverageStart": "2026-09-21T19:34:02+08:00",
   "items": [
     {
       "id": "oil-diplomacy-saudi-exports-20260921",
@@ -47,39 +47,6 @@
       "publishedAt": "2026-09-21T22:24:07+08:00"
     },
     {
-      "id": "spain-ai-regulation-roadmap-20260921",
-      "category": "科技",
-      "priority": 2,
-      "headline": "西班牙提出 AI 监管路线图与网络防御升级",
-      "summary": "首相桑切斯表示 AI 不能由科技企业自我监管，并提出为期 12 个月的路线图，涵盖网络防御、拟建 AI 算力设施及公共用途模型。",
-      "whyItMatters": "欧洲国家正把前沿模型安全、数据主权和数据中心环境标准纳入 AI 产业政策。",
-      "source": "Reuters",
-      "sourceUrl": "https://hk.marketscreener.com/news/spanish-pm-sanchez-says-ai-industry-cannot-be-self-regulated-ce785adbda8bf425",
-      "publishedAt": "2026-09-21T17:00:00+08:00"
-    },
-    {
-      "id": "lumentum-qualcomm-optical-interconnect-20260921",
-      "category": "科技",
-      "priority": 2,
-      "headline": "Lumentum、Qualcomm 与康宁联合展示 AI 光互连方案",
-      "summary": "三家公司宣布在 ECOC 2026 展示芯片间光互连原型，将 VCSEL 光引擎、接口技术与多模光纤组合，用于 AI 算力扩展。",
-      "whyItMatters": "原型目标是缓解大型 AI 系统电互连的带宽和功耗瓶颈，但距离规模商用仍需验证。",
-      "source": "Business Wire",
-      "sourceUrl": "https://www.financialcontent.com/article/bizwire-2026-9-21-lumentum-qualcomm-and-corning-to-demonstrate-high-density-1060-nm-vcsel-optical-d2d-connectivity-for-ai-scale-up-at-ecoc-2026",
-      "publishedAt": "2026-09-21T17:07:00+08:00"
-    },
-    {
-      "id": "yemen-houthi-highlands-advance-20260921",
-      "category": "国际",
-      "priority": 2,
-      "headline": "胡塞武装推进也门高地，红海沿岸战事扩大",
-      "summary": "路透社报道胡塞武装正争夺战略高地，试图切断沙特支持势力控制区与红海海岸的联系；美国尚未加入对胡塞的新一轮空袭。",
-      "whyItMatters": "地面战线变化可能进一步扩大区域冲突，并使红海航运及能源运输面临持续风险。",
-      "source": "Reuters",
-      "sourceUrl": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/21/houthis-push-for-control-of-yemen-highlands-as-trump-reported-to-have-called-off-airstrikes",
-      "publishedAt": "2026-09-21T19:04:00+08:00"
-    },
-    {
       "id": "eu-russia-sanctions-renewal-20260921",
       "category": "国际",
       "priority": 1,
@@ -89,17 +56,6 @@
       "source": "Reuters",
       "sourceUrl": "https://www.marketscreener.com/news/latest/EU-continues-talks-on-deal-to-lift-sanctions-on-Russia-linked-billionaires-Usmanov-and-Fridman-dip-12139796/",
       "publishedAt": "2026-09-22T03:12:00+08:00"
-    },
-    {
-      "id": "ethiopia-armed-groups-alliance-20260921",
-      "category": "国际",
-      "priority": 2,
-      "headline": "埃塞俄比亚七支武装宣布组建反政府联盟",
-      "summary": "来自提格雷、阿姆哈拉等地区的七支武装组织宣布结盟，其中包括曾在内战期间敌对的派别；政府指控联盟得到厄立特里亚支持，后者此前否认类似说法。",
-      "whyItMatters": "跨地区结盟可能加剧停火协议后的安全风险，但各组织的地域与政治分歧仍限制其协同行动。",
-      "source": "Reuters",
-      "sourceUrl": "https://ca.marketscreener.com/news/seven-ethiopian-armed-groups-announce-anti-government-alliance-ce785adbdd88f526",
-      "publishedAt": "2026-09-21T18:31:00+08:00"
     },
     {
       "id": "amd-trillion-valuation-20260921",
@@ -120,19 +76,8 @@
       "summary": "Avalyn 公布发表于《Respiratory Research》的两项一期试验细节：雾化 AP02 的预测肺部暴露较口服方案更高，部分剂量的全身暴露更低；疗效尚待二期验证。",
       "whyItMatters": "特发性肺纤维化患者常需长期服药；局部给药若后续证实有效，可能改善现有抗纤维化治疗的耐受性。",
       "source": "Avalyn Pharma",
-      "sourceUrl": "https://www.globenewswire.com/news-release/2026/09/21/3365508/0/en/avalyn-publishes-phase-1-data-highlighting-ap02-s-lung-targeted-delivery-and-encouraging-safety-profile.html",
+      "sourceUrl": "https://investors.avalynpharma.com/news-releases/news-release-details/avalyn-publishes-phase-1-data-highlighting-ap02s-lung-targeted",
       "publishedAt": "2026-09-21T21:00:00+08:00"
-    },
-    {
-      "id": "indian-oil-south-gas-pipeline-20260921",
-      "category": "能源",
-      "priority": 2,
-      "headline": "印度石油公司拟投约 2.56 亿美元建设南部天然气管线",
-      "summary": "公司称将投资 244.9 亿卢比建设并运营连接科钦与杜蒂戈林的约 425 公里天然气管道，设计输气能力每日 684 万标准立方米。",
-      "whyItMatters": "管线扩充印度南部供气网络，关系工业燃料替代和天然气基础设施的区域覆盖。",
-      "source": "Reuters",
-      "sourceUrl": "https://uk.marketscreener.com/news/indian-oil-to-invest-256-million-for-kochi-thoothukudi-natural-gas-pipeline-ce785adbda89f525",
-      "publishedAt": "2026-09-21T16:26:00+08:00"
     },
     {
       "id": "fda-nonanimal-testing-rule-20260922",
@@ -146,15 +91,15 @@
       "publishedAt": "2026-09-22T01:01:00+08:00"
     },
     {
-      "id": "pickering-nuclear-refurbishment-20260921",
+      "id": "irena-renewables-tripling-gap-20260921",
       "category": "能源",
       "priority": 2,
-      "headline": "加拿大皮克灵核电站开始停堆翻新",
-      "summary": "安大略省皮克灵核电站四座反应堆开始陆续停运，预计耗资 268 亿加元翻新，主体工程明年 1 月启动，完工后寿命可延长最多 38 年。",
-      "whyItMatters": "长期停堆与翻新将影响省内电力供给结构，未来则可恢复供约 220 万户家庭使用的核电产能。",
-      "source": "The Canadian Press",
-      "sourceUrl": "https://toronto.citynews.ca/2026/09/21/pickering-nuclear-reactors-start-coming-off-line-for-massive-refurbishment/",
-      "publishedAt": "2026-09-21T16:00:00+08:00"
+      "headline": "国际可再生能源署报告警示 2030 年装机目标仍有缺口",
+      "summary": "IRENA 等机构在纽约气候周发布报告：2025 年全球新增可再生能源装机创约 693 吉瓦纪录，但 2026 至 2030 年年均仍需约 1200 吉瓦才可实现三倍目标。",
+      "whyItMatters": "清洁电力增速虽创新高，后续投资、电网扩容与许可速度仍决定能否兑现各国目标。",
+      "source": "Associated Press",
+      "sourceUrl": "https://apnews.com/article/climate-change-un-fuel-ai-renewables-f3208930e39c7d233bdc24315065dcd2",
+      "publishedAt": "2026-09-21T21:00:29+08:00"
     },
     {
       "id": "uk-saudi-air-refueling-20260922",
@@ -218,9 +163,64 @@
       "headline": "韩国选定得州燃气电厂作为首个对美投资项目",
       "summary": "韩国政府向国会说明，将推进约 223 亿美元、装机 6.3 吉瓦的得州电厂；核电与阿拉斯加液化天然气项目仍在考虑，具体对美协议尚待敲定。",
       "whyItMatters": "这使韩国 3500 亿美元对美产业投资承诺进入项目选择阶段，并关系 AI 数据中心供电、韩企海外设备订单及双边关税安排。",
-      "source": "KBS World",
-      "sourceUrl": "https://rki.kbs.co.kr/service/news_view.htm?Seq_Code=204420&lang=e",
-      "publishedAt": "2026-09-22T14:03:08+08:00"
+      "source": "Yonhap News Agency",
+      "sourceUrl": "https://m-en.yna.co.kr/view/AEN20260922004451315?section=national%2Fpolitics",
+      "publishedAt": "2026-09-22T14:55:00+08:00"
+    },
+    {
+      "id": "ukraine-russia-strikes-samara-20260922",
+      "category": "国际",
+      "priority": 1,
+      "headline": "俄乌互袭造成平民死亡，俄萨马拉炼厂遇袭",
+      "summary": "俄军夜间导弹和无人机袭击乌克兰至少四个地区，造成至少四人死亡；乌方称击中俄萨马拉一座炼油厂，当地官员证实工业设施遇袭但未指明目标。",
+      "whyItMatters": "针对炼油设施的持续打击加大俄燃料供应风险，双方平民伤亡也使联合国大会期间的外交斡旋更紧迫。",
+      "source": "Associated Press",
+      "sourceUrl": "https://apnews.com/article/russia-ukraine-united-nations-zelenskyy-trump-us-9c3d38e7e97132884f915e157dbf9ef1",
+      "publishedAt": "2026-09-22T17:15:18+08:00"
+    },
+    {
+      "id": "south-korea-nuclear-phased-talks-20260922",
+      "category": "国际",
+      "priority": 2,
+      "headline": "韩国总统提出分阶段处理朝鲜核计划",
+      "summary": "李在明接受美联社书面采访称，拟先冻结朝鲜核导能力，再逐步削减并最终推动拆除，按进展提供政治和经济让步；朝鲜目前拒绝对话。",
+      "whyItMatters": "首尔在联合国大会前明确谈判次序，但方案能否启动取决于平壤是否重返谈判。",
+      "source": "Associated Press",
+      "sourceUrl": "https://apnews.com/article/koreas-lee-trump-kim-un-nuclear-2c12c8b88ca37e9dab861af584efa574",
+      "publishedAt": "2026-09-22T08:30:24+08:00"
+    },
+    {
+      "id": "alibaba-zhenwu-v900-ai-chip-20260922",
+      "category": "科技",
+      "priority": 1,
+      "headline": "阿里巴巴发布真武 V900 AI 芯片并公布大模型计划",
+      "summary": "阿里在杭州大会称新芯片性能约为上代三倍，拟训练 5 万亿至 10 万亿参数模型，并计划至 2032 年将全球云数据中心容量扩至逾 20 吉瓦。",
+      "whyItMatters": "芯片、模型与算力基础设施同步扩张，凸显中国企业争取自主 AI 供应链的投入，但性能数字仍为公司说法。",
+      "source": "Associated Press",
+      "sourceUrl": "https://apnews.com/article/alibaba-ai-chip-qwen-zhenwu-china-us-b29908e516faff9f5a82b201ba954aab",
+      "publishedAt": "2026-09-22T15:16:01+08:00"
+    },
+    {
+      "id": "meta-petal-subsea-cable-20260921",
+      "category": "科技",
+      "priority": 2,
+      "headline": "Meta 公布连接美法的拍比特级跨洋海缆 Petal",
+      "summary": "Meta 计划与 NEC、住友电工等合作建设约 7000 公里海缆，采用多芯光纤，设计容量 1 Pbps，预计 2029 年投入使用。",
+      "whyItMatters": "跨洋通信容量扩张有助于支撑云服务和 AI 数据流量，但项目尚处建设计划阶段。",
+      "source": "Meta Engineering",
+      "sourceUrl": "https://engineering.fb.com/2026/09/21/connectivity/petal-petabit-transoceanic-subsea-cable/",
+      "publishedAt": "2026-09-21T20:00:00+08:00"
+    },
+    {
+      "id": "texas-data-center-permit-pause-20260921",
+      "category": "能源",
+      "priority": 2,
+      "headline": "得州暂停新增数据中心环境许可，等待电网与水务审计",
+      "summary": "州长阿博特要求环境监管机构在 ERCOT 和州水务部门完成数据中心用电、用水及社区影响审计前停止发放新许可。",
+      "whyItMatters": "大型算力设施建设与电网、水资源承载力发生直接政策冲突，或拖慢后续项目落地。",
+      "source": "The Texas Tribune",
+      "sourceUrl": "https://www.texastribune.org/2026/09/21/texas-data-center-moratorium-water-energy/",
+      "publishedAt": "2026-09-22T05:31:00+08:00"
     }
   ]
 }
