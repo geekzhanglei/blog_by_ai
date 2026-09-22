@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-22T11:30:13+08:00",
-  "coverageStart": "2026-09-21T11:30:13+08:00",
+  "updatedAt": "2026-09-22T15:29:14+08:00",
+  "coverageStart": "2026-09-21T15:29:14+08:00",
   "items": [
     {
       "id": "oil-diplomacy-saudi-exports-20260921",
@@ -25,39 +25,6 @@
       "publishedAt": "2026-09-21T21:23:00+08:00"
     },
     {
-      "id": "nz-navy-taiwan-strait-20260921",
-      "category": "国际",
-      "priority": 2,
-      "headline": "新西兰确认两艘军舰穿越台湾海峡",
-      "summary": "新西兰国防军称护卫舰“特玛纳”号和补给舰“奥特亚罗瓦”号于 9 月 18 日穿越台湾海峡，属于三个月印太部署。",
-      "whyItMatters": "台海是全球重要航运通道；新西兰公开确认航行将受到区域安全和外交关系关注。",
-      "source": "Reuters",
-      "sourceUrl": "https://uk.marketscreener.com/news/new-zealand-naval-ships-transit-contested-taiwan-strait-ce785adbd98ef424",
-      "publishedAt": "2026-09-21T11:39:00+08:00"
-    },
-    {
-      "id": "tsmc-kaohsiung-packaging-park-20260921",
-      "category": "产业",
-      "priority": 2,
-      "headline": "台积电参与的高雄先进封装园区动工",
-      "summary": "高雄百璞产业园区动工，台积电计划建设技术验证实验室和人才培训中心，设施预计 2029 年第四季度启用。",
-      "whyItMatters": "先进封装是 AI 芯片供应链瓶颈之一，园区将为设备和材料厂商提供就近验证能力。",
-      "source": "Reuters",
-      "sourceUrl": "https://in.marketscreener.com/news/taiwan-breaks-ground-on-advanced-packaging-park-anchored-by-tsmc-ce785adbd889f025",
-      "publishedAt": "2026-09-21T12:26:00+08:00"
-    },
-    {
-      "id": "beacon-xlrp-vista-results-20260921",
-      "category": "健康",
-      "priority": 2,
-      "headline": "遗传性视网膜病基因疗法关键试验达到主要终点",
-      "summary": "Beacon 称其 laru-zova 基因疗法在 85 人 VISTA 试验中改善 X 连锁视网膜色素变性患者低照度视力，高剂量组 31% 达到预设应答标准，对照组无人达到。",
-      "whyItMatters": "该病尚缺有效治疗；试验结果支持与监管机构讨论申报，但疗法仍未获批。",
-      "source": "Beacon Therapeutics",
-      "sourceUrl": "https://www.globenewswire.com/news-release/2026/09/21/3365149/30580/en/beacon-therapeutics-reports-positive-topline-data-from-the-pivotal-vista-trial-of-laru-zova-for-the-treatment-of-x-linked-retinitis-pigmentosa-xlrp.html",
-      "publishedAt": "2026-09-21T14:00:00+08:00"
-    },
-    {
       "id": "paramount-warner-settlement-20260922",
       "category": "产业",
       "priority": 1,
@@ -65,7 +32,7 @@
       "summary": "加州总检察长宣布，和解尚待法院批准；派拉蒙承诺五年内增加至少 15 亿美元美国电影制作投入，并设立 4750 万美元受影响员工基金。",
       "whyItMatters": "这一和解扫除大型传媒合并的关键法律障碍，也为电影产量、就业及有线电视议价设定约束。",
       "source": "Associated Press",
-      "sourceUrl": "https://apnews.com/article/warner-bros-paramount-skydance-merger-settlement-1aaa7c471d8ba286ccfad92b18bc1ecf",
+      "sourceUrl": "https://www.local10.com/business/2026/09/21/states-settle-lawsuit-over-paramount-warner-merger-clearing-key-hurdle-for-81-billion-deal/",
       "publishedAt": "2026-09-22T01:07:38+08:00"
     },
     {
@@ -197,7 +164,7 @@
       "summary": "英国首相伯纳姆称，皇家空军将在数周内为沙特战机提供空中加油，以应对也门胡塞武装袭击；安排将持续接受评估。",
       "whyItMatters": "英国介入后区域军事协作扩大，红海航道及沙特能源设施安全风险仍受关注。",
       "source": "Associated Press",
-      "sourceUrl": "https://apnews.com/article/britain-saudi-arabia-yemen-burnham-c736f6485b0e9293eee733e12adc9bcd",
+      "sourceUrl": "https://www.local10.com/news/2026/09/21/uk-to-offer-saudi-arabia-aerial-refueling-to-counter-houthi-attacks/",
       "publishedAt": "2026-09-22T05:04:33+08:00"
     },
     {
@@ -208,7 +175,7 @@
       "summary": "柯林斯称持续通胀和中东战事促使她支持上周将美国政策利率上调 25 个基点至约 3.9%，其个人预测今年还需加息一次。",
       "whyItMatters": "能源冲击与需求韧性令美联储短期利率路径仍偏紧，影响全球融资成本。",
       "source": "Associated Press",
-      "sourceUrl": "https://apnews.com/article/inflation-goolsbee-federal-reserve-rates-5acf1f7e4f38ac77329fa0b9aaddd30f",
+      "sourceUrl": "https://www.washingtonpost.com/business/2026/09/21/inflation-goolsbee-federal-reserve-rates/7e3be36e-b5cd-11f1-94cb-d3d8f22a8c8b_story.html",
       "publishedAt": "2026-09-21T23:01:58+08:00"
     },
     {
@@ -232,6 +199,28 @@
       "source": "Reuters",
       "sourceUrl": "https://www.marketscreener.com/news/oura-targets-15-62-billion-valuation-in-us-ipo-setting-stage-for-fall-listings-ce785adbdc89f625",
       "publishedAt": "2026-09-21T20:04:00+08:00"
+    },
+    {
+      "id": "grail-fda-galleri-review-20260921",
+      "category": "健康",
+      "priority": 2,
+      "headline": "FDA 审查人员未发现 Galleri 多癌种血检重大安全问题",
+      "summary": "美国 FDA 为 9 月 23 日专家会议发布的材料未就检测性能、研究设计及主要安全分析提出未解决问题，但要求讨论其“早期发现”表述是否有足够证据。",
+      "whyItMatters": "这推进了多癌种筛查产品的上市审查；顾问会议和监管决定仍待举行，现有试验结果也未证实全面改善早期诊断。",
+      "source": "Reuters",
+      "sourceUrl": "https://www.marketscreener.com/news/grail-rallies-as-fda-staff-flags-no-major-concerns-for-multi-cancer-test-ce785adbde88f527",
+      "publishedAt": "2026-09-22T00:42:00+08:00"
+    },
+    {
+      "id": "korea-texas-investment-project-20260922",
+      "category": "产业",
+      "priority": 1,
+      "headline": "韩国选定得州燃气电厂作为首个对美投资项目",
+      "summary": "韩国政府向国会说明，将推进约 223 亿美元、装机 6.3 吉瓦的得州电厂；核电与阿拉斯加液化天然气项目仍在考虑，具体对美协议尚待敲定。",
+      "whyItMatters": "这使韩国 3500 亿美元对美产业投资承诺进入项目选择阶段，并关系 AI 数据中心供电、韩企海外设备订单及双边关税安排。",
+      "source": "KBS World",
+      "sourceUrl": "https://rki.kbs.co.kr/service/news_view.htm?Seq_Code=204420&lang=e",
+      "publishedAt": "2026-09-22T14:03:08+08:00"
     }
   ]
 }
