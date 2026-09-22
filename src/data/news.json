@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-22T19:34:02+08:00",
-  "coverageStart": "2026-09-21T19:34:02+08:00",
+  "updatedAt": "2026-09-22T23:34:49+08:00",
+  "coverageStart": "2026-09-21T23:34:49+08:00",
   "items": [
     {
       "id": "oil-diplomacy-saudi-exports-20260921",
@@ -14,17 +14,6 @@
       "publishedAt": "2026-09-22T03:39:00+08:00"
     },
     {
-      "id": "us-china-ai-alert-proposal-20260921",
-      "category": "科技",
-      "priority": 1,
-      "headline": "中美同意设 AI 安全对话，两个月后在深圳再会",
-      "summary": "美国财长贝森特称，双方同意建立 AI 安全正式对话和事件沟通热线，高层官员预计约两个月后在深圳讨论风险和通报规则。",
-      "whyItMatters": "这使纽约会谈提出的 AI 风险沟通机制向定期磋商推进；贸易休战是否延长则尚未宣布。",
-      "source": "Reuters",
-      "sourceUrl": "https://www.marketscreener.com/news/us-china-to-meet-again-on-ai-safety-in-two-months-in-shenzhen-bessent-says-ce785adbdc8ef722",
-      "publishedAt": "2026-09-21T21:23:00+08:00"
-    },
-    {
       "id": "paramount-warner-settlement-20260922",
       "category": "产业",
       "priority": 1,
@@ -34,17 +23,6 @@
       "source": "Associated Press",
       "sourceUrl": "https://www.local10.com/business/2026/09/21/states-settle-lawsuit-over-paramount-warner-merger-clearing-key-hurdle-for-81-billion-deal/",
       "publishedAt": "2026-09-22T01:07:38+08:00"
-    },
-    {
-      "id": "german-auto-workers-action-20260921",
-      "category": "产业",
-      "priority": 2,
-      "headline": "德国约 17.5 万汽车业员工参与全国行动日",
-      "summary": "IG Metall 称，汽车厂及供应商员工在德国各地参加超过 280 场集会等活动，抗议裁员并要求企业投资新产品与本土工厂。",
-      "whyItMatters": "德国汽车业就业与产能调整进入全国性劳资角力，或影响车企投资、供应链及产业政策讨论。",
-      "source": "Reuters",
-      "sourceUrl": "https://www.onvista.de/news/2026/09-21-protest-im-ganzen-land-gegen-kahlschlag-in-der-autoindustrie-0-20-26555834",
-      "publishedAt": "2026-09-21T22:24:07+08:00"
     },
     {
       "id": "eu-russia-sanctions-renewal-20260921",
@@ -58,28 +36,6 @@
       "publishedAt": "2026-09-22T03:12:00+08:00"
     },
     {
-      "id": "amd-trillion-valuation-20260921",
-      "category": "财经",
-      "priority": 2,
-      "headline": "AMD 市值盘中首次突破 1 万亿美元",
-      "summary": "AMD 股价周一盘中一度上涨约 9.6% 并创纪录，市值首次越过 1 万亿美元，随后仍随行情波动。",
-      "whyItMatters": "市场对 AI 算力芯片竞争和持续资本支出的预期，正重新定价主要半导体企业。",
-      "source": "Reuters",
-      "sourceUrl": "https://www.marketscreener.com/news/amd-becomes-latest-chipmaker-to-reach-1-trillion-valuation-on-ai-demand-ce785adbdf88f625",
-      "publishedAt": "2026-09-21T22:20:00+08:00"
-    },
-    {
-      "id": "avalyn-inhaled-nintedanib-phase1-paper-20260921",
-      "category": "健康",
-      "priority": 3,
-      "headline": "吸入型尼达尼布一期研究披露肺部药物暴露数据",
-      "summary": "Avalyn 公布发表于《Respiratory Research》的两项一期试验细节：雾化 AP02 的预测肺部暴露较口服方案更高，部分剂量的全身暴露更低；疗效尚待二期验证。",
-      "whyItMatters": "特发性肺纤维化患者常需长期服药；局部给药若后续证实有效，可能改善现有抗纤维化治疗的耐受性。",
-      "source": "Avalyn Pharma",
-      "sourceUrl": "https://investors.avalynpharma.com/news-releases/news-release-details/avalyn-publishes-phase-1-data-highlighting-ap02s-lung-targeted",
-      "publishedAt": "2026-09-21T21:00:00+08:00"
-    },
-    {
       "id": "fda-nonanimal-testing-rule-20260922",
       "category": "健康",
       "priority": 1,
@@ -91,17 +47,6 @@
       "publishedAt": "2026-09-22T01:01:00+08:00"
     },
     {
-      "id": "irena-renewables-tripling-gap-20260921",
-      "category": "能源",
-      "priority": 2,
-      "headline": "国际可再生能源署报告警示 2030 年装机目标仍有缺口",
-      "summary": "IRENA 等机构在纽约气候周发布报告：2025 年全球新增可再生能源装机创约 693 吉瓦纪录，但 2026 至 2030 年年均仍需约 1200 吉瓦才可实现三倍目标。",
-      "whyItMatters": "清洁电力增速虽创新高，后续投资、电网扩容与许可速度仍决定能否兑现各国目标。",
-      "source": "Associated Press",
-      "sourceUrl": "https://apnews.com/article/climate-change-un-fuel-ai-renewables-f3208930e39c7d233bdc24315065dcd2",
-      "publishedAt": "2026-09-21T21:00:29+08:00"
-    },
-    {
       "id": "uk-saudi-air-refueling-20260922",
       "category": "国际",
       "priority": 1,
@@ -111,39 +56,6 @@
       "source": "Associated Press",
       "sourceUrl": "https://www.local10.com/news/2026/09/21/uk-to-offer-saudi-arabia-aerial-refueling-to-counter-houthi-attacks/",
       "publishedAt": "2026-09-22T05:04:33+08:00"
-    },
-    {
-      "id": "fed-collins-inflation-hike-20260921",
-      "category": "财经",
-      "priority": 2,
-      "headline": "波士顿联储主席支持加息并预计年内或再加一次",
-      "summary": "柯林斯称持续通胀和中东战事促使她支持上周将美国政策利率上调 25 个基点至约 3.9%，其个人预测今年还需加息一次。",
-      "whyItMatters": "能源冲击与需求韧性令美联储短期利率路径仍偏紧，影响全球融资成本。",
-      "source": "Associated Press",
-      "sourceUrl": "https://www.washingtonpost.com/business/2026/09/21/inflation-goolsbee-federal-reserve-rates/7e3be36e-b5cd-11f1-94cb-d3d8f22a8c8b_story.html",
-      "publishedAt": "2026-09-21T23:01:58+08:00"
-    },
-    {
-      "id": "india-nse-ipo-orders-20260921",
-      "category": "财经",
-      "priority": 2,
-      "headline": "印度国家证券交易所 IPO 获约百亿美元认购",
-      "summary": "印度国家证券交易所 23 亿美元 IPO 在申购末日获约 5.7 倍认购，按发行价上限估算申购额约 100.7 亿美元，股份拟于周四交易。",
-      "whyItMatters": "这笔印度大型交易所上市交易检验投资者对当地资本市场增长与新股融资的需求。",
-      "source": "Reuters",
-      "sourceUrl": "https://www.marketscreener.com/news/india-s-nse-ipo-draws-10-billion-in-bids-ce785adbdd81f225",
-      "publishedAt": "2026-09-21T19:53:00+08:00"
-    },
-    {
-      "id": "oura-ipo-roadshow-20260921",
-      "category": "财经",
-      "priority": 2,
-      "headline": "智能戒指厂商 Oura 启动美国 IPO 路演",
-      "summary": "Oura 与老股东拟出售 5000 万股，按每股 40 至 44 美元区间上限筹资至多 22 亿美元，目标完全摊薄估值约 156.2 亿美元。",
-      "whyItMatters": "交易将测试波动市场中投资者对可穿戴健康硬件和消费科技新股的需求。",
-      "source": "Reuters",
-      "sourceUrl": "https://www.marketscreener.com/news/oura-targets-15-62-billion-valuation-in-us-ipo-setting-stage-for-fall-listings-ce785adbdc89f625",
-      "publishedAt": "2026-09-21T20:04:00+08:00"
     },
     {
       "id": "grail-fda-galleri-review-20260921",
@@ -161,18 +73,18 @@
       "category": "产业",
       "priority": 1,
       "headline": "韩国选定得州燃气电厂作为首个对美投资项目",
-      "summary": "韩国政府向国会说明，将推进约 223 亿美元、装机 6.3 吉瓦的得州电厂；核电与阿拉斯加液化天然气项目仍在考虑，具体对美协议尚待敲定。",
+      "summary": "韩国确认将得州一座 6.3 吉瓦燃气电厂列为对美 3500 亿美元投资计划首个项目，仍须美国方面审批；核电与阿拉斯加液化天然气项目仍在考虑。",
       "whyItMatters": "这使韩国 3500 亿美元对美产业投资承诺进入项目选择阶段，并关系 AI 数据中心供电、韩企海外设备订单及双边关税安排。",
-      "source": "Yonhap News Agency",
-      "sourceUrl": "https://m-en.yna.co.kr/view/AEN20260922004451315?section=national%2Fpolitics",
-      "publishedAt": "2026-09-22T14:55:00+08:00"
+      "source": "Reuters",
+      "sourceUrl": "https://www.marketscreener.com/news/south-korea-to-brief-lawmakers-on-us-investment-package-amid-profitability-concerns-ce785adbd08df422",
+      "publishedAt": "2026-09-22T07:51:00+08:00"
     },
     {
       "id": "ukraine-russia-strikes-samara-20260922",
       "category": "国际",
       "priority": 1,
       "headline": "俄乌互袭造成平民死亡，俄萨马拉炼厂遇袭",
-      "summary": "俄军夜间导弹和无人机袭击乌克兰至少四个地区，造成至少四人死亡；乌方称击中俄萨马拉一座炼油厂，当地官员证实工业设施遇袭但未指明目标。",
+      "summary": "俄军夜间导弹和无人机袭击乌克兰至少四个地区，造成至少五人死亡；乌方称击中俄萨马拉一座炼油厂，当地官员证实工业设施遇袭但未指明目标。",
       "whyItMatters": "针对炼油设施的持续打击加大俄燃料供应风险，双方平民伤亡也使联合国大会期间的外交斡旋更紧迫。",
       "source": "Associated Press",
       "sourceUrl": "https://apnews.com/article/russia-ukraine-united-nations-zelenskyy-trump-us-9c3d38e7e97132884f915e157dbf9ef1",
@@ -201,17 +113,6 @@
       "publishedAt": "2026-09-22T15:16:01+08:00"
     },
     {
-      "id": "meta-petal-subsea-cable-20260921",
-      "category": "科技",
-      "priority": 2,
-      "headline": "Meta 公布连接美法的拍比特级跨洋海缆 Petal",
-      "summary": "Meta 计划与 NEC、住友电工等合作建设约 7000 公里海缆，采用多芯光纤，设计容量 1 Pbps，预计 2029 年投入使用。",
-      "whyItMatters": "跨洋通信容量扩张有助于支撑云服务和 AI 数据流量，但项目尚处建设计划阶段。",
-      "source": "Meta Engineering",
-      "sourceUrl": "https://engineering.fb.com/2026/09/21/connectivity/petal-petabit-transoceanic-subsea-cable/",
-      "publishedAt": "2026-09-21T20:00:00+08:00"
-    },
-    {
       "id": "texas-data-center-permit-pause-20260921",
       "category": "能源",
       "priority": 2,
@@ -221,6 +122,105 @@
       "source": "The Texas Tribune",
       "sourceUrl": "https://www.texastribune.org/2026/09/21/texas-data-center-moratorium-water-energy/",
       "publishedAt": "2026-09-22T05:31:00+08:00"
+    },
+    {
+      "id": "uk-august-borrowing-20260922",
+      "category": "财经",
+      "priority": 1,
+      "headline": "英国 8 月公共借款升至 183 亿英镑",
+      "summary": "英国国家统计局公布 8 月公共借款 183 亿英镑，较上年同期增加 29 亿英镑；本财年迄今借款较预算责任办公室预测高 81 亿英镑。",
+      "whyItMatters": "借款超预期压缩新政府编制预算的财政空间，也可能影响国债收益率与未来税收安排。",
+      "source": "英国国家统计局",
+      "sourceUrl": "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances/august2026/pdf",
+      "publishedAt": "2026-09-22T14:00:00+08:00"
+    },
+    {
+      "id": "australia-rba-inflation-risks-20260922",
+      "category": "财经",
+      "priority": 2,
+      "headline": "澳央行行长警示通胀上行风险正在显现",
+      "summary": "澳洲联储行长布洛克指出，中东冲突推高能源价格，国内需求仍偏强；她强调并未预告下周议息结果。",
+      "whyItMatters": "澳大利亚核心通胀仍高于目标区间，市场对再加息的预期可能影响汇率与亚太债市。",
+      "source": "Reuters",
+      "sourceUrl": "https://hk.marketscreener.com/news/australia-s-central-bank-says-inflation-risks-may-be-materialising-ce785ad8d988f02c",
+      "publishedAt": "2026-09-22T12:12:00+08:00"
+    },
+    {
+      "id": "us-stocks-oil-september22-20260922",
+      "category": "财经",
+      "priority": 2,
+      "headline": "油价再破百美元关口，美股在纪录附近震荡",
+      "summary": "美东周二上午布伦特原油短暂跌破每桶 100 美元；标普 500 指数接近纪录高位，银行股走弱而纳斯达克小幅上行。",
+      "whyItMatters": "能源价格回落减轻债券收益率压力，但中东供应不确定性仍左右全球风险资产。",
+      "source": "Associated Press",
+      "sourceUrl": "https://apnews.com/article/markets-ai-oil-wall-street-de8c5f9659e44556e40e661f794b48ad",
+      "publishedAt": "2026-09-22T11:31:07+08:00"
+    },
+    {
+      "id": "deepseek-un-security-council-ai-20260922",
+      "category": "科技",
+      "priority": 2,
+      "headline": "DeepSeek 获邀向联合国安理会说明 AI 风险",
+      "summary": "路透社援引知情人士称，DeepSeek 等中国 AI 企业获邀在本周安理会人工智能与国际安全会议发言；具体出席安排仍可能变化。",
+      "whyItMatters": "AI 安全讨论扩大至中美主要模型企业，但相关发言与治理共识尚未形成。",
+      "source": "Reuters",
+      "sourceUrl": "https://in.marketscreener.com/news/deepseek-to-brief-un-security-council-on-ai-this-week-sources-say-ce785ad8db8aff20",
+      "publishedAt": "2026-09-22T17:17:00+08:00"
+    },
+    {
+      "id": "openai-math-advisory-group-20260922",
+      "category": "科技",
+      "priority": 2,
+      "headline": "OpenAI 宣布设立独立数学与 AI 咨询小组",
+      "summary": "新小组由高等研究院承办，将就 AI 数学成果的评审、传播及学术规范提供意见；OpenAI 同时称其内部模型解决了逾百道开放问题，此说法仍需独立核验。",
+      "whyItMatters": "高能力 AI 进入数学研究，成果验证和公布方式成为科研治理议题。",
+      "source": "TechCrunch",
+      "sourceUrl": "https://techcrunch.com/2026/09/21/openai-forms-math-advisory-group-as-its-ai-resolves-more-than-100-open-problems/",
+      "publishedAt": "2026-09-22T04:15:00+08:00"
+    },
+    {
+      "id": "enervenue-changzhou-battery-factory-20260922",
+      "category": "产业",
+      "priority": 2,
+      "headline": "美国电池初创企业 EnerVenue 将首座工厂落在常州",
+      "summary": "EnerVenue 向路透社确认，放弃肯塔基州方案后已在江苏常州建成首座镍氢电池工厂，计划本周四开始量产；公司称当地供应链和工程能力是选址主因。",
+      "whyItMatters": "关键电池制造仍受产业集群和供应链深度驱动，凸显制造业回流政策面临的现实约束。",
+      "source": "Reuters",
+      "sourceUrl": "https://www.marketscreener.com/news/us-battery-startup-that-ditched-kentucky-for-china-opens-factory-as-trump-xi-meet-ce785ad8d888f527",
+      "publishedAt": "2026-09-22T14:31:00+08:00"
+    },
+    {
+      "id": "china-drug-precursor-export-controls-20260922",
+      "category": "健康",
+      "priority": 2,
+      "headline": "中国扩大对北美三国制毒前体化学品出口许可范围",
+      "summary": "中国宣布对输往美国、墨西哥和加拿大的两种额外化学品实行出口许可，相关管制品种增至 18 种。",
+      "whyItMatters": "前体化学品监管直接关系芬太尼等合成毒品的跨境供应，也将影响中美禁毒合作。",
+      "source": "Associated Press",
+      "sourceUrl": "https://apnews.com/article/china-us-drug-precursor-chemicals-6e3012905f3263b796325c03e94d1e40",
+      "publishedAt": "2026-09-22T20:13:48+08:00"
+    },
+    {
+      "id": "lithuania-drone-hardened-grid-substation-20260922",
+      "category": "能源",
+      "priority": 2,
+      "headline": "立陶宛规划抗无人机袭击的跨境电网变电站",
+      "summary": "立陶宛电网运营商称，新建的 Gizai 变电站将为变压器加装混凝土防护，并配置防爆围栏和隧道探测设施，服务连接波兰的 Harmony Link 工程。",
+      "whyItMatters": "波罗的海电网已脱离俄罗斯系统，新节点的防护关系区域供电韧性与跨境互联安全。",
+      "source": "Reuters",
+      "sourceUrl": "https://uk.marketscreener.com/news/lithuania-plans-key-substation-near-russia-fortified-against-explosive-drones-ce785ad8d98afe21",
+      "publishedAt": "2026-09-22T13:01:00+08:00"
+    },
+    {
+      "id": "yemen-mokha-port-strikes-20260922",
+      "category": "国际",
+      "priority": 2,
+      "headline": "也门穆哈港遭空袭，胡塞方面称至少六人死亡",
+      "summary": "胡塞控制区卫生部门称穆哈港周二空袭造成至少六人死亡；同日也门政府指责胡塞武装袭击邻近省份的露天市场。",
+      "whyItMatters": "也门战事再度升级，红海沿岸平民安全及区域航运面临更高风险；伤亡数字尚待独立核实。",
+      "source": "Associated Press",
+      "sourceUrl": "https://apnews.com/article/mideast-news-roundup-september-22-2026-f1ef966c0f89e8dd13806768e3af4a0f",
+      "publishedAt": "2026-09-22T19:18:48+08:00"
     }
   ]
 }
