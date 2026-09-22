@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-22T07:28:47+08:00",
-  "coverageStart": "2026-09-21T07:28:47+08:00",
+  "updatedAt": "2026-09-22T11:30:13+08:00",
+  "coverageStart": "2026-09-21T11:30:13+08:00",
   "items": [
     {
       "id": "oil-diplomacy-saudi-exports-20260921",
@@ -25,28 +25,6 @@
       "publishedAt": "2026-09-21T21:23:00+08:00"
     },
     {
-      "id": "typhoon-dujuan-japan-warnings-20260921",
-      "category": "国际",
-      "priority": 2,
-      "headline": "台风杜鹃逼近日本关东，多地发布洪水和滑坡警报",
-      "summary": "日本气象厅称台风杜鹃将贴近东京所在的关东地区，部分太平洋沿岸自周六以来降雨已超过 300 毫米。",
-      "whyItMatters": "强降雨带可能引发山洪和滑坡，并已导致亚运赛事延期，东京都市圈交通与公共安全面临短时冲击。",
-      "source": "Reuters",
-      "sourceUrl": "https://uk.marketscreener.com/news/typhoon-approaches-eastern-japan-prompting-flood-and-landslide-warnings-ce785adbd988f123",
-      "publishedAt": "2026-09-21T10:10:00+08:00"
-    },
-    {
-      "id": "vietnam-ftse-emerging-market-20260921",
-      "category": "财经",
-      "priority": 2,
-      "headline": "越南股票正式纳入富时罗素新兴市场指数",
-      "summary": "越南股票进入富时罗素新兴市场指数，纳入将在 2027 年前分四阶段完成，指数公司估计最多可引入 60 亿美元资金。",
-      "whyItMatters": "升级将扩大越南资本市场的被动资金配置，并推动其继续改善外资持股限制、自由流通量和中央对手方清算机制。",
-      "source": "Reuters",
-      "sourceUrl": "https://www.marketscreener.com/news/vietnam-joins-ftse-russell-emerging-market-benchmark-ce785adad08aff22",
-      "publishedAt": "2026-09-21T08:31:18+08:00"
-    },
-    {
       "id": "nz-navy-taiwan-strait-20260921",
       "category": "国际",
       "priority": 2,
@@ -67,17 +45,6 @@
       "source": "Reuters",
       "sourceUrl": "https://in.marketscreener.com/news/taiwan-breaks-ground-on-advanced-packaging-park-anchored-by-tsmc-ce785adbd889f025",
       "publishedAt": "2026-09-21T12:26:00+08:00"
-    },
-    {
-      "id": "europe-jet-fuel-deficit-20260921",
-      "category": "能源",
-      "priority": 2,
-      "headline": "欧洲第四季度航煤或短缺每日 51 万桶",
-      "summary": "Energy Aspects 预计欧洲第四季度航空燃油每日缺口为 51 万桶；韩国 9 月对欧出口升至近四年高位，仍难填补中东供应损失。",
-      "whyItMatters": "航煤短缺将推高欧洲航空业燃料成本，并促使进口转向亚洲、北美和非洲。",
-      "source": "Reuters",
-      "sourceUrl": "https://uk.marketscreener.com/news/europe-faces-q4-jet-fuel-supply-deficit-even-as-south-korea-becomes-latest-big-supplier-ce785adad08af22c",
-      "publishedAt": "2026-09-21T08:01:00+08:00"
     },
     {
       "id": "beacon-xlrp-vista-results-20260921",
@@ -113,17 +80,6 @@
       "publishedAt": "2026-09-21T22:24:07+08:00"
     },
     {
-      "id": "korea-chip-exports-record-20260921",
-      "category": "财经",
-      "priority": 2,
-      "headline": "韩国 9 月前 20 天出口同比激增 78%",
-      "summary": "韩国海关初步数据显示，出口额达 714 亿美元、创同期新高；半导体出口同比增长 259% 至 341.2 亿美元。",
-      "whyItMatters": "AI 芯片需求带动韩国贸易顺差扩大，也为全球半导体景气提供了最新高频指标。",
-      "source": "Yonhap",
-      "sourceUrl": "https://en.yna.co.kr/view/AEN20260921001751320",
-      "publishedAt": "2026-09-21T08:19:27+08:00"
-    },
-    {
       "id": "spain-ai-regulation-roadmap-20260921",
       "category": "科技",
       "priority": 2,
@@ -146,17 +102,6 @@
       "publishedAt": "2026-09-21T17:07:00+08:00"
     },
     {
-      "id": "telix-itm-radiopharma-merger-20260921",
-      "category": "健康",
-      "priority": 2,
-      "headline": "Telix 拟以 16.5 亿美元收购放射性同位素供应商 ITM",
-      "summary": "双方签署合并协议，交易须经股东等批准；ITM 的治疗性同位素生产网络和三期临床候选药物将并入 Telix。",
-      "whyItMatters": "放射性药物的关键同位素供应与研发整合，有望影响肿瘤精准治疗的产能和市场竞争。",
-      "source": "Telix Pharmaceuticals",
-      "sourceUrl": "https://www.globenewswire.com/news-release/2026/09/21/3365113/0/en/telix-and-itm-join-forces-to-create-a-radiopharmaceutical-powerhouse.html",
-      "publishedAt": "2026-09-21T08:55:00+08:00"
-    },
-    {
       "id": "yemen-houthi-highlands-advance-20260921",
       "category": "国际",
       "priority": 2,
@@ -164,7 +109,7 @@
       "summary": "路透社报道胡塞武装正争夺战略高地，试图切断沙特支持势力控制区与红海海岸的联系；美国尚未加入对胡塞的新一轮空袭。",
       "whyItMatters": "地面战线变化可能进一步扩大区域冲突，并使红海航运及能源运输面临持续风险。",
       "source": "Reuters",
-      "sourceUrl": "https://ca.marketscreener.com/news/houthis-push-for-control-of-yemen-highlands-as-trump-reported-to-have-called-off-airstrikes-ce785adbdd8df624",
+      "sourceUrl": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/21/houthis-push-for-control-of-yemen-highlands-as-trump-reported-to-have-called-off-airstrikes",
       "publishedAt": "2026-09-21T19:04:00+08:00"
     },
     {
@@ -175,7 +120,7 @@
       "summary": "欧盟使节提出以对约 3000 个俄相关个人和实体的制裁续期三年，换取移除乌斯马诺夫和弗里德曼；拉脱维亚周一晚未同意，各国将继续磋商。",
       "whyItMatters": "续期和除名均尚未生效，成员国对制裁力度与妥协条件的分歧仍可能影响最后决定。",
       "source": "Reuters",
-      "sourceUrl": "https://in.marketscreener.com/news/latest/EU-continues-talks-on-deal-to-lift-sanctions-on-Russia-linked-billionaires-Usmanov-and-Fridman-dip-12139796/",
+      "sourceUrl": "https://www.marketscreener.com/news/latest/EU-continues-talks-on-deal-to-lift-sanctions-on-Russia-linked-billionaires-Usmanov-and-Fridman-dip-12139796/",
       "publishedAt": "2026-09-22T03:12:00+08:00"
     },
     {
@@ -188,17 +133,6 @@
       "source": "Reuters",
       "sourceUrl": "https://ca.marketscreener.com/news/seven-ethiopian-armed-groups-announce-anti-government-alliance-ce785adbdd88f526",
       "publishedAt": "2026-09-21T18:31:00+08:00"
-    },
-    {
-      "id": "softbank-openai-bond-sale-20260921",
-      "category": "财经",
-      "priority": 2,
-      "headline": "软银启动约 111.5 亿美元债券发行以支持 OpenAI 投资",
-      "summary": "交易文件显示，软银拟发行 100 亿美元及 10 亿欧元无担保债券，主要用于支付对 OpenAI 后续投资的第三笔 100 亿美元款项；债券预计本周定价。",
-      "whyItMatters": "若按计划完成，将成为亚太地区规模最大的非金融企业债券交易之一，也显示 AI 投资对大型集团融资结构的影响。",
-      "source": "Reuters",
-      "sourceUrl": "https://www.marketscreener.com/news/softbank-group-launches-over-10-billion-in-bonds-for-openai-investment-term-sheet-shows-ce785adbd989f523",
-      "publishedAt": "2026-09-21T09:37:00+08:00"
     },
     {
       "id": "amd-trillion-valuation-20260921",
@@ -232,6 +166,72 @@
       "source": "Reuters",
       "sourceUrl": "https://uk.marketscreener.com/news/indian-oil-to-invest-256-million-for-kochi-thoothukudi-natural-gas-pipeline-ce785adbda89f525",
       "publishedAt": "2026-09-21T16:26:00+08:00"
+    },
+    {
+      "id": "fda-nonanimal-testing-rule-20260922",
+      "category": "健康",
+      "priority": 1,
+      "headline": "美国 FDA 明确药物安全测试可采用非动物方法",
+      "summary": "FDA 发布直接最终规则，澄清在适当情况下可使用人体细胞、器官芯片及计算模型等方法，另公布 25 个实际应用案例；现有安全标准不变。",
+      "whyItMatters": "这为药物研发采用经验证的人源模型提供更明确的监管路径，但不意味着全面取消动物试验。",
+      "source": "FDA",
+      "sourceUrl": "https://www.globenewswire.com/news-release/2026/09/21/3365780/0/en/fda-updates-regulations-to-advance-innovative-alternatives-to-animal-testing.html",
+      "publishedAt": "2026-09-22T01:01:00+08:00"
+    },
+    {
+      "id": "pickering-nuclear-refurbishment-20260921",
+      "category": "能源",
+      "priority": 2,
+      "headline": "加拿大皮克灵核电站开始停堆翻新",
+      "summary": "安大略省皮克灵核电站四座反应堆开始陆续停运，预计耗资 268 亿加元翻新，主体工程明年 1 月启动，完工后寿命可延长最多 38 年。",
+      "whyItMatters": "长期停堆与翻新将影响省内电力供给结构，未来则可恢复供约 220 万户家庭使用的核电产能。",
+      "source": "The Canadian Press",
+      "sourceUrl": "https://toronto.citynews.ca/2026/09/21/pickering-nuclear-reactors-start-coming-off-line-for-massive-refurbishment/",
+      "publishedAt": "2026-09-21T16:00:00+08:00"
+    },
+    {
+      "id": "uk-saudi-air-refueling-20260922",
+      "category": "国际",
+      "priority": 1,
+      "headline": "英国同意向沙特战机提供有限空中加油支援",
+      "summary": "英国首相伯纳姆称，皇家空军将在数周内为沙特战机提供空中加油，以应对也门胡塞武装袭击；安排将持续接受评估。",
+      "whyItMatters": "英国介入后区域军事协作扩大，红海航道及沙特能源设施安全风险仍受关注。",
+      "source": "Associated Press",
+      "sourceUrl": "https://apnews.com/article/britain-saudi-arabia-yemen-burnham-c736f6485b0e9293eee733e12adc9bcd",
+      "publishedAt": "2026-09-22T05:04:33+08:00"
+    },
+    {
+      "id": "fed-collins-inflation-hike-20260921",
+      "category": "财经",
+      "priority": 2,
+      "headline": "波士顿联储主席支持加息并预计年内或再加一次",
+      "summary": "柯林斯称持续通胀和中东战事促使她支持上周将美国政策利率上调 25 个基点至约 3.9%，其个人预测今年还需加息一次。",
+      "whyItMatters": "能源冲击与需求韧性令美联储短期利率路径仍偏紧，影响全球融资成本。",
+      "source": "Associated Press",
+      "sourceUrl": "https://apnews.com/article/inflation-goolsbee-federal-reserve-rates-5acf1f7e4f38ac77329fa0b9aaddd30f",
+      "publishedAt": "2026-09-21T23:01:58+08:00"
+    },
+    {
+      "id": "india-nse-ipo-orders-20260921",
+      "category": "财经",
+      "priority": 2,
+      "headline": "印度国家证券交易所 IPO 获约百亿美元认购",
+      "summary": "印度国家证券交易所 23 亿美元 IPO 在申购末日获约 5.7 倍认购，按发行价上限估算申购额约 100.7 亿美元，股份拟于周四交易。",
+      "whyItMatters": "这笔印度大型交易所上市交易检验投资者对当地资本市场增长与新股融资的需求。",
+      "source": "Reuters",
+      "sourceUrl": "https://www.marketscreener.com/news/india-s-nse-ipo-draws-10-billion-in-bids-ce785adbdd81f225",
+      "publishedAt": "2026-09-21T19:53:00+08:00"
+    },
+    {
+      "id": "oura-ipo-roadshow-20260921",
+      "category": "财经",
+      "priority": 2,
+      "headline": "智能戒指厂商 Oura 启动美国 IPO 路演",
+      "summary": "Oura 与老股东拟出售 5000 万股，按每股 40 至 44 美元区间上限筹资至多 22 亿美元，目标完全摊薄估值约 156.2 亿美元。",
+      "whyItMatters": "交易将测试波动市场中投资者对可穿戴健康硬件和消费科技新股的需求。",
+      "source": "Reuters",
+      "sourceUrl": "https://www.marketscreener.com/news/oura-targets-15-62-billion-valuation-in-us-ipo-setting-stage-for-fall-listings-ce785adbdc89f625",
+      "publishedAt": "2026-09-21T20:04:00+08:00"
     }
   ]
 }
