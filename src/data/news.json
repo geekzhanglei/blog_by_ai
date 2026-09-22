@@ -1,50 +1,50 @@
 {
-  "updatedAt": "2026-09-22T23:34:49+08:00",
-  "coverageStart": "2026-09-21T23:34:49+08:00",
+  "updatedAt": "2026-09-23T03:31:25+08:00",
+  "coverageStart": "2026-09-22T03:31:25+08:00",
   "items": [
     {
-      "id": "oil-diplomacy-saudi-exports-20260921",
+      "id": "us-states-offshore-wind-lawsuits-20260923",
       "category": "能源",
       "priority": 1,
-      "headline": "外交预期与沙特出口恢复推动油价跌至 12 天低点",
-      "summary": "市场押注联合国大会期间美伊外交可能重启，加之沙特部分出口恢复；布伦特原油结算价下跌 3.4% 至每桶 100.34 美元，美国 WTI 近月合约跌至 95.78 美元。",
-      "whyItMatters": "中东风险溢价开始回落，但胡塞袭击与关键航道安全仍可能迅速扭转油价，影响通胀和运输成本。",
-      "source": "Reuters",
-      "sourceUrl": "https://in.marketscreener.com/news/oil-hits-over-1-week-low-on-hopes-of-boost-to-diplomacy-in-iran-war-ce785adad08df727",
-      "publishedAt": "2026-09-22T03:39:00+08:00"
+      "headline": "纽约和加州起诉阻止联邦政府取消海上风电项目",
+      "summary": "纽约牵头八州、加州另案起诉特朗普政府，反对以约 14 亿美元回购租约并终止 Invenergy 和 Bluepoint Wind 等海上风电项目。",
+      "whyItMatters": "诉讼将影响美国东、西海岸新增清洁电力、消费者电费及近 40 亿美元项目退出安排。",
+      "source": "Associated Press",
+      "sourceUrl": "https://apnews.com/article/trump-offshore-wind-energy-fossil-fuels-e757e0492d91ac0dbb0d5992175a869a",
+      "publishedAt": "2026-09-23T01:15:00+08:00"
     },
     {
-      "id": "paramount-warner-settlement-20260922",
+      "id": "ineos-hull-plants-mothballed-20260922",
       "category": "产业",
       "priority": 1,
-      "headline": "派拉蒙与 12 州就华纳合并诉讼达成和解",
-      "summary": "加州总检察长宣布，和解尚待法院批准；派拉蒙承诺五年内增加至少 15 亿美元美国电影制作投入，并设立 4750 万美元受影响员工基金。",
-      "whyItMatters": "这一和解扫除大型传媒合并的关键法律障碍，也为电影产量、就业及有线电视议价设定约束。",
-      "source": "Associated Press",
-      "sourceUrl": "https://www.local10.com/business/2026/09/21/states-settle-lawsuit-over-paramount-warner-merger-clearing-key-hurdle-for-81-billion-deal/",
-      "publishedAt": "2026-09-22T01:07:38+08:00"
+      "headline": "英力士因能源成本暂停英国赫尔三座化工厂",
+      "summary": "英力士宣布暂停赫尔三座化工厂运营，称欧洲天然气与碳成本令生产失去竞争力；相关工厂合计雇用近 4000 人。",
+      "whyItMatters": "停产显示高能源价格正冲击欧洲基础化工产能，并可能波及医药、建材和日化品供应链。",
+      "source": "Reuters",
+      "sourceUrl": "https://uk.marketscreener.com/news/ineos-to-mothball-three-chemical-plants-as-high-energy-costs-hit-production-ce785ad8db8af724",
+      "publishedAt": "2026-09-22T17:07:00+08:00"
     },
     {
-      "id": "eu-russia-sanctions-renewal-20260921",
+      "id": "us-iran-unga-talks-20260922",
       "category": "国际",
       "priority": 1,
-      "headline": "欧盟对俄制裁续期与两名商人除名交易仍待敲定",
-      "summary": "欧盟使节提出以对约 3000 个俄相关个人和实体的制裁续期三年，换取移除乌斯马诺夫和弗里德曼；拉脱维亚周一晚未同意，各国将继续磋商。",
-      "whyItMatters": "续期和除名均尚未生效，成员国对制裁力度与妥协条件的分歧仍可能影响最后决定。",
-      "source": "Reuters",
-      "sourceUrl": "https://www.marketscreener.com/news/latest/EU-continues-talks-on-deal-to-lift-sanctions-on-Russia-linked-billionaires-Usmanov-and-Fridman-dip-12139796/",
-      "publishedAt": "2026-09-22T03:12:00+08:00"
+      "headline": "美伊官员在特朗普联合国演说后举行三小时会谈",
+      "summary": "特朗普称美伊官员周二会谈三小时；他此前在联合国大会威胁若无法达成协议可能摧毁伊朗，随后又表示双方关系正在发展。",
+      "whyItMatters": "直接接触为持续近七个月的战争提供新的外交窗口，但会谈内容及伊朗方面表态仍不明确。",
+      "source": "Associated Press",
+      "sourceUrl": "https://apnews.com/article/692e1e171a791be0c9b9c1f56718a0d0",
+      "publishedAt": "2026-09-22T20:15:19+08:00"
     },
     {
-      "id": "fda-nonanimal-testing-rule-20260922",
+      "id": "viking-vk2735-maintenance-study-20260922",
       "category": "健康",
       "priority": 1,
-      "headline": "美国 FDA 明确药物安全测试可采用非动物方法",
-      "summary": "FDA 发布直接最终规则，澄清在适当情况下可使用人体细胞、器官芯片及计算模型等方法，另公布 25 个实际应用案例；现有安全标准不变。",
-      "whyItMatters": "这为药物研发采用经验证的人源模型提供更明确的监管路径，但不意味着全面取消动物试验。",
-      "source": "FDA",
-      "sourceUrl": "https://www.globenewswire.com/news-release/2026/09/21/3365780/0/en/fda-updates-regulations-to-advance-innovative-alternatives-to-animal-testing.html",
-      "publishedAt": "2026-09-22T01:01:00+08:00"
+      "headline": "Viking 公布 VK2735 减重维持研究结果",
+      "summary": "Viking 称，受试者完成 21 周每周给药后，改为隔周或每月注射 12 周仍分别维持最高 97% 和 90% 的减重效果；结果尚为公司公布的顶线数据。",
+      "whyItMatters": "若后续完整数据确认，较低给药频率可能改善肥胖药物长期依从性，但该候选药仍处研发阶段。",
+      "source": "Viking Therapeutics",
+      "sourceUrl": "https://www.prnewswire.com/news-releases/viking-therapeutics-announces-positive-topline-results-from-maintenance-study-of-glp-1gip-agonist-vk2735-demonstrating-the-promise-of-multiple-maintenance-dosing-regimens-302885584.html",
+      "publishedAt": "2026-09-22T19:05:00+08:00"
     },
     {
       "id": "uk-saudi-air-refueling-20260922",
@@ -58,15 +58,15 @@
       "publishedAt": "2026-09-22T05:04:33+08:00"
     },
     {
-      "id": "grail-fda-galleri-review-20260921",
+      "id": "amgen-dazodalibep-phase3-sjogren-20260922",
       "category": "健康",
       "priority": 2,
-      "headline": "FDA 审查人员未发现 Galleri 多癌种血检重大安全问题",
-      "summary": "美国 FDA 为 9 月 23 日专家会议发布的材料未就检测性能、研究设计及主要安全分析提出未解决问题，但要求讨论其“早期发现”表述是否有足够证据。",
-      "whyItMatters": "这推进了多癌种筛查产品的上市审查；顾问会议和监管决定仍待举行，现有试验结果也未证实全面改善早期诊断。",
-      "source": "Reuters",
-      "sourceUrl": "https://www.marketscreener.com/news/grail-rallies-as-fda-staff-flags-no-major-concerns-for-multi-cancer-test-ce785adbde88f527",
-      "publishedAt": "2026-09-22T00:42:00+08:00"
+      "headline": "安进称干燥综合征药物三期试验达到主要终点",
+      "summary": "安进称，dazodalibep 在约 621 名中重度系统性干燥综合征患者的 OASIZ 301 试验中，于第 48 周显著改善疾病活动；完整数据尚待医学会议公布。",
+      "whyItMatters": "该病目前缺少获批的系统性疾病修饰疗法，阳性三期结果可能支持后续申报，但仍需完整数据和监管评估。",
+      "source": "Amgen",
+      "sourceUrl": "https://www.prnewswire.com/news-releases/amgen-announces-positive-topline-phase-3-results-for-dazodalibep-in-moderate-to-severe-systemic-sjogrens-disease-302885422.html",
+      "publishedAt": "2026-09-22T21:00:00+08:00"
     },
     {
       "id": "korea-texas-investment-project-20260922",
