@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-23T11:32:00+08:00",
-  "coverageStart": "2026-09-22T11:32:00+08:00",
+  "updatedAt": "2026-09-23T15:36:31+08:00",
+  "coverageStart": "2026-09-22T15:36:31+08:00",
   "items": [
     {
       "id": "us-states-offshore-wind-lawsuits-20260923",
@@ -102,15 +102,15 @@
       "publishedAt": "2026-09-23T01:32:32+08:00"
     },
     {
-      "id": "alibaba-zhenwu-v900-ai-chip-20260922",
+      "id": "anthropic-claude-opus-5-5-20260923",
       "category": "科技",
       "priority": 1,
-      "headline": "阿里巴巴发布真武 V900 AI 芯片并公布大模型计划",
-      "summary": "阿里在杭州大会称新芯片性能约为上代三倍，拟训练 5 万亿至 10 万亿参数模型，并计划至 2032 年将全球云数据中心容量扩至逾 20 吉瓦。",
-      "whyItMatters": "芯片、模型与算力基础设施同步扩张，凸显中国企业争取自主 AI 供应链的投入，但性能数字仍为公司说法。",
-      "source": "Associated Press",
-      "sourceUrl": "https://apnews.com/article/alibaba-ai-chip-qwen-zhenwu-china-us-b29908e516faff9f5a82b201ba954aab",
-      "publishedAt": "2026-09-22T15:16:01+08:00"
+      "headline": "Anthropic 发布 Claude Opus 5.5",
+      "summary": "Anthropic 推出 Claude Opus 5.5，称其多数任务表现达到 Fable 5.1 水平，典型负载运行成本较 Opus 5 低 40%，现已在主要云平台和 API 上线。",
+      "whyItMatters": "前沿模型价格与效率同步改善，将影响企业 AI 采购和代理式开发工具竞争；性能数据仍主要来自公司评测。",
+      "source": "Anthropic",
+      "sourceUrl": "https://www.anthropic.com/claude-opus-5-5",
+      "publishedAt": "2026-09-23T02:08:00+08:00"
     },
     {
       "id": "cognex-realsense-acquisition-20260922",
@@ -124,26 +124,26 @@
       "publishedAt": "2026-09-22T20:00:00+08:00"
     },
     {
-      "id": "uk-august-borrowing-20260922",
+      "id": "adb-asia-growth-outlook-20260923",
       "category": "财经",
       "priority": 1,
-      "headline": "英国 8 月公共借款升至 183 亿英镑",
-      "summary": "英国国家统计局公布 8 月公共借款 183 亿英镑，较上年同期增加 29 亿英镑；本财年迄今借款较预算责任办公室预测高 81 亿英镑。",
-      "whyItMatters": "借款超预期压缩新政府编制预算的财政空间，也可能影响国债收益率与未来税收安排。",
-      "source": "英国国家统计局",
-      "sourceUrl": "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances/august2026/pdf",
-      "publishedAt": "2026-09-22T14:00:00+08:00"
+      "headline": "亚行将发展中亚洲 2026 年增长预测上调至 5%",
+      "summary": "亚洲开发银行把发展中亚洲和太平洋地区 2026 年增长预测由 4.9% 小幅上调至 5.0%，并将通胀预测由 4.3% 下调至 4.2%。",
+      "whyItMatters": "投资、财政刺激和 AI 相关出口支撑区域增长，但能源价格、地缘冲突及厄尔尼诺仍构成下行风险。",
+      "source": "Reuters",
+      "sourceUrl": "https://www.marketscreener.com/news/adb-slightly-lifts-2026-growth-outlook-trims-inflation-forecast-ce785ad9d888f020",
+      "publishedAt": "2026-09-23T08:01:00+08:00"
     },
     {
-      "id": "australia-rba-inflation-risks-20260922",
+      "id": "australia-blocks-iag-rac-acquisition-20260923",
       "category": "财经",
       "priority": 2,
-      "headline": "澳央行行长警示通胀上行风险正在显现",
-      "summary": "澳洲联储行长布洛克指出，中东冲突推高能源价格，国内需求仍偏强；她强调并未预告下周议息结果。",
-      "whyItMatters": "澳大利亚核心通胀仍高于目标区间，市场对再加息的预期可能影响汇率与亚太债市。",
-      "source": "Reuters",
-      "sourceUrl": "https://hk.marketscreener.com/news/australia-s-central-bank-says-inflation-risks-may-be-materialising-ce785ad8d988f02c",
-      "publishedAt": "2026-09-22T12:12:00+08:00"
+      "headline": "澳大利亚监管机构否决 IAG 收购 RAC Insurance",
+      "summary": "澳大利亚竞争与消费者委员会认定，IAG 收购 RAC Insurance 将显著削弱西澳汽车险及住宅财产险竞争，因此禁止交易实施。",
+      "whyItMatters": "交易若完成，IAG 在当地两类保险市场的份额都可能超过 50%，否决决定保护区域保险市场竞争。",
+      "source": "澳大利亚竞争与消费者委员会",
+      "sourceUrl": "https://www.accc.gov.au/media-release/accc-opposes-iags-proposed-acquisition-of-rac-insurance",
+      "publishedAt": "2026-09-23T08:57:00+08:00"
     },
     {
       "id": "asia-stocks-tech-rally-20260923",
@@ -179,15 +179,15 @@
       "publishedAt": "2026-09-22T20:00:00+08:00"
     },
     {
-      "id": "enervenue-changzhou-battery-factory-20260922",
+      "id": "nth-cycle-glencore-offtake-20260923",
       "category": "产业",
       "priority": 2,
-      "headline": "美国电池初创企业 EnerVenue 将首座工厂落在常州",
-      "summary": "EnerVenue 向路透社确认，放弃肯塔基州方案后已在江苏常州建成首座镍氢电池工厂，计划本周四开始量产；公司称当地供应链和工程能力是选址主因。",
-      "whyItMatters": "关键电池制造仍受产业集群和供应链深度驱动，凸显制造业回流政策面临的现实约束。",
+      "headline": "Nth Cycle 与嘉能可签署 10 亿美元再生矿产协议",
+      "summary": "美国金属精炼初创企业 Nth Cycle 与嘉能可签署十年协议，将从废旧电池提取锂、镍等关键矿物并供货；嘉能可每年提供约 2.4 万吨黑粉原料。",
+      "whyItMatters": "长期供销安排为美国本土电池回收和关键矿物精炼锁定原料与买家，也为 Nth Cycle 上市计划降低商业风险。",
       "source": "Reuters",
-      "sourceUrl": "https://www.marketscreener.com/news/us-battery-startup-that-ditched-kentucky-for-china-opens-factory-as-trump-xi-meet-ce785ad8d888f527",
-      "publishedAt": "2026-09-22T14:31:00+08:00"
+      "sourceUrl": "https://ca.marketscreener.com/news/nth-cycle-inks-1-billion-minerals-offtake-with-glencore-ahead-of-public-listing-ce785ad8d18cff23",
+      "publishedAt": "2026-09-23T01:20:00+08:00"
     },
     {
       "id": "china-drug-precursor-export-controls-20260922",
@@ -201,15 +201,15 @@
       "publishedAt": "2026-09-22T20:13:48+08:00"
     },
     {
-      "id": "lithuania-drone-hardened-grid-substation-20260922",
+      "id": "south-korea-energy-import-diversification-20260923",
       "category": "能源",
-      "priority": 2,
-      "headline": "立陶宛规划抗无人机袭击的跨境电网变电站",
-      "summary": "立陶宛电网运营商称，新建的 Gizai 变电站将为变压器加装混凝土防护，并配置防爆围栏和隧道探测设施，服务连接波兰的 Harmony Link 工程。",
-      "whyItMatters": "波罗的海电网已脱离俄罗斯系统，新节点的防护关系区域供电韧性与跨境互联安全。",
+      "priority": 1,
+      "headline": "韩国拟在 2035 年前降低中东原油依赖",
+      "summary": "韩国产业部发布十年资源安全计划，目标把中东原油进口占比从 2025 年的 70% 降至 50%，并于 2030 年前增加约 2000 万桶原油储备。",
+      "whyItMatters": "伊朗战争暴露霍尔木兹海峡供应风险，进口多元化将影响韩国炼化采购、国家储备和关键矿产供应链。",
       "source": "Reuters",
-      "sourceUrl": "https://uk.marketscreener.com/news/lithuania-plans-key-substation-near-russia-fortified-against-explosive-drones-ce785ad8d98afe21",
-      "publishedAt": "2026-09-22T13:01:00+08:00"
+      "sourceUrl": "https://www.marketscreener.com/news/south-korea-plans-to-cut-its-reliance-on-middle-crude-oil-imports-to-50-by-2035-ce785ad9d88df421",
+      "publishedAt": "2026-09-23T08:31:00+08:00"
     },
     {
       "id": "yemen-mokha-port-strikes-20260922",
