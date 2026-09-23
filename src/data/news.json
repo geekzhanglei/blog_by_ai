@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-23T03:31:25+08:00",
-  "coverageStart": "2026-09-22T03:31:25+08:00",
+  "updatedAt": "2026-09-23T11:32:00+08:00",
+  "coverageStart": "2026-09-22T11:32:00+08:00",
   "items": [
     {
       "id": "us-states-offshore-wind-lawsuits-20260923",
@@ -47,15 +47,15 @@
       "publishedAt": "2026-09-22T19:05:00+08:00"
     },
     {
-      "id": "uk-saudi-air-refueling-20260922",
-      "category": "国际",
+      "id": "moldova-energy-water-emergency-20260923",
+      "category": "能源",
       "priority": 1,
-      "headline": "英国同意向沙特战机提供有限空中加油支援",
-      "summary": "英国首相伯纳姆称，皇家空军将在数周内为沙特战机提供空中加油，以应对也门胡塞武装袭击；安排将持续接受评估。",
-      "whyItMatters": "英国介入后区域军事协作扩大，红海航道及沙特能源设施安全风险仍受关注。",
+      "headline": "摩尔多瓦将对能源和供水实施 60 天紧急状态",
+      "summary": "摩尔多瓦议会以 54 票赞成通过措施，因德涅斯特河严重低水位及全球冲突推高能源成本，自周六起进入 60 天能源和供水紧急状态。",
+      "whyItMatters": "该国高度依赖进口天然气和电力，紧急授权可能带来非必要用水限制，并影响冬季能源保供。",
       "source": "Associated Press",
-      "sourceUrl": "https://www.local10.com/news/2026/09/21/uk-to-offer-saudi-arabia-aerial-refueling-to-counter-houthi-attacks/",
-      "publishedAt": "2026-09-22T05:04:33+08:00"
+      "sourceUrl": "https://apnews.com/article/a73f807a2a7c2ccd38258d49ac1fbbd3",
+      "publishedAt": "2026-09-23T01:44:28+08:00"
     },
     {
       "id": "amgen-dazodalibep-phase3-sjogren-20260922",
@@ -69,15 +69,15 @@
       "publishedAt": "2026-09-22T21:00:00+08:00"
     },
     {
-      "id": "korea-texas-investment-project-20260922",
+      "id": "catl-debrecen-cell-trial-production-20260922",
       "category": "产业",
       "priority": 1,
-      "headline": "韩国选定得州燃气电厂作为首个对美投资项目",
-      "summary": "韩国确认将得州一座 6.3 吉瓦燃气电厂列为对美 3500 亿美元投资计划首个项目，仍须美国方面审批；核电与阿拉斯加液化天然气项目仍在考虑。",
-      "whyItMatters": "这使韩国 3500 亿美元对美产业投资承诺进入项目选择阶段，并关系 AI 数据中心供电、韩企海外设备订单及双边关税安排。",
-      "source": "Reuters",
-      "sourceUrl": "https://www.marketscreener.com/news/south-korea-to-brief-lawmakers-on-us-investment-package-amid-profitability-concerns-ce785adbd08df422",
-      "publishedAt": "2026-09-22T07:51:00+08:00"
+      "headline": "宁德时代匈牙利电芯工厂启动试生产",
+      "summary": "宁德时代称，德布勒森工厂已在首两条产线启动电芯试生产，用于调试和验证设备与流程；全面建成后规划产能为 100 吉瓦时。",
+      "whyItMatters": "该基地将成为宁德时代中国以外最大制造基地，直接服务欧洲车企并重塑当地电动车电池供应链。",
+      "source": "CATL",
+      "sourceUrl": "https://www.newswire.ca/news-releases/catl-kicks-off-trial-production-of-battery-cells-in-hungary-813215343.html",
+      "publishedAt": "2026-09-22T19:38:00+08:00"
     },
     {
       "id": "ukraine-russia-strikes-samara-20260922",
@@ -91,15 +91,15 @@
       "publishedAt": "2026-09-22T17:15:18+08:00"
     },
     {
-      "id": "south-korea-nuclear-phased-talks-20260922",
-      "category": "国际",
-      "priority": 2,
-      "headline": "韩国总统提出分阶段处理朝鲜核计划",
-      "summary": "李在明接受美联社书面采访称，拟先冻结朝鲜核导能力，再逐步削减并最终推动拆除，按进展提供政治和经济让步；朝鲜目前拒绝对话。",
-      "whyItMatters": "首尔在联合国大会前明确谈判次序，但方案能否启动取决于平壤是否重返谈判。",
+      "id": "aca-enrollment-fraud-removals-20260923",
+      "category": "健康",
+      "priority": 1,
+      "headline": "美国政府计划移除 76 万名医保市场参保人",
+      "summary": "特朗普政府称将以欺诈或身份不存在为由，从《平价医疗法案》医保市场移除约 76 万人，并暂停新经纪人注册六个月；相关指控尚待进一步审查。",
+      "whyItMatters": "措施涉及大规模医疗保障资格和约 22 亿美元补贴支出，可能影响参保人就医与医保经纪行业。",
       "source": "Associated Press",
-      "sourceUrl": "https://apnews.com/article/koreas-lee-trump-kim-un-nuclear-2c12c8b88ca37e9dab861af584efa574",
-      "publishedAt": "2026-09-22T08:30:24+08:00"
+      "sourceUrl": "https://apnews.com/article/eb57a4819c8a876a72c1301a112e21dc",
+      "publishedAt": "2026-09-23T01:32:32+08:00"
     },
     {
       "id": "alibaba-zhenwu-v900-ai-chip-20260922",
@@ -113,15 +113,15 @@
       "publishedAt": "2026-09-22T15:16:01+08:00"
     },
     {
-      "id": "texas-data-center-permit-pause-20260921",
-      "category": "能源",
+      "id": "cognex-realsense-acquisition-20260922",
+      "category": "科技",
       "priority": 2,
-      "headline": "得州暂停新增数据中心环境许可，等待电网与水务审计",
-      "summary": "州长阿博特要求环境监管机构在 ERCOT 和州水务部门完成数据中心用电、用水及社区影响审计前停止发放新许可。",
-      "whyItMatters": "大型算力设施建设与电网、水资源承载力发生直接政策冲突，或拖慢后续项目落地。",
-      "source": "The Texas Tribune",
-      "sourceUrl": "https://www.texastribune.org/2026/09/21/texas-data-center-moratorium-water-energy/",
-      "publishedAt": "2026-09-22T05:31:00+08:00"
+      "headline": "Cognex 以 5 亿美元收购 RealSense",
+      "summary": "工业机器视觉公司 Cognex 签约以现金 5 亿美元收购深度感知相机企业 RealSense，交易预计第四季度完成；人脸认证业务将在交割前剥离。",
+      "whyItMatters": "并购把 3D 感知能力并入工业视觉平台，反映机器人和实体 AI 市场加速整合。",
+      "source": "Cognex",
+      "sourceUrl": "https://investor.cognex.com/news/news-details/2026/Cognex-to-Acquire-RealSense-Expanding-Machine-Vision-Leadership-into-High-Growth-Robotic-Perception-Market/default.aspx",
+      "publishedAt": "2026-09-22T20:00:00+08:00"
     },
     {
       "id": "uk-august-borrowing-20260922",
@@ -146,15 +146,15 @@
       "publishedAt": "2026-09-22T12:12:00+08:00"
     },
     {
-      "id": "us-stocks-oil-september22-20260922",
+      "id": "asia-stocks-tech-rally-20260923",
       "category": "财经",
       "priority": 2,
-      "headline": "油价再破百美元关口，美股在纪录附近震荡",
-      "summary": "美东周二上午布伦特原油短暂跌破每桶 100 美元；标普 500 指数接近纪录高位，银行股走弱而纳斯达克小幅上行。",
-      "whyItMatters": "能源价格回落减轻债券收益率压力，但中东供应不确定性仍左右全球风险资产。",
-      "source": "Associated Press",
-      "sourceUrl": "https://apnews.com/article/markets-ai-oil-wall-street-de8c5f9659e44556e40e661f794b48ad",
-      "publishedAt": "2026-09-22T11:31:07+08:00"
+      "headline": "科技股推动亚洲股市冲击连续第六日上涨",
+      "summary": "亚洲股市周三延续由 AI 应用需求带动的涨势，布伦特原油回落至每桶约 99.18 美元；日经现货因假日休市，但期货显著走高。",
+      "whyItMatters": "科技风险偏好、油价与美伊外交预期共同影响亚洲资产定价，市场仍在评估主要央行进一步加息风险。",
+      "source": "Reuters",
+      "sourceUrl": "https://www.marketscreener.com/news/asia-stocks-ride-tech-wave-higher-oil-stays-subdued-ce785ad9d88ff022",
+      "publishedAt": "2026-09-23T09:45:00+08:00"
     },
     {
       "id": "deepseek-un-security-council-ai-20260922",
@@ -168,15 +168,15 @@
       "publishedAt": "2026-09-22T17:17:00+08:00"
     },
     {
-      "id": "openai-math-advisory-group-20260922",
-      "category": "科技",
-      "priority": 2,
-      "headline": "OpenAI 宣布设立独立数学与 AI 咨询小组",
-      "summary": "新小组由高等研究院承办，将就 AI 数学成果的评审、传播及学术规范提供意见；OpenAI 同时称其内部模型解决了逾百道开放问题，此说法仍需独立核验。",
-      "whyItMatters": "高能力 AI 进入数学研究，成果验证和公布方式成为科研治理议题。",
-      "source": "TechCrunch",
-      "sourceUrl": "https://techcrunch.com/2026/09/21/openai-forms-math-advisory-group-as-its-ai-resolves-more-than-100-open-problems/",
-      "publishedAt": "2026-09-22T04:15:00+08:00"
+      "id": "celldex-barzolvolimab-phase3-20260922",
+      "category": "健康",
+      "priority": 1,
+      "headline": "Celldex 称慢性荨麻疹药物两项三期试验达标",
+      "summary": "Celldex 称，barzolvolimab 在两项共 1939 人的三期试验中达到主要和全部关键次要终点；第 12 周完全缓解率约为 42% 至 46%，安慰剂组约为 9% 至 13%。",
+      "whyItMatters": "结果可能支持 2027 年生物制品许可申请，但仍需监管审评及更长期安全性数据。",
+      "source": "Celldex Therapeutics",
+      "sourceUrl": "https://ir.celldex.com/news-releases/news-release-details/celldex-announces-positive-results-phase-3-embarq-csu1-and",
+      "publishedAt": "2026-09-22T20:00:00+08:00"
     },
     {
       "id": "enervenue-changzhou-battery-factory-20260922",
